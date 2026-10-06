@@ -1,0 +1,21 @@
+{
+  "name": "dgs-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DGS DOCS — génération automatique des documents DGS (Android, hors ligne)",
+  "scripts": {
+    "data": "python3 tools/build_data.py ./DGS_DOCUMENTS_V1.0",
+    "build": "python3 tools/build.py",
+    "sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/filesystem": "^7.0.0",
+    "@capacitor/share": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.0.0"
+  }
+}

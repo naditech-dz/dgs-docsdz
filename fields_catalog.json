@@ -1,0 +1,5430 @@
+{
+ "paths": {
+  "DGS-MAT-001": "07_MATERIEL_VEHICULES/01_Vehicules/DGS-MAT-001-PV-Reception-Vehicule.docx",
+  "DGS-MAT-002": "07_MATERIEL_VEHICULES/01_Vehicules/DGS-MAT-002-PV-Affectation-Vehicule.docx",
+  "DGS-MAT-003": "07_MATERIEL_VEHICULES/01_Vehicules/DGS-MAT-003-PV-Etat-Vehicule.docx",
+  "DGS-MAT-004": "07_MATERIEL_VEHICULES/01_Vehicules/DGS-MAT-004-PV-Accident-Vehicule.docx",
+  "DGS-MAT-005": "07_MATERIEL_VEHICULES/01_Vehicules/DGS-MAT-005-PV-Restitution-Vehicule.docx",
+  "DGS-MAT-006": "07_MATERIEL_VEHICULES/02_Equipements/DGS-MAT-006-PV-Mise-En-Service-Equipement.docx",
+  "DGS-MAT-007": "07_MATERIEL_VEHICULES/02_Equipements/DGS-MAT-007-PV-Mise-Hors-Service.docx",
+  "DGS-MAT-008": "07_MATERIEL_VEHICULES/02_Equipements/DGS-MAT-008-PV-Perte-Ou-Degradation-Materiel.docx",
+  "DGS-CLI-007": "02_CLIENTS/Devis_Offres/DGS-CLI-007-Devis-Estimatif.docx",
+  "DGS-CLI-008": "02_CLIENTS/Devis_Offres/DGS-CLI-008-Devis-Detaille.docx",
+  "DGS-CLI-009": "02_CLIENTS/Devis_Offres/DGS-CLI-009-Offre-Commerciale.docx",
+  "DGS-CLI-010": "02_CLIENTS/Devis_Offres/DGS-CLI-010-Bordereau-Prix.docx",
+  "DGS-CLI-011": "02_CLIENTS/Devis_Offres/DGS-CLI-011-Conditions-Paiement.docx",
+  "DGS-CLI-012": "02_CLIENTS/Devis_Offres/DGS-CLI-012-Bon-Pour-Accord.docx",
+  "DGS-CLI-019": "02_CLIENTS/Devis_Offres/DGS-CLI-019-Fiche-Demande-Revision-Client.docx",
+  "DGS-CLI-020": "02_CLIENTS/Devis_Offres/DGS-CLI-020-Lettre-Transmission-Documents.docx",
+  "DGS-CLI-025": "02_CLIENTS/Devis_Offres/DGS-CLI-025-Lettre-Relance-Devis.docx",
+  "DGS-CLI-015": "02_CLIENTS/Facturation/DGS-CLI-015-Recu-Paiement.docx",
+  "DGS-CLI-016": "02_CLIENTS/Facturation/DGS-CLI-016-Lettre-Rappel-Paiement.docx",
+  "DGS-CLI-017": "02_CLIENTS/Facturation/DGS-CLI-017-Mise-En-Demeure-Payer.docx",
+  "DGS-CLI-014": "02_CLIENTS/Garanties/DGS-CLI-014-Fiche-Suivi-Garantie.docx",
+  "DGS-CON-010": "02_CLIENTS/Avenants/DGS-CON-010-Avenant-Au-Contrat.docx",
+  "DGS-CLI-013": "02_CLIENTS/SAV/DGS-CLI-013-Fiche-Demande-SAV.docx",
+  "DGS-CLI-018": "02_CLIENTS/SAV/DGS-CLI-018-Fiche-Reclamation-Client.docx",
+  "DGS-CLI-023": "02_CLIENTS/SAV/DGS-CLI-023-Reponse-Une-Reclamation-Client.docx",
+  "DGS-CLI-024": "02_CLIENTS/SAV/DGS-CLI-024-Enquete-Satisfaction-Client.docx",
+  "DGS-PV-031": "02_CLIENTS/SAV/DGS-PV-031-PV-Constat-SAV.docx",
+  "DGS-PV-032": "02_CLIENTS/SAV/DGS-PV-032-PV-Intervention-SAV.docx",
+  "DGS-PV-033": "02_CLIENTS/SAV/DGS-PV-033-PV-Reparation.docx",
+  "DGS-PV-034": "02_CLIENTS/SAV/DGS-PV-034-PV-Reception-Apres-Intervention.docx",
+  "DGS-PV-035": "02_CLIENTS/SAV/DGS-PV-035-PV-Cloture-SAV.docx",
+  "DGS-PV-001": "02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-001-PV-Visite-Initiale.docx",
+  "DGS-PV-002": "02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-002-PV-Etat-Lieux.docx",
+  "DGS-PV-003": "02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-003-PV-Remise-Site.docx",
+  "DGS-PV-004": "02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-004-PV-Reunion-Lancement.docx",
+  "DGS-PV-005": "02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-005-PV-Demarrage-Travaux.docx",
+  "DGS-PV-006": "02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-006-PV-Validation-Plans.docx",
+  "DGS-PV-007": "02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-007-PV-Validation-Materiaux.docx",
+  "DGS-PV-008": "02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-008-PV-Validation-Echantillons.docx",
+  "DGS-PV-009": "02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-009-PV-Validation-Choix-Client.docx",
+  "DGS-PV-010": "02_CLIENTS/PV/02_Suivi_Et_Avancement/DGS-PV-010-PV-Reunion-Chantier.docx",
+  "DGS-PV-011": "02_CLIENTS/PV/02_Suivi_Et_Avancement/DGS-PV-011-PV-Avancement-Travaux.docx",
+  "DGS-PV-012": "02_CLIENTS/PV/02_Suivi_Et_Avancement/DGS-PV-012-PV-Constat-Avancement.docx",
+  "DGS-PV-013": "02_CLIENTS/PV/02_Suivi_Et_Avancement/DGS-PV-013-PV-Reception-Une-Etape.docx",
+  "DGS-PV-014": "02_CLIENTS/PV/03_Modifications_Et_Travaux_Supplementaires/DGS-PV-014-PV-Travaux-Modificatifs.docx",
+  "DGS-PV-015": "02_CLIENTS/PV/03_Modifications_Et_Travaux_Supplementaires/DGS-PV-015-PV-Travaux-Supplementaires.docx",
+  "DGS-PV-016": "02_CLIENTS/PV/03_Modifications_Et_Travaux_Supplementaires/DGS-PV-016-PV-Demande-Modification-Client.docx",
+  "DGS-PV-017": "02_CLIENTS/PV/04_Arrets_Retards_Et_Litiges/DGS-PV-017-PV-Suspension-Travaux.docx",
+  "DGS-PV-018": "02_CLIENTS/PV/04_Arrets_Retards_Et_Litiges/DGS-PV-018-PV-Reprise-Travaux.docx",
+  "DGS-PV-019": "02_CLIENTS/PV/04_Arrets_Retards_Et_Litiges/DGS-PV-019-PV-Retard.docx",
+  "DGS-PV-021": "02_CLIENTS/PV/04_Arrets_Retards_Et_Litiges/DGS-PV-021-PV-Constat-Desaccord.docx",
+  "DGS-PV-036": "02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-036-PV-Choix-Materiaux.docx",
+  "DGS-PV-037": "02_CLIENTS/PV/04_Arrets_Retards_Et_Litiges/DGS-PV-037-PV-Annulation-Contrat.docx",
+  "DGS-CLI-001": "02_CLIENTS/Identification/DGS-CLI-001-Fiche-Identification-Client.docx",
+  "DGS-CLI-002": "02_CLIENTS/Identification/DGS-CLI-002-Fiche-Demande-Client.docx",
+  "DGS-CLI-003": "02_CLIENTS/Identification/DGS-CLI-003-Fiche-Visite.docx",
+  "DGS-CLI-004": "02_CLIENTS/Identification/DGS-CLI-004-Fiche-Releve.docx",
+  "DGS-CLI-005": "02_CLIENTS/Identification/DGS-CLI-005-Cahier-Besoins-Client.docx",
+  "DGS-CLI-006": "02_CLIENTS/Identification/DGS-CLI-006-Compte-Rendu-Reunion-Client.docx",
+  "DGS-CLI-021": "02_CLIENTS/Reception/DGS-CLI-021-Attestation-Fin-Travaux.docx",
+  "DGS-PV-022": "02_CLIENTS/Reception/DGS-PV-022-PV-Pre-Reception.docx",
+  "DGS-PV-023": "02_CLIENTS/Reception/DGS-PV-023-PV-Reception-Avec-Reserves.docx",
+  "DGS-PV-024": "02_CLIENTS/Reception/DGS-PV-024-PV-Reception-Provisoire.docx",
+  "DGS-PV-025": "02_CLIENTS/Reception/DGS-PV-025-PV-Levee-Reserves.docx",
+  "DGS-PV-026": "02_CLIENTS/Reception/DGS-PV-026-PV-Reception-Definitive.docx",
+  "DGS-PV-027": "02_CLIENTS/Reception/DGS-PV-027-PV-Livraison-Travaux.docx",
+  "DGS-PV-028": "02_CLIENTS/Reception/DGS-PV-028-PV-Remise-Cles.docx",
+  "DGS-PV-029": "02_CLIENTS/Reception/DGS-PV-029-PV-Cloture-Chantier.docx",
+  "DGS-PV-030": "02_CLIENTS/Reception/DGS-PV-030-PV-Cloture-Projet.docx",
+  "DGS-CLI-022": "02_CLIENTS/Contrats/03_Resiliation/DGS-CLI-022-Lettre-Resiliation-Contrat.docx",
+  "DGS-CON-001": "02_CLIENTS/Contrats/01_Contrats_Travaux/DGS-CON-001-Contrat-General-Travaux.docx",
+  "DGS-CON-002": "02_CLIENTS/Contrats/01_Contrats_Travaux/DGS-CON-002-Contrat-Renovation.docx",
+  "DGS-CON-003": "02_CLIENTS/Contrats/01_Contrats_Travaux/DGS-CON-003-Contrat-Finition.docx",
+  "DGS-CON-004": "02_CLIENTS/Contrats/01_Contrats_Travaux/DGS-CON-004-Contrat-Amenagement-Interieur.docx",
+  "DGS-CON-005": "02_CLIENTS/Contrats/01_Contrats_Travaux/DGS-CON-005-Contrat-Cle-En-Main.docx",
+  "DGS-CON-006": "02_CLIENTS/Contrats/02_Contrats_Services/DGS-CON-006-Contrat-Suivi-Chantier.docx",
+  "DGS-CON-007": "02_CLIENTS/Contrats/02_Contrats_Services/DGS-CON-007-Contrat-Conception.docx",
+  "DGS-CON-008": "02_CLIENTS/Contrats/02_Contrats_Services/DGS-CON-008-Contrat-Prestation-Service.docx",
+  "DGS-CON-009": "02_CLIENTS/Contrats/02_Contrats_Services/DGS-CON-009-Contrat-Maintenance.docx",
+  "DGS-SYS-004": "00_README/DGS-SYS-004-Rapport-Livraison-Validation-Juridique.docx",
+  "INDEX-DGS-DOCUMENTS.docx": "00_README/INDEX-DGS-DOCUMENTS.docx",
+  "README-DGS-DOCUMENT-SYSTEM.docx": "00_README/README-DGS-DOCUMENT-SYSTEM.docx",
+  "DGS-CHT-001": "03_CHANTIERS/Lancement/DGS-CHT-001-Fiche-Projet.docx",
+  "DGS-CHT-002": "03_CHANTIERS/Lancement/DGS-CHT-002-PV-Installation-Chantier.docx",
+  "DGS-CHT-003": "03_CHANTIERS/Lancement/DGS-CHT-003-PV-Implantation.docx",
+  "DGS-CHT-004": "03_CHANTIERS/Suivi/DGS-CHT-004-PV-Controle-Travaux.docx",
+  "DGS-CHT-010": "03_CHANTIERS/Suivi/DGS-CHT-010-PV-Constat-Degradation.docx",
+  "DGS-CHT-011": "03_CHANTIERS/Suivi/DGS-CHT-011-Journal-Chantier.docx",
+  "DGS-CHT-012": "03_CHANTIERS/Suivi/DGS-CHT-012-Rapport-Hebdomadaire-Avancement.docx",
+  "DGS-CHT-013": "03_CHANTIERS/Suivi/DGS-CHT-013-Rapport-Mensuel-Avancement.docx",
+  "DGS-CHT-014": "03_CHANTIERS/Suivi/DGS-CHT-014-Fiche-Pointage-Personnel-Chantier.docx",
+  "DGS-CHT-018": "03_CHANTIERS/Suivi/DGS-CHT-018-Attachement-Travaux.docx",
+  "DGS-CHT-019": "03_CHANTIERS/Suivi/DGS-CHT-019-Ordre-Service.docx",
+  "DGS-CHT-020": "03_CHANTIERS/Suivi/DGS-CHT-020-Planning-Hebdomadaire-Chantier.docx",
+  "DGS-CHT-005": "03_CHANTIERS/Reception/DGS-CHT-005-PV-Reception-Ferraillage.docx",
+  "DGS-CHT-006": "03_CHANTIERS/Reception/DGS-CHT-006-PV-Reception-Coffrage.docx",
+  "DGS-CHT-007": "03_CHANTIERS/Reception/DGS-CHT-007-PV-Reception-Etancheite.docx",
+  "DGS-CHT-008": "03_CHANTIERS/Reception/DGS-CHT-008-PV-Reception-Reseaux.docx",
+  "DGS-CHT-009": "03_CHANTIERS/Reception/DGS-CHT-009-PV-Reception-Finition.docx",
+  "DGS-CHT-015": "03_CHANTIERS/Materiaux/DGS-CHT-015-Bon-Sortie-Materiaux.docx",
+  "DGS-CHT-016": "03_CHANTIERS/Materiaux/DGS-CHT-016-Demande-Approvisionnement.docx",
+  "DGS-QLT-001": "03_CHANTIERS/Materiaux/DGS-QLT-001-PV-Reception-Materiaux.docx",
+  "DGS-QLT-002": "03_CHANTIERS/Materiaux/DGS-QLT-002-PV-Controle-Qualite-Materiaux.docx",
+  "DGS-QLT-004": "03_CHANTIERS/Materiaux/DGS-QLT-004-Fiche-Tracabilite-Materiau.docx",
+  "DGS-HSE-001": "03_CHANTIERS/HSE/DGS-HSE-001-PV-Controle-Securite.docx",
+  "DGS-HSE-002": "03_CHANTIERS/HSE/DGS-HSE-002-PV-Controle-HSE.docx",
+  "DGS-HSE-003": "03_CHANTIERS/HSE/DGS-HSE-003-PV-Incident-Chantier.docx",
+  "DGS-HSE-004": "03_CHANTIERS/HSE/DGS-HSE-004-PV-Accident-Chantier.docx",
+  "DGS-HSE-005": "03_CHANTIERS/HSE/DGS-HSE-005-Fiche-Verification-Quotidienne-Securite.docx",
+  "DGS-HSE-006": "03_CHANTIERS/HSE/DGS-HSE-006-Fiche-Accueil-Securite.docx",
+  "DGS-QLT-005": "03_CHANTIERS/Qualite/DGS-QLT-005-PV-Controle-Qualite.docx",
+  "DGS-QLT-006": "03_CHANTIERS/Qualite/DGS-QLT-006-PV-Controle-Beton.docx",
+  "DGS-CHT-017": "03_CHANTIERS/Non_Conformites/DGS-CHT-017-Registre-Non-Conformites.docx",
+  "DGS-PV-020": "03_CHANTIERS/Non_Conformites/DGS-PV-020-PV-Non-Conformite.docx",
+  "DGS-QLT-003": "03_CHANTIERS/Non_Conformites/DGS-QLT-003-PV-Refus-Materiaux.docx",
+  "DGS-PRO-001": "08_PROMOTION_IMMOBILIERE/01_Etudes_Et_Validation/DGS-PRO-001-PV-Validation-Une-Operation-Immobiliere.docx",
+  "DGS-PRO-002": "08_PROMOTION_IMMOBILIERE/01_Etudes_Et_Validation/DGS-PRO-002-PV-Validation-Terrain.docx",
+  "DGS-PRO-003": "08_PROMOTION_IMMOBILIERE/01_Etudes_Et_Validation/DGS-PRO-003-PV-Validation-Programme.docx",
+  "DGS-PRO-004": "08_PROMOTION_IMMOBILIERE/01_Etudes_Et_Validation/DGS-PRO-004-PV-Validation-Etude-Faisabilite.docx",
+  "DGS-PRO-005": "08_PROMOTION_IMMOBILIERE/01_Etudes_Et_Validation/DGS-PRO-005-PV-Validation-Budget.docx",
+  "DGS-PRO-006": "08_PROMOTION_IMMOBILIERE/02_Financement_Et_Lancement/DGS-PRO-006-PV-Validation-Financement.docx",
+  "DGS-PRO-007": "08_PROMOTION_IMMOBILIERE/02_Financement_Et_Lancement/DGS-PRO-007-PV-Lancement-Operation.docx",
+  "DGS-PRO-008": "08_PROMOTION_IMMOBILIERE/03_Suivi_Operation/DGS-PRO-008-PV-Suivi-Operation.docx",
+  "DGS-PRO-009": "08_PROMOTION_IMMOBILIERE/04_Livraison_Et_Remise_Cles/DGS-PRO-009-PV-Reception-Promotion.docx",
+  "DGS-PRO-010": "08_PROMOTION_IMMOBILIERE/04_Livraison_Et_Remise_Cles/DGS-PRO-010-PV-Livraison-Logements.docx",
+  "DGS-PRO-011": "08_PROMOTION_IMMOBILIERE/04_Livraison_Et_Remise_Cles/DGS-PRO-011-PV-Remise-Cles-Promotion.docx",
+  "DGS-SYS-001": "09_MODELES_MASTER/DGS-SYS-001-Master-Document-Template.docx",
+  "DGS-ST-001": "05_SOUS_TRAITANTS/01_Selection_Et_Contrat/DGS-ST-001-Fiche-Sous-Traitant.docx",
+  "DGS-ST-002": "05_SOUS_TRAITANTS/01_Selection_Et_Contrat/DGS-ST-002-Contrat-Sous-Traitance.docx",
+  "DGS-ST-003": "05_SOUS_TRAITANTS/01_Selection_Et_Contrat/DGS-ST-003-PV-Selection-Sous-Traitant.docx",
+  "DGS-ST-004": "05_SOUS_TRAITANTS/02_Execution_Et_Controle/DGS-ST-004-PV-Demarrage-Sous-Traitance.docx",
+  "DGS-ST-005": "05_SOUS_TRAITANTS/02_Execution_Et_Controle/DGS-ST-005-PV-Reception-Travaux-Sous-Traitant.docx",
+  "DGS-ST-006": "05_SOUS_TRAITANTS/02_Execution_Et_Controle/DGS-ST-006-PV-Controle-Sous-Traitant.docx",
+  "DGS-ST-007": "05_SOUS_TRAITANTS/03_Litiges_Et_Fin_Prestation/DGS-ST-007-PV-Non-Conformite-Sous-Traitant.docx",
+  "DGS-ST-008": "05_SOUS_TRAITANTS/03_Litiges_Et_Fin_Prestation/DGS-ST-008-PV-Fin-Prestation.docx",
+  "DGS-FOU-001": "04_FOURNISSEURS/01_Selection_Et_Referencement/DGS-FOU-001-Fiche-Fournisseur.docx",
+  "DGS-FOU-002": "04_FOURNISSEURS/01_Selection_Et_Referencement/DGS-FOU-002-Fiche-Referencement-Fournisseur.docx",
+  "DGS-FOU-003": "04_FOURNISSEURS/01_Selection_Et_Referencement/DGS-FOU-003-Fiche-Evaluation-Fournisseur.docx",
+  "DGS-FOU-004": "04_FOURNISSEURS/01_Selection_Et_Referencement/DGS-FOU-004-PV-Selection-Fournisseur.docx",
+  "DGS-FOU-005": "04_FOURNISSEURS/02_Commandes_Et_Livraisons/DGS-FOU-005-PV-Reception-Commande.docx",
+  "DGS-FOU-006": "04_FOURNISSEURS/02_Commandes_Et_Livraisons/DGS-FOU-006-PV-Controle-Livraison.docx",
+  "DGS-FOU-007": "04_FOURNISSEURS/03_Litiges_Retours_Resiliation/DGS-FOU-007-PV-Non-Conformite-Fournisseur.docx",
+  "DGS-FOU-008": "04_FOURNISSEURS/03_Litiges_Retours_Resiliation/DGS-FOU-008-PV-Retour-Fournisseur.docx",
+  "DGS-FOU-009": "04_FOURNISSEURS/03_Litiges_Retours_Resiliation/DGS-FOU-009-PV-Resiliation-Fournisseur.docx",
+  "DGS-ADM-001": "01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-001-Decision-Associe-Unique.docx",
+  "DGS-ADM-002": "01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-002-Decision-Nomination-Gerant.docx",
+  "DGS-ADM-003": "01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-003-Decision-Renouvellement-Gerant.docx",
+  "DGS-ADM-004": "01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-004-Decision-Remuneration-Gerant.docx",
+  "DGS-ADM-005": "01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-005-Decision-Modification-Statuts.docx",
+  "DGS-ADM-006": "01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-006-Decision-Transfert-Siege.docx",
+  "DGS-ADM-007": "01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-007-Decision-Extension-Activite.docx",
+  "DGS-FIN-001": "01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-001-Decision-Investissement.docx",
+  "DGS-FIN-002": "01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-002-Decision-Acquisition-Un-Bien.docx",
+  "DGS-FIN-003": "01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-003-Decision-Cession-Un-Bien.docx",
+  "DGS-FIN-004": "01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-004-Decision-Autorisation-Emprunt.docx",
+  "DGS-FIN-005": "01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-005-Decision-Autorisation-Credit.docx",
+  "DGS-FIN-006": "01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-006-Decision-Affectation-Resultat.docx",
+  "DGS-FIN-007": "01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-007-Decision-Approbation-Comptes.docx",
+  "DGS-MAR-003": "10_MARCHES_PUBLICS/02_Visite_Et_Eclaircissements/DGS-MAR-003-PV-Visite-Site-Appel-Offres.docx",
+  "DGS-MAR-005": "10_MARCHES_PUBLICS/02_Visite_Et_Eclaircissements/DGS-MAR-005-Lettre-Demande-Eclaircissements.docx",
+  "DGS-MAR-089": "10_MARCHES_PUBLICS/02_Visite_Et_Eclaircissements/DGS-MAR-089-Lettre-Demande-Report-Date-Depot-Offres.docx",
+  "DGS-MAR-105": "10_MARCHES_PUBLICS/02_Visite_Et_Eclaircissements/DGS-MAR-105-Attestation-Visite-Lieux.docx",
+  "DGS-MAR-010": "10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-010-Declaration-Candidature.docx",
+  "DGS-MAR-011": "10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-011-Declaration-Probite.docx",
+  "DGS-MAR-016": "10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-016-Declaration-Sur-Honneur-Fiscale-Parafiscale-Et-Sociale.docx",
+  "DGS-MAR-024": "10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-024-Declaration-Non-Exclusion-Marches-Publics.docx",
+  "DGS-MAR-025": "10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-025-Declaration-Absence-Conflit-Interets.docx",
+  "DGS-MAR-026": "10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-026-Declaration-Preference-Nationale.docx",
+  "DGS-MAR-064": "10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-064-Decompte-Definitif.docx",
+  "DGS-MAR-067": "10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-067-Demande-Reception-Provisoire-Travaux.docx",
+  "DGS-MAR-101": "10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-101-Demande-Reception-Definitive-Travaux.docx",
+  "DGS-MAR-102": "10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-102-Tableau-Suivi-Reserves-Marche.docx",
+  "DGS-MAR-103": "10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-103-Demande-Certificat-Bonne-Execution-Marche.docx",
+  "DGS-MAR-104": "10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-104-Fiche-Cloture-Dossier-Marche.docx",
+  "DGS-MAR-090": "10_MARCHES_PUBLICS/12_Procedures_Simplifiees/DGS-MAR-090-Lettre-Reponse-Consultation.docx",
+  "DGS-MAR-091": "10_MARCHES_PUBLICS/12_Procedures_Simplifiees/DGS-MAR-091-Facture-Proforma.docx",
+  "DGS-MAR-092": "10_MARCHES_PUBLICS/12_Procedures_Simplifiees/DGS-MAR-092-Accuse-Reception-Bon-Commande.docx",
+  "DGS-MAR-093": "10_MARCHES_PUBLICS/12_Procedures_Simplifiees/DGS-MAR-093-Bon-Livraison-Service-Contractant.docx",
+  "DGS-MAR-001": "10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-001-Fiche-Veille-Et-Decision-Soumission.docx",
+  "DGS-MAR-002": "10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-002-Fiche-Retrait-Cahier-Charges-Et-Calendrier.docx",
+  "DGS-MAR-006": "10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-006-Tableau-Suivi-Soumissions.docx",
+  "DGS-MAR-008": "10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-008-Fiche-Analyse-Cahier-Charges.docx",
+  "DGS-MAR-009": "10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-009-Lettre-Demande-Cahier-Charges.docx",
+  "DGS-MAR-084": "10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-084-Lettre-Renonciation-Soumissionner.docx",
+  "DGS-MAR-050": "10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-050-Demande-Emission-Caution-Bancaire.docx",
+  "DGS-MAR-051": "10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-051-Tableau-Suivi-Cautions-Et-Garanties.docx",
+  "DGS-MAR-052": "10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-052-Demande-Mainlevee-Caution.docx",
+  "DGS-MAR-053": "10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-053-Demande-Prorogation-Caution.docx",
+  "DGS-MAR-054": "10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-054-Fiche-Determination-Garanties-Marche.docx",
+  "DGS-MAR-055": "10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-055-Demande-Substitution-Retenue-Garantie-Caution.docx",
+  "DGS-MAR-056": "10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-056-Demande-Restitution-Retenue-Garantie.docx",
+  "DGS-MAR-106": "10_MARCHES_PUBLICS/00_Guide/DGS-MAR-106-Guide-Parcours-Appel-Offres.docx",
+  "DGS-MAR-012": "10_MARCHES_PUBLICS/04_Candidature_Pouvoirs_Groupement/DGS-MAR-012-Declaration-Sous-Traitant.docx",
+  "DGS-MAR-013": "10_MARCHES_PUBLICS/04_Candidature_Pouvoirs_Groupement/DGS-MAR-013-Accord-Groupement-Momentane-Entreprises.docx",
+  "DGS-MAR-014": "10_MARCHES_PUBLICS/04_Candidature_Pouvoirs_Groupement/DGS-MAR-014-Procuration-Pour-Depot-Et-Signature-Offre.docx",
+  "DGS-MAR-062": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-062-Demande-Avance.docx",
+  "DGS-MAR-063": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-063-Situation-Travaux-Decompte-Provisoire.docx",
+  "DGS-MAR-065": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-065-Demande-Prorogation-Delai.docx",
+  "DGS-MAR-066": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-066-Demande-Avenant-Au-Marche.docx",
+  "DGS-MAR-068": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-068-Memoire-Reclamation.docx",
+  "DGS-MAR-069": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-069-Lettre-Relance-Paiement-Au-Service-Contractant.docx",
+  "DGS-MAR-095": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-095-Lettre-Reserves-Entrepreneur.docx",
+  "DGS-MAR-096": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-096-Demande-Revision-Prix.docx",
+  "DGS-MAR-097": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-097-Demande-Interets-Moratoires.docx",
+  "DGS-MAR-098": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-098-Demande-Suspension-Travaux.docx",
+  "DGS-MAR-099": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-099-Tableau-Bord-Suivi-Execution-Marche.docx",
+  "DGS-MAR-100": "10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-100-Registre-Correspondances-Ordres-Service-Marche.docx",
+  "DGS-MAR-004": "10_MARCHES_PUBLICS/10_Depot_Et_Controle/DGS-MAR-004-Liste-Controle-Dossier-Soumission.docx",
+  "DGS-MAR-070": "10_MARCHES_PUBLICS/10_Depot_Et_Controle/DGS-MAR-070-Page-Garde-Dossier-Soumission.docx",
+  "DGS-MAR-071": "10_MARCHES_PUBLICS/10_Depot_Et_Controle/DGS-MAR-071-Modele-Etiquettes-Enveloppes.docx",
+  "DGS-MAR-072": "10_MARCHES_PUBLICS/10_Depot_Et_Controle/DGS-MAR-072-Bordereau-Depot-Dossier-Soumission.docx",
+  "DGS-MAR-073": "10_MARCHES_PUBLICS/10_Depot_Et_Controle/DGS-MAR-073-Lettre-Retrait-Ou-Modification-Offre.docx",
+  "DGS-MAR-060": "10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-060-Bordereau-Pieces-Justificatives-Attributaire.docx",
+  "DGS-MAR-061": "10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-061-Accuse-Reception-Ordre-Service-Demarrage.docx",
+  "DGS-MAR-079": "10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-079-Lettre-Acceptation-Attribution-Provisoire.docx",
+  "DGS-MAR-080": "10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-080-Fiche-Lancement-Marche.docx",
+  "DGS-MAR-081": "10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-081-Lettre-Designation-Representant-Entreprise.docx",
+  "DGS-MAR-082": "10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-082-Lettre-Transmission-Attestations-Assurance.docx",
+  "DGS-MAR-083": "10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-083-Programme-Execution-Travaux.docx",
+  "DGS-MAR-094": "10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-094-Lettre-Rappel-Ordre-Service-Demarrage.docx",
+  "DGS-MAR-040": "10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-040-Lettre-Soumission.docx",
+  "DGS-MAR-041": "10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-041-Bordereau-Prix-Unitaires.docx",
+  "DGS-MAR-042": "10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-042-Detail-Quantitatif-Et-Estimatif.docx",
+  "DGS-MAR-043": "10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-043-Sous-Detail-Prix-Unitaires.docx",
+  "DGS-MAR-044": "10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-044-Decomposition-Prix-Global-Et-Forfaitaire.docx",
+  "DGS-MAR-046": "10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-046-Recapitulatif-Lots-Montant-Global-Offre.docx",
+  "DGS-MAR-047": "10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-047-Echeancier-Previsionnel-Facturation.docx",
+  "DGS-MAR-048": "10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-048-Fiche-Determination-Coefficient-Vente.docx",
+  "DGS-MAR-049": "10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-049-Fiche-Verification-Arithmetique-Offre-Financiere.docx",
+  "DGS-MAR-085": "10_MARCHES_PUBLICS/06_Pieces_Administratives/DGS-MAR-085-Registre-Pieces-Administratives-Validite.docx",
+  "DGS-MAR-086": "10_MARCHES_PUBLICS/06_Pieces_Administratives/DGS-MAR-086-Lettre-Demande-Attestations-Administratives.docx",
+  "DGS-MAR-087": "10_MARCHES_PUBLICS/06_Pieces_Administratives/DGS-MAR-087-Demande-Attestation-Bancaire-Capacite-Financiere.docx",
+  "DGS-MAR-088": "10_MARCHES_PUBLICS/06_Pieces_Administratives/DGS-MAR-088-Sommaire-Dossier-Candidature.docx",
+  "DGS-MAR-030": "10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-030-Declaration-Souscrire.docx",
+  "DGS-MAR-031": "10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-031-Memoire-Technique-Justificatif.docx",
+  "DGS-MAR-032": "10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-032-Planning-Detaille-Travaux.docx",
+  "DGS-MAR-033": "10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-033-Fiche-Installation-Chantier.docx",
+  "DGS-MAR-034": "10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-034-Liste-Materiaux-Et-Fournitures-Proposes.docx",
+  "DGS-MAR-035": "10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-035-Plan-Qualite-Chantier.docx",
+  "DGS-MAR-036": "10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-036-Plan-HSE-Chantier.docx",
+  "DGS-MAR-037": "10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-037-Feuille-Acceptation-Cahier-Charges.docx",
+  "DGS-MAR-038": "10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-038-Organigramme-Equipe-Chantier.docx",
+  "DGS-MAR-039": "10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-039-Plan-Gestion-Environnementale-Dechets-Chantier.docx",
+  "DGS-MAR-007": "10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-007-Lettre-Recours-Contre-Resultat-Appel-Offres.docx",
+  "DGS-MAR-074": "10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-074-Lettre-Prolongation-Validite-Offre.docx",
+  "DGS-MAR-075": "10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-075-Fiche-Suivi-Seance-Ouverture-Plis.docx",
+  "DGS-MAR-076": "10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-076-Lettre-Reponse-Demande-Complement-Dossier.docx",
+  "DGS-MAR-077": "10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-077-Lettre-Demande-Communication-Resultats-Evaluation.docx",
+  "DGS-MAR-078": "10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-078-Fiche-Analyse-Resultat-Retour-Experience.docx",
+  "DGS-MAR-015": "10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-015-Fiche-Renseignements-Soumissionnaire.docx",
+  "DGS-MAR-017": "10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-017-Fiche-References-Professionnelles.docx",
+  "DGS-MAR-018": "10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-018-Demande-Attestation-Bonne-Execution.docx",
+  "DGS-MAR-019": "10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-019-Fiche-Moyens-Humains.docx",
+  "DGS-MAR-020": "10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-020-Curriculum-Vitae-Personnel-Encadrement.docx",
+  "DGS-MAR-021": "10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-021-Fiche-Moyens-Materiels.docx",
+  "DGS-MAR-022": "10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-022-Fiche-Situation-Financiere.docx",
+  "DGS-MAR-023": "10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-023-Plan-Charges-Entreprise.docx",
+  "DGS-MAR-027": "10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-027-Fiche-Qualification-Classification-Professionnelle.docx",
+  "DGS-MAR-028": "10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-028-Fiche-Assurances-Entreprise.docx",
+  "DGS-MAR-029": "10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-029-Fiche-Detaillee-Reference-Marche.docx",
+  "DGS-PER-001": "06_PERSONNEL/01_Dossier_Salarie/DGS-PER-001-Fiche-Salarie.docx",
+  "DGS-PER-002": "06_PERSONNEL/02_Prise_Fonction_Et_Passation/DGS-PER-002-PV-Prise-Fonction.docx",
+  "DGS-PER-003": "06_PERSONNEL/03_Remise_Et_Restitution_Materiel/DGS-PER-003-PV-Remise-Materiel.docx",
+  "DGS-PER-004": "06_PERSONNEL/03_Remise_Et_Restitution_Materiel/DGS-PER-004-PV-Remise-Vehicule.docx",
+  "DGS-PER-005": "06_PERSONNEL/03_Remise_Et_Restitution_Materiel/DGS-PER-005-PV-Restitution-Materiel.docx",
+  "DGS-PER-006": "06_PERSONNEL/04_Formation_Et_HSE/DGS-PER-006-PV-Formation.docx",
+  "DGS-PER-007": "06_PERSONNEL/04_Formation_Et_HSE/DGS-PER-007-PV-Sensibilisation-HSE.docx",
+  "DGS-PER-008": "06_PERSONNEL/02_Prise_Fonction_Et_Passation/DGS-PER-008-PV-Passation-Service.docx",
+  "DGS-PER-009": "06_PERSONNEL/01_Dossier_Salarie/DGS-PER-009-Contrat-Travail-Duree-Indeterminee.docx",
+  "DGS-PER-010": "06_PERSONNEL/01_Dossier_Salarie/DGS-PER-010-Contrat-Travail-Duree-Determinee.docx",
+  "DGS-PER-011": "06_PERSONNEL/05_Absences_Missions_Attestations/DGS-PER-011-Attestation-Travail.docx",
+  "DGS-PER-012": "06_PERSONNEL/05_Absences_Missions_Attestations/DGS-PER-012-Demande-Conge-Ou-Absence.docx",
+  "DGS-PER-013": "06_PERSONNEL/01_Dossier_Salarie/DGS-PER-013-Fiche-Poste.docx",
+  "DGS-PER-014": "06_PERSONNEL/01_Dossier_Salarie/DGS-PER-014-Reglement-Interieur.docx",
+  "DGS-PER-015": "06_PERSONNEL/05_Absences_Missions_Attestations/DGS-PER-015-Ordre-Mission.docx",
+  "DGS-PER-016": "06_PERSONNEL/06_Depart_Et_Solde/DGS-PER-016-Recu-Pour-Solde-Tout-Compte.docx"
+ },
+ "catalog": {
+  "DGS-MAT-001": [
+   {
+    "text": "[MARQUE ET MODÈLE]",
+    "key": "MARQUE_ET_MODELE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU VENDEUR]",
+    "key": "NOM_DU_VENDEUR",
+    "count": 1
+   },
+   {
+    "text": "[N° D’IMMATRICULATION]",
+    "key": "N_D_IMMATRICULATION",
+    "count": 1
+   }
+  ],
+  "DGS-MAT-002": [
+   {
+    "text": "[MARQUE ET MODÈLE]",
+    "key": "MARQUE_ET_MODELE",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET FONCTION]",
+    "key": "NOM_ET_FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[N° D’IMMATRICULATION]",
+    "key": "N_D_IMMATRICULATION",
+    "count": 1
+   }
+  ],
+  "DGS-MAT-003": [
+   {
+    "text": "[MARQUE ET MODÈLE]",
+    "key": "MARQUE_ET_MODELE",
+    "count": 1
+   },
+   {
+    "text": "[N° D’IMMATRICULATION]",
+    "key": "N_D_IMMATRICULATION",
+    "count": 1
+   }
+  ],
+  "DGS-MAT-004": [
+   {
+    "text": "[MARQUE ET MODÈLE]",
+    "key": "MARQUE_ET_MODELE",
+    "count": 1
+   },
+   {
+    "text": "[N° D’IMMATRICULATION]",
+    "key": "N_D_IMMATRICULATION",
+    "count": 1
+   }
+  ],
+  "DGS-MAT-005": [
+   {
+    "text": "[MARQUE ET MODÈLE]",
+    "key": "MARQUE_ET_MODELE",
+    "count": 1
+   },
+   {
+    "text": "[N° D’IMMATRICULATION]",
+    "key": "N_D_IMMATRICULATION",
+    "count": 1
+   }
+  ],
+  "DGS-MAT-006": [
+   {
+    "text": "[DÉSIGNATION]",
+    "key": "DESIGNATION",
+    "count": 1
+   }
+  ],
+  "DGS-MAT-007": [
+   {
+    "text": "[DÉSIGNATION]",
+    "key": "DESIGNATION",
+    "count": 1
+   }
+  ],
+  "DGS-MAT-008": [
+   {
+    "text": "[DÉSIGNATION ET RÉFÉRENCE]",
+    "key": "DESIGNATION_ET_REFERENCE",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET FONCTION]",
+    "key": "NOM_ET_FONCTION",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-007": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[AUTRE LOT OU POSTE]",
+    "key": "AUTRE_LOT_OU_POSTE",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM / FONCTION]",
+    "key": "NOM_FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° DEVIS]",
+    "key": "N_DEVIS",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-008": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[DÉLAI]",
+    "key": "DELAI",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 2
+   },
+   {
+    "text": "[NOM / FONCTION]",
+    "key": "NOM_FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° DEVIS]",
+    "key": "N_DEVIS",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-009": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[DÉLAI]",
+    "key": "DELAI",
+    "count": 3
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° OFFRE]",
+    "key": "N_OFFRE",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[PRESTATION EXCLUE]",
+    "key": "PRESTATION_EXCLUE",
+    "count": 2
+   },
+   {
+    "text": "[PRESTATION INCLUSE]",
+    "key": "PRESTATION_INCLUSE",
+    "count": 2
+   },
+   {
+    "text": "[TVA]",
+    "key": "TVA",
+    "count": 1
+   },
+   {
+    "text": "[À COMPLÉTER — RIB]",
+    "key": "A_COMPLETER_RIB",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-010": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° BORDEREAU]",
+    "key": "N_BORDEREAU",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-011": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° CONTRAT / N° DEVIS / N° OFFRE]",
+    "key": "N_CONTRAT_N_DEVIS_N_OFFRE",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[À COMPLÉTER — RIB]",
+    "key": "A_COMPLETER_RIB",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-012": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[DATE DE DÉMARRAGE]",
+    "key": "DATE_DE_DEMARRAGE",
+    "count": 1
+   },
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 2
+   },
+   {
+    "text": "[DÉLAI]",
+    "key": "DELAI",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° DEVIS / N° OFFRE]",
+    "key": "N_DEVIS_N_OFFRE",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[TVA]",
+    "key": "TVA",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-019": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-020": [
+   {
+    "text": "[ADRESSE CLIENT]",
+    "key": "ADRESSE_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-025": [
+   {
+    "text": "[ADRESSE CLIENT]",
+    "key": "ADRESSE_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-015": [
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° CONTRAT / N° FACTURE]",
+    "key": "N_CONTRAT_N_FACTURE",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-016": [
+   {
+    "text": "[ADRESSE CLIENT]",
+    "key": "ADRESSE_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-017": [
+   {
+    "text": "[ADRESSE CLIENT]",
+    "key": "ADRESSE_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-014": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CON-010": [
+   {
+    "text": "[DÉNOMINATION]",
+    "key": "DENOMINATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-013": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-018": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-023": [
+   {
+    "text": "[ADRESSE CLIENT]",
+    "key": "ADRESSE_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[MESURE 1 — RESPONSABLE — ÉCHÉANCE]",
+    "key": "MESURE_1_RESPONSABLE_ECHEANCE",
+    "count": 1
+   },
+   {
+    "text": "[MESURE 2 — RESPONSABLE — ÉCHÉANCE]",
+    "key": "MESURE_2_RESPONSABLE_ECHEANCE",
+    "count": 1
+   },
+   {
+    "text": "[MESURE 3 — RESPONSABLE — ÉCHÉANCE]",
+    "key": "MESURE_3_RESPONSABLE_ECHEANCE",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-024": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-031": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-032": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-033": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-034": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-035": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-001": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-002": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-003": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-004": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-005": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-006": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-007": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-008": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-009": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-010": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-011": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-012": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-013": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-014": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-015": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-016": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-017": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-018": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-019": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-021": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-036": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-037": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-001": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° DOSSIER]",
+    "key": "N_DOSSIER",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-002": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-003": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-004": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-005": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-006": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE LA RÉUNION]",
+    "key": "OBJET_DE_LA_REUNION",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-021": [
+   {
+    "text": "[NATURE DES TRAVAUX]",
+    "key": "NATURE_DES_TRAVAUX",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-PV-022": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-023": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-024": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-025": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-026": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-027": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-028": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-029": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-030": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CLI-022": [
+   {
+    "text": "[ADRESSE CLIENT]",
+    "key": "ADRESSE_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CON-001": [
+   {
+    "text": "[DÉNOMINATION]",
+    "key": "DENOMINATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CON-002": [
+   {
+    "text": "[DÉNOMINATION]",
+    "key": "DENOMINATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CON-003": [
+   {
+    "text": "[DÉNOMINATION]",
+    "key": "DENOMINATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CON-004": [
+   {
+    "text": "[DÉNOMINATION]",
+    "key": "DENOMINATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CON-005": [
+   {
+    "text": "[DÉNOMINATION]",
+    "key": "DENOMINATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CON-006": [
+   {
+    "text": "[DÉNOMINATION]",
+    "key": "DENOMINATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CON-007": [
+   {
+    "text": "[DÉNOMINATION]",
+    "key": "DENOMINATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CON-008": [
+   {
+    "text": "[DÉNOMINATION]",
+    "key": "DENOMINATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-CON-009": [
+   {
+    "text": "[DÉNOMINATION]",
+    "key": "DENOMINATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   }
+  ],
+  "DGS-SYS-004": [],
+  "INDEX-DGS-DOCUMENTS.docx": [],
+  "README-DGS-DOCUMENT-SYSTEM.docx": [],
+  "DGS-CHT-001": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[DATE DE DÉMARRAGE]",
+    "key": "DATE_DE_DEMARRAGE",
+    "count": 1
+   },
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 3
+   },
+   {
+    "text": "[DÉLAI]",
+    "key": "DELAI",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 2
+   },
+   {
+    "text": "[NOM / FONCTION]",
+    "key": "NOM_FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 2
+   },
+   {
+    "text": "[N° CONTRAT]",
+    "key": "N_CONTRAT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[TVA]",
+    "key": "TVA",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-002": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-003": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-004": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-010": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-011": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-012": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-013": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-014": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-018": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-019": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-020": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-005": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-006": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-007": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-008": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-009": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-015": [
+   {
+    "text": "[INTITULÉ DU PROJET / N° PROJET]",
+    "key": "INTITULE_DU_PROJET_N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-016": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-QLT-001": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM FOURNISSEUR]",
+    "key": "NOM_FOURNISSEUR",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-QLT-002": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-QLT-004": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-HSE-001": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-HSE-002": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-HSE-003": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-HSE-004": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-HSE-005": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-HSE-006": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-QLT-005": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-QLT-006": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-CHT-017": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PV-020": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM CLIENT]",
+    "key": "NOM_CLIENT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-QLT-003": [
+   {
+    "text": "[ADRESSE DU CHANTIER]",
+    "key": "ADRESSE_DU_CHANTIER",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM FOURNISSEUR]",
+    "key": "NOM_FOURNISSEUR",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PRO-001": [
+   {
+    "text": "[ADRESSE DU TERRAIN OU DU PROGRAMME]",
+    "key": "ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DE L’OPÉRATION]",
+    "key": "INTITULE_DE_L_OPERATION",
+    "count": 1
+   },
+   {
+    "text": "[N° OPÉRATION]",
+    "key": "N_OPERATION",
+    "count": 1
+   }
+  ],
+  "DGS-PRO-002": [
+   {
+    "text": "[ADRESSE DU TERRAIN OU DU PROGRAMME]",
+    "key": "ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DE L’OPÉRATION]",
+    "key": "INTITULE_DE_L_OPERATION",
+    "count": 1
+   },
+   {
+    "text": "[N° OPÉRATION]",
+    "key": "N_OPERATION",
+    "count": 1
+   }
+  ],
+  "DGS-PRO-003": [
+   {
+    "text": "[ADRESSE DU TERRAIN OU DU PROGRAMME]",
+    "key": "ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DE L’OPÉRATION]",
+    "key": "INTITULE_DE_L_OPERATION",
+    "count": 1
+   },
+   {
+    "text": "[N° OPÉRATION]",
+    "key": "N_OPERATION",
+    "count": 1
+   }
+  ],
+  "DGS-PRO-004": [
+   {
+    "text": "[ADRESSE DU TERRAIN OU DU PROGRAMME]",
+    "key": "ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DE L’OPÉRATION]",
+    "key": "INTITULE_DE_L_OPERATION",
+    "count": 1
+   },
+   {
+    "text": "[N° OPÉRATION]",
+    "key": "N_OPERATION",
+    "count": 1
+   }
+  ],
+  "DGS-PRO-005": [
+   {
+    "text": "[ADRESSE DU TERRAIN OU DU PROGRAMME]",
+    "key": "ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DE L’OPÉRATION]",
+    "key": "INTITULE_DE_L_OPERATION",
+    "count": 1
+   },
+   {
+    "text": "[N° OPÉRATION]",
+    "key": "N_OPERATION",
+    "count": 1
+   }
+  ],
+  "DGS-PRO-006": [
+   {
+    "text": "[ADRESSE DU TERRAIN OU DU PROGRAMME]",
+    "key": "ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DE L’OPÉRATION]",
+    "key": "INTITULE_DE_L_OPERATION",
+    "count": 1
+   },
+   {
+    "text": "[N° OPÉRATION]",
+    "key": "N_OPERATION",
+    "count": 1
+   }
+  ],
+  "DGS-PRO-007": [
+   {
+    "text": "[ADRESSE DU TERRAIN OU DU PROGRAMME]",
+    "key": "ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DE L’OPÉRATION]",
+    "key": "INTITULE_DE_L_OPERATION",
+    "count": 1
+   },
+   {
+    "text": "[N° OPÉRATION]",
+    "key": "N_OPERATION",
+    "count": 1
+   }
+  ],
+  "DGS-PRO-008": [
+   {
+    "text": "[ADRESSE DU TERRAIN OU DU PROGRAMME]",
+    "key": "ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DE L’OPÉRATION]",
+    "key": "INTITULE_DE_L_OPERATION",
+    "count": 1
+   },
+   {
+    "text": "[N° OPÉRATION]",
+    "key": "N_OPERATION",
+    "count": 1
+   }
+  ],
+  "DGS-PRO-009": [
+   {
+    "text": "[ADRESSE DU TERRAIN OU DU PROGRAMME]",
+    "key": "ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DE L’OPÉRATION]",
+    "key": "INTITULE_DE_L_OPERATION",
+    "count": 1
+   },
+   {
+    "text": "[N° OPÉRATION]",
+    "key": "N_OPERATION",
+    "count": 1
+   }
+  ],
+  "DGS-PRO-010": [
+   {
+    "text": "[INTITULÉ DE L’OPÉRATION]",
+    "key": "INTITULE_DE_L_OPERATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DE L’ACQUÉREUR]",
+    "key": "NOM_ET_PRENOM_DE_L_ACQUEREUR",
+    "count": 1
+   },
+   {
+    "text": "[N° CONTRAT]",
+    "key": "N_CONTRAT",
+    "count": 1
+   },
+   {
+    "text": "[N° DE LOT]",
+    "key": "N_DE_LOT",
+    "count": 1
+   }
+  ],
+  "DGS-PRO-011": [
+   {
+    "text": "[INTITULÉ DE L’OPÉRATION]",
+    "key": "INTITULE_DE_L_OPERATION",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DE L’ACQUÉREUR]",
+    "key": "NOM_ET_PRENOM_DE_L_ACQUEREUR",
+    "count": 1
+   },
+   {
+    "text": "[N° DE LOT]",
+    "key": "N_DE_LOT",
+    "count": 1
+   }
+  ],
+  "DGS-SYS-001": [
+   {
+    "text": "[Deuxième élément]",
+    "key": "DEUXIEME_ELEMENT",
+    "count": 1
+   },
+   {
+    "text": "[Intitulé de la deuxième rubrique]",
+    "key": "INTITULE_DE_LA_DEUXIEME_RUBRIQUE",
+    "count": 1
+   },
+   {
+    "text": "[Intitulé de la première rubrique]",
+    "key": "INTITULE_DE_LA_PREMIERE_RUBRIQUE",
+    "count": 1
+   },
+   {
+    "text": "[Intitulé de la troisième rubrique]",
+    "key": "INTITULE_DE_LA_TROISIEME_RUBRIQUE",
+    "count": 1
+   },
+   {
+    "text": "[Introduction de la liste :]",
+    "key": "INTRODUCTION_DE_LA_LISTE",
+    "count": 1
+   },
+   {
+    "text": "[Poste 1]",
+    "key": "POSTE_1",
+    "count": 1
+   },
+   {
+    "text": "[Poste 2]",
+    "key": "POSTE_2",
+    "count": 1
+   },
+   {
+    "text": "[Poste 3]",
+    "key": "POSTE_3",
+    "count": 1
+   },
+   {
+    "text": "[Premier élément]",
+    "key": "PREMIER_ELEMENT",
+    "count": 1
+   },
+   {
+    "text": "[Sous-titre ou objet du document]",
+    "key": "SOUS_TITRE_OU_OBJET_DU_DOCUMENT",
+    "count": 1
+   },
+   {
+    "text": "[TITRE DU DOCUMENT]",
+    "key": "TITRE_DU_DOCUMENT",
+    "count": 1
+   },
+   {
+    "text": "[Troisième élément]",
+    "key": "TROISIEME_ELEMENT",
+    "count": 1
+   },
+   {
+    "text": "[Élément ou donnée principale : valeur]",
+    "key": "ELEMENT_OU_DONNEE_PRINCIPALE_VALEUR",
+    "count": 1
+   }
+  ],
+  "DGS-ST-001": [],
+  "DGS-ST-002": [
+   {
+    "text": "[DÉNOMINATION DU SOUS-TRAITANT]",
+    "key": "DENOMINATION_DU_SOUS_TRAITANT",
+    "count": 1
+   }
+  ],
+  "DGS-ST-003": [
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[LOT]",
+    "key": "LOT",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-ST-004": [
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM SOUS-TRAITANT]",
+    "key": "NOM_SOUS_TRAITANT",
+    "count": 1
+   },
+   {
+    "text": "[N° CONTRAT ST]",
+    "key": "N_CONTRAT_ST",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-ST-005": [
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM SOUS-TRAITANT]",
+    "key": "NOM_SOUS_TRAITANT",
+    "count": 1
+   },
+   {
+    "text": "[N° CONTRAT ST]",
+    "key": "N_CONTRAT_ST",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-ST-006": [
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM SOUS-TRAITANT]",
+    "key": "NOM_SOUS_TRAITANT",
+    "count": 1
+   },
+   {
+    "text": "[N° CONTRAT ST]",
+    "key": "N_CONTRAT_ST",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-ST-007": [
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM SOUS-TRAITANT]",
+    "key": "NOM_SOUS_TRAITANT",
+    "count": 1
+   },
+   {
+    "text": "[N° CONTRAT ST]",
+    "key": "N_CONTRAT_ST",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-ST-008": [
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM SOUS-TRAITANT]",
+    "key": "NOM_SOUS_TRAITANT",
+    "count": 1
+   },
+   {
+    "text": "[N° CONTRAT ST]",
+    "key": "N_CONTRAT_ST",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-FOU-001": [],
+  "DGS-FOU-002": [
+   {
+    "text": "[ADRESSE FOURNISSEUR]",
+    "key": "ADRESSE_FOURNISSEUR",
+    "count": 1
+   },
+   {
+    "text": "[NOM FOURNISSEUR]",
+    "key": "NOM_FOURNISSEUR",
+    "count": 1
+   }
+  ],
+  "DGS-FOU-003": [
+   {
+    "text": "[NOM FOURNISSEUR]",
+    "key": "NOM_FOURNISSEUR",
+    "count": 1
+   }
+  ],
+  "DGS-FOU-004": [
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[N° PROJET]",
+    "key": "N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-FOU-005": [
+   {
+    "text": "[ADRESSE FOURNISSEUR]",
+    "key": "ADRESSE_FOURNISSEUR",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET / N° PROJET]",
+    "key": "INTITULE_DU_PROJET_N_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM FOURNISSEUR]",
+    "key": "NOM_FOURNISSEUR",
+    "count": 1
+   }
+  ],
+  "DGS-FOU-006": [
+   {
+    "text": "[ADRESSE FOURNISSEUR]",
+    "key": "ADRESSE_FOURNISSEUR",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET / N° PROJET]",
+    "key": "INTITULE_DU_PROJET_N_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM FOURNISSEUR]",
+    "key": "NOM_FOURNISSEUR",
+    "count": 1
+   }
+  ],
+  "DGS-FOU-007": [
+   {
+    "text": "[ADRESSE FOURNISSEUR]",
+    "key": "ADRESSE_FOURNISSEUR",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET / N° PROJET]",
+    "key": "INTITULE_DU_PROJET_N_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM FOURNISSEUR]",
+    "key": "NOM_FOURNISSEUR",
+    "count": 1
+   }
+  ],
+  "DGS-FOU-008": [
+   {
+    "text": "[ADRESSE FOURNISSEUR]",
+    "key": "ADRESSE_FOURNISSEUR",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET / N° PROJET]",
+    "key": "INTITULE_DU_PROJET_N_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[NOM FOURNISSEUR]",
+    "key": "NOM_FOURNISSEUR",
+    "count": 1
+   }
+  ],
+  "DGS-FOU-009": [
+   {
+    "text": "[NOM FOURNISSEUR]",
+    "key": "NOM_FOURNISSEUR",
+    "count": 1
+   },
+   {
+    "text": "[N° CONTRAT / ACCORD]",
+    "key": "N_CONTRAT_ACCORD",
+    "count": 1
+   }
+  ],
+  "DGS-ADM-001": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   },
+   {
+    "text": "[Texte de la décision, précis et limité à un seul objet.]",
+    "key": "TEXTE_DE_LA_DECISION_PRECIS_ET_LIMITE_A_UN_SEUL_OBJET",
+    "count": 1
+   }
+  ],
+  "DGS-ADM-002": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU GÉRANT]",
+    "key": "NOM_ET_PRENOM_DU_GERANT",
+    "count": 1
+   }
+  ],
+  "DGS-ADM-003": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU GÉRANT]",
+    "key": "NOM_ET_PRENOM_DU_GERANT",
+    "count": 2
+   }
+  ],
+  "DGS-ADM-004": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU GÉRANT]",
+    "key": "NOM_ET_PRENOM_DU_GERANT",
+    "count": 1
+   }
+  ],
+  "DGS-ADM-005": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   }
+  ],
+  "DGS-ADM-006": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   }
+  ],
+  "DGS-ADM-007": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   }
+  ],
+  "DGS-FIN-001": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   }
+  ],
+  "DGS-FIN-002": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   }
+  ],
+  "DGS-FIN-003": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   }
+  ],
+  "DGS-FIN-004": [
+   {
+    "text": "[DURÉE]",
+    "key": "DUREE",
+    "count": 1
+   },
+   {
+    "text": "[MONTANT]",
+    "key": "MONTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   },
+   {
+    "text": "[PÉRIODICITÉ]",
+    "key": "PERIODICITE",
+    "count": 1
+   },
+   {
+    "text": "[TAUX]",
+    "key": "TAUX",
+    "count": 1
+   }
+  ],
+  "DGS-FIN-005": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   }
+  ],
+  "DGS-FIN-006": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   }
+  ],
+  "DGS-FIN-007": [
+   {
+    "text": "[NOM ET PRÉNOM DE L’ASSOCIÉ UNIQUE]",
+    "key": "NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-003": [
+   {
+    "text": "[ADRESSE DU SITE]",
+    "key": "ADRESSE_DU_SITE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-005": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-089": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-105": [
+   {
+    "text": "[ADRESSE DU SITE]",
+    "key": "ADRESSE_DU_SITE",
+    "count": 1
+   },
+   {
+    "text": "[DÉSIGNATION DU SITE]",
+    "key": "DESIGNATION_DU_SITE",
+    "count": 1
+   },
+   {
+    "text": "[FONCTION]",
+    "key": "FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU MANDATAIRE]",
+    "key": "NOM_ET_PRENOM_DU_MANDATAIRE",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-010": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-011": [
+   {
+    "text": "[NOM DU GÉRANT]",
+    "key": "NOM_DU_GERANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-016": [],
+  "DGS-MAR-024": [
+   {
+    "text": "[NOM DU GÉRANT]",
+    "key": "NOM_DU_GERANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-025": [
+   {
+    "text": "[NOM DU GÉRANT]",
+    "key": "NOM_DU_GERANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-026": [
+   {
+    "text": "[NOM DU GÉRANT]",
+    "key": "NOM_DU_GERANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-064": [
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ]",
+    "key": "N_MARCHE",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DU MARCHÉ]",
+    "key": "OBJET_DU_MARCHE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-067": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-101": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-102": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ]",
+    "key": "N_MARCHE",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DU MARCHÉ]",
+    "key": "OBJET_DU_MARCHE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-103": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-104": [
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[DURÉE]",
+    "key": "DUREE",
+    "count": 1
+   },
+   {
+    "text": "[EMPLACEMENT]",
+    "key": "EMPLACEMENT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ]",
+    "key": "N_MARCHE",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DU MARCHÉ]",
+    "key": "OBJET_DU_MARCHE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-090": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[CONDITIONS DE PAIEMENT]",
+    "key": "CONDITIONS_DE_PAIEMENT",
+    "count": 1
+   },
+   {
+    "text": "[DURÉE]",
+    "key": "DUREE",
+    "count": 1
+   },
+   {
+    "text": "[DÉLAI]",
+    "key": "DELAI",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-091": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[CONDITIONS DE PAIEMENT]",
+    "key": "CONDITIONS_DE_PAIEMENT",
+    "count": 1
+   },
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[DURÉE]",
+    "key": "DUREE",
+    "count": 1
+   },
+   {
+    "text": "[DÉLAI]",
+    "key": "DELAI",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° CONSULTATION / N° BON DE COMMANDE]",
+    "key": "N_CONSULTATION_N_BON_DE_COMMANDE",
+    "count": 1
+   },
+   {
+    "text": "[N° DEVIS / N° OFFRE]",
+    "key": "N_DEVIS_N_OFFRE",
+    "count": 1
+   },
+   {
+    "text": "[À COMPLÉTER — RIB]",
+    "key": "A_COMPLETER_RIB",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-092": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-093": [
+   {
+    "text": "[ADRESSE DU SITE]",
+    "key": "ADRESSE_DU_SITE",
+    "count": 1
+   },
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET FONCTION]",
+    "key": "NOM_ET_FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[N° BORDEREAU]",
+    "key": "N_BORDEREAU",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ]",
+    "key": "N_MARCHE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-001": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-002": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-006": [],
+  "DGS-MAR-008": [
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 2
+   },
+   {
+    "text": "[DURÉE]",
+    "key": "DUREE",
+    "count": 1
+   },
+   {
+    "text": "[DÉLAI]",
+    "key": "DELAI",
+    "count": 1
+   },
+   {
+    "text": "[HEURE]",
+    "key": "HEURE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-009": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[FONCTION]",
+    "key": "FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU MANDATAIRE]",
+    "key": "NOM_ET_PRENOM_DU_MANDATAIRE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-084": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-050": [
+   {
+    "text": "[AGENCE ET ADRESSE]",
+    "key": "AGENCE_ET_ADRESSE",
+    "count": 1
+   },
+   {
+    "text": "[BANQUE]",
+    "key": "BANQUE",
+    "count": 1
+   },
+   {
+    "text": "[SERVICE CONTRACTANT]",
+    "key": "SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-051": [],
+  "DGS-MAR-052": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-053": [
+   {
+    "text": "[AGENCE ET ADRESSE]",
+    "key": "AGENCE_ET_ADRESSE",
+    "count": 1
+   },
+   {
+    "text": "[BANQUE]",
+    "key": "BANQUE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-054": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   },
+   {
+    "text": "[TAUX]",
+    "key": "TAUX",
+    "count": 5
+   }
+  ],
+  "DGS-MAR-055": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-056": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-106": [],
+  "DGS-MAR-012": [
+   {
+    "text": "[ADRESSE]",
+    "key": "ADRESSE",
+    "count": 1
+   },
+   {
+    "text": "[DÉNOMINATION DU SOUS-TRAITANT]",
+    "key": "DENOMINATION_DU_SOUS_TRAITANT",
+    "count": 1
+   },
+   {
+    "text": "[FORME JURIDIQUE]",
+    "key": "FORME_JURIDIQUE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET QUALITÉ]",
+    "key": "NOM_ET_QUALITE",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[N° RC]",
+    "key": "N_RC",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-013": [
+   {
+    "text": "[COTRAITANT]",
+    "key": "COTRAITANT",
+    "count": 1
+   },
+   {
+    "text": "[DÉNOMINATION DU COTRAITANT]",
+    "key": "DENOMINATION_DU_COTRAITANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-014": [
+   {
+    "text": "[NOM DU GÉRANT]",
+    "key": "NOM_DU_GERANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU MANDATAIRE]",
+    "key": "NOM_ET_PRENOM_DU_MANDATAIRE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-062": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-063": [
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ]",
+    "key": "N_MARCHE",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DU MARCHÉ]",
+    "key": "OBJET_DU_MARCHE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-065": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[CAUSE 1 — date, description, pièce justificative]",
+    "key": "CAUSE_1_DATE_DESCRIPTION_PIECE_JUSTIFICATIVE",
+    "count": 1
+   },
+   {
+    "text": "[CAUSE 2]",
+    "key": "CAUSE_2",
+    "count": 1
+   },
+   {
+    "text": "[CAUSE 3]",
+    "key": "CAUSE_3",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-066": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[JUSTIFICATION 1 — sujétion imprévue, modification de consistance, quantités]",
+    "key": "JUSTIFICATION_1_SUJETION_IMPREVUE_MODIFICATION_DE_CONSISTANCE_QUANTITES",
+    "count": 1
+   },
+   {
+    "text": "[JUSTIFICATION 2]",
+    "key": "JUSTIFICATION_2",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-068": [
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ]",
+    "key": "N_MARCHE",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DU MARCHÉ]",
+    "key": "OBJET_DU_MARCHE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-069": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-095": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-096": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-097": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-098": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-099": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ]",
+    "key": "N_MARCHE",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DU MARCHÉ]",
+    "key": "OBJET_DU_MARCHE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-100": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ]",
+    "key": "N_MARCHE",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DU MARCHÉ]",
+    "key": "OBJET_DU_MARCHE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-004": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-070": [
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-071": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-072": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[HEURE]",
+    "key": "HEURE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU MANDATAIRE]",
+    "key": "NOM_ET_PRENOM_DU_MANDATAIRE",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° D’ENREGISTREMENT]",
+    "key": "N_D_ENREGISTREMENT",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-073": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-060": [
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ / N° AO]",
+    "key": "N_MARCHE_N_AO",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-061": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-079": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-080": [
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 3
+   },
+   {
+    "text": "[DÉLAI]",
+    "key": "DELAI",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ]",
+    "key": "N_MARCHE",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DU MARCHÉ]",
+    "key": "OBJET_DU_MARCHE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-081": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[CONTACT]",
+    "key": "CONTACT",
+    "count": 1
+   },
+   {
+    "text": "[FONCTION]",
+    "key": "FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM]",
+    "key": "NOM_ET_PRENOM",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-082": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-083": [
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 2
+   },
+   {
+    "text": "[DÉLAI]",
+    "key": "DELAI",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ]",
+    "key": "N_MARCHE",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DU MARCHÉ]",
+    "key": "OBJET_DU_MARCHE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-094": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-040": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   },
+   {
+    "text": "[TAUX OU MONTANT]",
+    "key": "TAUX_OU_MONTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-041": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-042": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-043": [
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° ET DÉSIGNATION DU POSTE]",
+    "key": "N_ET_DESIGNATION_DU_POSTE",
+    "count": 1
+   },
+   {
+    "text": "[U]",
+    "key": "U",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-044": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-046": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-047": [
+   {
+    "text": "[DÉLAI]",
+    "key": "DELAI",
+    "count": 2
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-048": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   },
+   {
+    "text": "[TAUX]",
+    "key": "TAUX",
+    "count": 6
+   }
+  ],
+  "DGS-MAR-049": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-085": [
+   {
+    "text": "[BANQUE]",
+    "key": "BANQUE",
+    "count": 1
+   },
+   {
+    "text": "[COMPAGNIE]",
+    "key": "COMPAGNIE",
+    "count": 1
+   },
+   {
+    "text": "[ORGANISME ÉMETTEUR]",
+    "key": "ORGANISME_EMETTEUR",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-086": [
+   {
+    "text": "[ADRESSE DE L’ORGANISME]",
+    "key": "ADRESSE_DE_L_ORGANISME",
+    "count": 1
+   },
+   {
+    "text": "[N° D’AFFILIATION]",
+    "key": "N_D_AFFILIATION",
+    "count": 1
+   },
+   {
+    "text": "[ORGANISME]",
+    "key": "ORGANISME",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-087": [
+   {
+    "text": "[AGENCE ET ADRESSE]",
+    "key": "AGENCE_ET_ADRESSE",
+    "count": 1
+   },
+   {
+    "text": "[BANQUE]",
+    "key": "BANQUE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-088": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-030": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-031": [
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-032": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-033": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-034": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-035": [
+   {
+    "text": "[NOM ET FONCTION]",
+    "key": "NOM_ET_FONCTION",
+    "count": 2
+   }
+  ],
+  "DGS-MAR-036": [
+   {
+    "text": "[NOM ET FONCTION]",
+    "key": "NOM_ET_FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOMBRE]",
+    "key": "NOMBRE",
+    "count": 1
+   },
+   {
+    "text": "[NOM]",
+    "key": "NOM",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-037": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-038": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-039": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM]",
+    "key": "NOM_ET_PRENOM",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   },
+   {
+    "text": "[PÉRIODICITÉ]",
+    "key": "PERIODICITE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-007": [
+   {
+    "text": "[ADRESSE]",
+    "key": "ADRESSE",
+    "count": 1
+   },
+   {
+    "text": "[AUTORITÉ DESTINATAIRE DU RECOURS]",
+    "key": "AUTORITE_DESTINATAIRE_DU_RECOURS",
+    "count": 1
+   },
+   {
+    "text": "[MOTIF 2]",
+    "key": "MOTIF_2",
+    "count": 1
+   },
+   {
+    "text": "[MOTIF 3]",
+    "key": "MOTIF_3",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-074": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-075": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET FONCTION]",
+    "key": "NOM_ET_FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU MANDATAIRE]",
+    "key": "NOM_ET_PRENOM_DU_MANDATAIRE",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-076": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-077": [
+   {
+    "text": "[ADRESSE DU SERVICE CONTRACTANT]",
+    "key": "ADRESSE_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-078": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-015": [],
+  "DGS-MAR-017": [],
+  "DGS-MAR-018": [
+   {
+    "text": "[ADRESSE]",
+    "key": "ADRESSE",
+    "count": 1
+   },
+   {
+    "text": "[MAÎTRE D’OUVRAGE]",
+    "key": "MAITRE_D_OUVRAGE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-019": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-020": [
+   {
+    "text": "[NOM ET PRÉNOM]",
+    "key": "NOM_ET_PRENOM",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[POSTE]",
+    "key": "POSTE",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-021": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-022": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-023": [
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-027": [
+   {
+    "text": "[DATE]",
+    "key": "DATE",
+    "count": 2
+   },
+   {
+    "text": "[NOM DU SERVICE CONTRACTANT]",
+    "key": "NOM_DU_SERVICE_CONTRACTANT",
+    "count": 1
+   },
+   {
+    "text": "[N° AO]",
+    "key": "N_AO",
+    "count": 1
+   },
+   {
+    "text": "[N° CERTIFICAT]",
+    "key": "N_CERTIFICAT",
+    "count": 1
+   },
+   {
+    "text": "[N° LOT / SANS OBJET]",
+    "key": "N_LOT_SANS_OBJET",
+    "count": 1
+   },
+   {
+    "text": "[OBJET DE L’APPEL D’OFFRES]",
+    "key": "OBJET_DE_L_APPEL_D_OFFRES",
+    "count": 1
+   },
+   {
+    "text": "[ORGANISME ÉMETTEUR]",
+    "key": "ORGANISME_EMETTEUR",
+    "count": 1
+   }
+  ],
+  "DGS-MAR-028": [],
+  "DGS-MAR-029": [
+   {
+    "text": "[ADRESSE DU SITE]",
+    "key": "ADRESSE_DU_SITE",
+    "count": 1
+   },
+   {
+    "text": "[CONTACT]",
+    "key": "CONTACT",
+    "count": 1
+   },
+   {
+    "text": "[INTITULÉ DU PROJET]",
+    "key": "INTITULE_DU_PROJET",
+    "count": 1
+   },
+   {
+    "text": "[MAÎTRE D’OUVRAGE]",
+    "key": "MAITRE_D_OUVRAGE",
+    "count": 1
+   },
+   {
+    "text": "[NATURE DES TRAVAUX]",
+    "key": "NATURE_DES_TRAVAUX",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET FONCTION]",
+    "key": "NOM_ET_FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[N° MARCHÉ]",
+    "key": "N_MARCHE",
+    "count": 1
+   }
+  ],
+  "DGS-PER-001": [],
+  "DGS-PER-002": [
+   {
+    "text": "[FONCTION]",
+    "key": "FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU SALARIÉ]",
+    "key": "NOM_ET_PRENOM_DU_SALARIE",
+    "count": 1
+   },
+   {
+    "text": "[SERVICE / N° PROJET]",
+    "key": "SERVICE_N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PER-003": [
+   {
+    "text": "[FONCTION]",
+    "key": "FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU SALARIÉ]",
+    "key": "NOM_ET_PRENOM_DU_SALARIE",
+    "count": 1
+   },
+   {
+    "text": "[SERVICE / N° PROJET]",
+    "key": "SERVICE_N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PER-004": [
+   {
+    "text": "[MARQUE ET MODÈLE]",
+    "key": "MARQUE_ET_MODELE",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU SALARIÉ]",
+    "key": "NOM_ET_PRENOM_DU_SALARIE",
+    "count": 1
+   },
+   {
+    "text": "[N° D’IMMATRICULATION]",
+    "key": "N_D_IMMATRICULATION",
+    "count": 1
+   }
+  ],
+  "DGS-PER-005": [
+   {
+    "text": "[FONCTION]",
+    "key": "FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU SALARIÉ]",
+    "key": "NOM_ET_PRENOM_DU_SALARIE",
+    "count": 1
+   },
+   {
+    "text": "[SERVICE / N° PROJET]",
+    "key": "SERVICE_N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PER-006": [
+   {
+    "text": "[INTITULÉ]",
+    "key": "INTITULE",
+    "count": 1
+   }
+  ],
+  "DGS-PER-007": [
+   {
+    "text": "[N° PROJET / LIEU]",
+    "key": "N_PROJET_LIEU",
+    "count": 1
+   }
+  ],
+  "DGS-PER-008": [
+   {
+    "text": "[NOM]",
+    "key": "NOM",
+    "count": 2
+   },
+   {
+    "text": "[POSTE / FONCTION]",
+    "key": "POSTE_FONCTION",
+    "count": 1
+   }
+  ],
+  "DGS-PER-009": [
+   {
+    "text": "[FONCTION]",
+    "key": "FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU SALARIÉ]",
+    "key": "NOM_ET_PRENOM_DU_SALARIE",
+    "count": 1
+   }
+  ],
+  "DGS-PER-010": [
+   {
+    "text": "[FONCTION]",
+    "key": "FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU SALARIÉ]",
+    "key": "NOM_ET_PRENOM_DU_SALARIE",
+    "count": 1
+   }
+  ],
+  "DGS-PER-011": [
+   {
+    "text": "[FONCTION]",
+    "key": "FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU SALARIÉ]",
+    "key": "NOM_ET_PRENOM_DU_SALARIE",
+    "count": 1
+   }
+  ],
+  "DGS-PER-012": [
+   {
+    "text": "[FONCTION]",
+    "key": "FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU SALARIÉ]",
+    "key": "NOM_ET_PRENOM_DU_SALARIE",
+    "count": 1
+   },
+   {
+    "text": "[SERVICE / N° PROJET]",
+    "key": "SERVICE_N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PER-013": [
+   {
+    "text": "[INTITULÉ]",
+    "key": "INTITULE",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM]",
+    "key": "NOM_ET_PRENOM",
+    "count": 1
+   },
+   {
+    "text": "[SERVICE]",
+    "key": "SERVICE",
+    "count": 1
+   }
+  ],
+  "DGS-PER-014": [],
+  "DGS-PER-015": [
+   {
+    "text": "[FONCTION]",
+    "key": "FONCTION",
+    "count": 1
+   },
+   {
+    "text": "[NOM ET PRÉNOM DU SALARIÉ]",
+    "key": "NOM_ET_PRENOM_DU_SALARIE",
+    "count": 1
+   },
+   {
+    "text": "[SERVICE / N° PROJET]",
+    "key": "SERVICE_N_PROJET",
+    "count": 1
+   }
+  ],
+  "DGS-PER-016": [
+   {
+    "text": "[NOM ET PRÉNOM DU SALARIÉ]",
+    "key": "NOM_ET_PRENOM_DU_SALARIE",
+    "count": 1
+   }
+  ]
+ }
+}

@@ -1,0 +1,7 @@
+{
+  "appId": "com.blackstone.dgsdocs",
+  "appName": "DGS DOCS",
+  "webDir": "www",
+  "android": { "allowMixedContent": false, "backgroundColor": "#0f1520" },
+  "plugins": { "SplashScreen": { "launchShowDuration": 0 } }
+}
