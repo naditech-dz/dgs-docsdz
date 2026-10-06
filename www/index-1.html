@@ -1,0 +1,1074 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f1520">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.png">
+<title>DGS DOCS</title>
+<style>:root{--bg:#0f1520;--card:#182131;--card2:#1f2a3d;--line:#2b3850;--tx:#eef1f6;--mut:#93a0b6;--gold:#d4a937;--gold2:#ad8c22;--ok:#2fb36d;--warn:#e0a526;--err:#e5534b}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{padding-bottom:90px;max-width:720px;margin:0 auto}
+a{color:var(--gold);text-decoration:none}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;padding:12px 14px;padding-top:max(12px,env(safe-area-inset-top));background:rgba(15,21,32,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top h1{flex:1;margin:0;font-size:18px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.logo{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;font-weight:800;border-radius:8px;padding:4px 8px;font-size:14px;letter-spacing:.5px}
+.back{font-size:30px;line-height:24px;padding:0 8px 4px 0;color:var(--gold)}
+.ico{font-size:20px;padding:4px}
+.tabs{display:flex;gap:6px;padding:12px 12px 4px;overflow-x:auto}
+.tabs button{flex:1;min-width:84px;background:var(--card);border:1px solid var(--line);color:var(--mut);border-radius:12px;padding:9px 6px;font-size:13px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.tabs button small{font-size:11px;opacity:.8}.tabs button.on{border-color:var(--gold);color:var(--tx);background:var(--card2)}
+.searchrow,.sec>input[type=search]{padding:8px 12px}
+input,select,textarea{width:100%;background:var(--card2);color:var(--tx);border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+input[type=checkbox]{width:20px;height:20px;accent-color:var(--gold)}
+.list,.sec{padding:0 12px}
+.sec{margin-top:18px}.sec h3{margin:0 0 8px;font-size:15px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px;display:flex;align-items:center;gap:8px}
+.sec h3 small{font-weight:400;text-transform:none}.mini{margin-left:auto;font-size:13px;text-transform:none;letter-spacing:0}
+.item,.doc,.next{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:8px 0;color:var(--tx)}
+.item.sm{padding:9px 12px}.av{font-size:22px;width:38px;height:38px;border-radius:10px;background:var(--card2);display:grid;place-items:center}
+.tx{flex:1;min-width:0;display:flex;flex-direction:column}.tx b{font-weight:600;overflow:hidden;text-overflow:ellipsis}.tx small{color:var(--mut);font-size:12.5px;overflow:hidden;text-overflow:ellipsis}
+.chev{color:var(--mut);font-size:22px}.st{font-size:16px}
+.next{border-color:var(--gold);background:linear-gradient(90deg,rgba(212,169,55,.12),var(--card))}.next>span:first-child{color:var(--gold);font-size:20px}
+.fab{position:fixed;right:max(18px,calc(50% - 342px));bottom:max(22px,env(safe-area-inset-bottom));width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;font-size:32px;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.45)}
+.empty{text-align:center;color:var(--mut);padding:36px 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px}
+.card h2{margin:0 0 6px;font-size:19px}.card.slim{padding:10px 14px}.card.warn{border-color:var(--warn);background:rgba(224,165,38,.1)}.card.ok{border-color:var(--ok);background:rgba(47,179,109,.1)}.card.err{border-color:var(--err);background:rgba(229,83,75,.1)}
+.chip{display:inline-block;background:var(--card2);border:1px solid var(--line);border-radius:20px;padding:3px 10px;margin:2px 6px 2px 0;font-size:13px;color:var(--tx)}.chip.s{font-size:12px}
+.kvs{margin-top:8px}.kv{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-top:1px solid var(--line)}.kv span{color:var(--mut);font-size:13px}.kv b{font-weight:500;text-align:right}
+.form{padding:0 12px}.fld{display:block;margin:12px 0}.fld>span{display:block;font-size:13px;color:var(--mut);margin-bottom:5px}.fld em{font-style:normal;color:var(--gold);font-size:11.5px}.fld em.inh{color:var(--ok)}
+.hh{margin:18px 0 4px;font-size:15px;color:var(--gold)}.hh small{color:var(--mut)}
+.grp{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:8px 0;overflow:hidden}.grp>summary{padding:12px 14px;cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between}.grp>summary::-webkit-details-marker{display:none}
+.grp>summary small{color:var(--mut);font-weight:400}.grp .doc{margin:0;border-radius:0;border-width:1px 0 0;background:transparent}.grp .inner{padding:0 12px 10px}
+.chk{display:flex;gap:10px;align-items:center;margin:16px 0;color:var(--mut);font-size:14px}
+.actions{display:flex;gap:10px;margin:18px 12px}.form .actions{margin:20px 0}.actions.col{flex-direction:column}.row2{display:flex;gap:10px}.row2>*{flex:1}
+.btn{display:block;text-align:center;background:var(--card2);border:1px solid var(--line);color:var(--tx);border-radius:12px;padding:13px 16px;font:inherit;font-weight:600;flex:1}
+.btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;border:0}.btn.big{padding:16px;font-size:18px}.btn.danger{color:var(--err);border-color:rgba(229,83,75,.5)}
+.pages{display:flex;flex-direction:column;gap:12px}.pg{width:100%;border-radius:6px;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.note{color:var(--mut);font-size:12.5px;margin:10px 0}.miss{margin-top:8px;color:var(--warn);font-size:13px}.log{font-size:12px;color:var(--mut);background:var(--card);border-radius:10px;padding:10px;max-height:260px;overflow:auto}
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,20px);background:#000c;color:#fff;border:1px solid var(--line);padding:11px 16px;border-radius:12px;opacity:0;transition:.25s;z-index:100;max-width:90%;text-align:center;font-size:14px}.toast.show{opacity:1;transform:translate(-50%,0)}
+.busy{position:fixed;inset:0;background:rgba(5,8,14,.82);z-index:99;display:grid;place-items:center}.busybox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;width:min(320px,86%);text-align:center}
+.spin{width:34px;height:34px;border:4px solid var(--line);border-top-color:var(--gold);border-radius:50%;margin:0 auto 12px;animation:sp 1s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+.bar{height:6px;background:var(--line);border-radius:4px;margin-top:12px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .2s}
+.ctx{display:block;color:#8a97ab;font-size:12px;margin:2px 0 4px}.ctx b{color:#f0b429}
+</style>
+</head>
+<body>
+<div id="view"><p style="color:#9fb0c8;padding:24px;font-family:sans-serif">Chargement…</p></div>
+<script>window.addEventListener("error",function(e){var v=document.getElementById("view");if(v)v.innerHTML='<pre style="color:#ffb4b4;padding:16px;white-space:pre-wrap;font-size:13px">Erreur : '+(e.message||"")+" ("+(e.lineno||"")+":"+(e.colno||"")+")</pre>"});window.addEventListener("unhandledrejection",function(e){var v=document.getElementById("view");if(v&&!v.children.length||v&&/Chargement/.test(v.innerText))v.innerHTML='<pre style="color:#ffb4b4;padding:16px;white-space:pre-wrap;font-size:13px">Erreur : '+(e.reason&&e.reason.message||e.reason)+"</pre>"});</script>
+<script>const DOCS=[{"c":"DGS-ADM-001","p":"01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-001-Decision-Associe-Unique.docx","f":"DGS-ADM-001-Decision-Associe-Unique.docx","t":"Décision de l’associé unique","u":"Modèle général de décision de l’associé unique [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-ADM-002","p":"01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-002-Decision-Nomination-Gerant.docx","f":"DGS-ADM-002-Decision-Nomination-Gerant.docx","t":"Décision de nomination du gérant","u":"Nommer un gérant [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-ADM-003","p":"01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-003-Decision-Renouvellement-Gerant.docx","f":"DGS-ADM-003-Decision-Renouvellement-Gerant.docx","t":"Décision de renouvellement du gérant","u":"Renouveler le mandat du gérant [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-ADM-004","p":"01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-004-Decision-Remuneration-Gerant.docx","f":"DGS-ADM-004-Decision-Remuneration-Gerant.docx","t":"Décision de rémunération du gérant","u":"Fixer la rémunération du gérant [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-ADM-005","p":"01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-005-Decision-Modification-Statuts.docx","f":"DGS-ADM-005-Decision-Modification-Statuts.docx","t":"Décision de modification des statuts","u":"Modifier les statuts de l’EURL [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-ADM-006","p":"01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-006-Decision-Transfert-Siege.docx","f":"DGS-ADM-006-Decision-Transfert-Siege.docx","t":"Décision de transfert du siège","u":"Transférer le siège social [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-ADM-007","p":"01_ENTREPRISE/Decisions_Associe_Unique/01_Administration/DGS-ADM-007-Decision-Extension-Activite.docx","f":"DGS-ADM-007-Decision-Extension-Activite.docx","t":"Décision d’extension d’activité","u":"Étendre l’objet ou les activités de l’EURL [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-FIN-001","p":"01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-001-Decision-Investissement.docx","f":"DGS-FIN-001-Decision-Investissement.docx","t":"Décision d’investissement","u":"Autoriser un investissement [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-FIN-002","p":"01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-002-Decision-Acquisition-Un-Bien.docx","f":"DGS-FIN-002-Decision-Acquisition-Un-Bien.docx","t":"Décision d’acquisition d’un bien","u":"Autoriser l’acquisition d’un bien [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-FIN-003","p":"01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-003-Decision-Cession-Un-Bien.docx","f":"DGS-FIN-003-Decision-Cession-Un-Bien.docx","t":"Décision de cession d’un bien","u":"Autoriser la cession d’un bien [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-FIN-004","p":"01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-004-Decision-Autorisation-Emprunt.docx","f":"DGS-FIN-004-Decision-Autorisation-Emprunt.docx","t":"Décision d’autorisation d’emprunt","u":"Autoriser la souscription d’un emprunt [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-FIN-005","p":"01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-005-Decision-Autorisation-Credit.docx","f":"DGS-FIN-005-Decision-Autorisation-Credit.docx","t":"Décision d’autorisation de crédit","u":"Autoriser une ouverture ou un octroi de crédit [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-FIN-006","p":"01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-006-Decision-Affectation-Resultat.docx","f":"DGS-FIN-006-Decision-Affectation-Resultat.docx","t":"Décision d’affectation du résultat","u":"Décider de l’affectation du résultat [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-FIN-007","p":"01_ENTREPRISE/Decisions_Associe_Unique/02_Finance/DGS-FIN-007-Decision-Approbation-Comptes.docx","f":"DGS-FIN-007-Decision-Approbation-Comptes.docx","t":"Décision d’approbation des comptes","u":"Approuver les comptes de l’exercice [À VALIDER JURIDIQUEMENT]","s":"Associé unique (+ Gérant)"},{"c":"DGS-CON-010","p":"02_CLIENTS/Avenants/DGS-CON-010-Avenant-Au-Contrat.docx","f":"DGS-CON-010-Avenant-Au-Contrat.docx","t":"Avenant au contrat","u":"Modifier un contrat en cours (prix, délai, périmètre)","s":"DGS + Client"},{"c":"DGS-CON-001","p":"02_CLIENTS/Contrats/01_Contrats_Travaux/DGS-CON-001-Contrat-General-Travaux.docx","f":"DGS-CON-001-Contrat-General-Travaux.docx","t":"Contrat général de travaux","u":"Encadrer une prestation de travaux de construction ou d’aménagement","s":"DGS + Client"},{"c":"DGS-CON-002","p":"02_CLIENTS/Contrats/01_Contrats_Travaux/DGS-CON-002-Contrat-Renovation.docx","f":"DGS-CON-002-Contrat-Renovation.docx","t":"Contrat de rénovation","u":"Encadrer des travaux de rénovation d’un bien existant","s":"DGS + Client"},{"c":"DGS-CON-003","p":"02_CLIENTS/Contrats/01_Contrats_Travaux/DGS-CON-003-Contrat-Finition.docx","f":"DGS-CON-003-Contrat-Finition.docx","t":"Contrat de finition","u":"Encadrer des travaux de second œuvre et de finition","s":"DGS + Client"},{"c":"DGS-CON-004","p":"02_CLIENTS/Contrats/01_Contrats_Travaux/DGS-CON-004-Contrat-Amenagement-Interieur.docx","f":"DGS-CON-004-Contrat-Amenagement-Interieur.docx","t":"Contrat d’aménagement intérieur","u":"Encadrer aménagement, décoration et mobilier sur mesure","s":"DGS + Client"},{"c":"DGS-CON-005","p":"02_CLIENTS/Contrats/01_Contrats_Travaux/DGS-CON-005-Contrat-Cle-En-Main.docx","f":"DGS-CON-005-Contrat-Cle-En-Main.docx","t":"Contrat clé en main","u":"Encadrer une prestation globale (conception, travaux, livraison)","s":"DGS + Client"},{"c":"DGS-CON-006","p":"02_CLIENTS/Contrats/02_Contrats_Services/DGS-CON-006-Contrat-Suivi-Chantier.docx","f":"DGS-CON-006-Contrat-Suivi-Chantier.docx","t":"Contrat de suivi de chantier","u":"Encadrer une mission de suivi et de contrôle d’exécution","s":"DGS + Client"},{"c":"DGS-CON-007","p":"02_CLIENTS/Contrats/02_Contrats_Services/DGS-CON-007-Contrat-Conception.docx","f":"DGS-CON-007-Contrat-Conception.docx","t":"Contrat de conception","u":"Encadrer une mission de conception et d’études","s":"DGS + Client"},{"c":"DGS-CON-008","p":"02_CLIENTS/Contrats/02_Contrats_Services/DGS-CON-008-Contrat-Prestation-Service.docx","f":"DGS-CON-008-Contrat-Prestation-Service.docx","t":"Contrat de prestation de service","u":"Encadrer une prestation de service ponctuelle","s":"DGS + Client"},{"c":"DGS-CON-009","p":"02_CLIENTS/Contrats/02_Contrats_Services/DGS-CON-009-Contrat-Maintenance.docx","f":"DGS-CON-009-Contrat-Maintenance.docx","t":"Contrat de maintenance","u":"Encadrer l’entretien et la maintenance après réception","s":"DGS + Client"},{"c":"DGS-CLI-022","p":"02_CLIENTS/Contrats/03_Resiliation/DGS-CLI-022-Lettre-Resiliation-Contrat.docx","f":"DGS-CLI-022-Lettre-Resiliation-Contrat.docx","t":"Lettre de résiliation de contrat","u":"Notifier la résiliation d’un contrat [À VALIDER JURIDIQUEMENT]","s":"DGS"},{"c":"DGS-CLI-007","p":"02_CLIENTS/Devis_Offres/DGS-CLI-007-Devis-Estimatif.docx","f":"DGS-CLI-007-Devis-Estimatif.docx","t":"Devis estimatif","u":"Donner une évaluation budgétaire indicative avant le devis détaillé","s":"DGS (+ Client)"},{"c":"DGS-CLI-008","p":"02_CLIENTS/Devis_Offres/DGS-CLI-008-Devis-Detaille.docx","f":"DGS-CLI-008-Devis-Detaille.docx","t":"Devis détaillé","u":"Chiffrer les travaux par lot (quantités, prix unitaires, totaux)","s":"DGS + Client"},{"c":"DGS-CLI-009","p":"02_CLIENTS/Devis_Offres/DGS-CLI-009-Offre-Commerciale.docx","f":"DGS-CLI-009-Offre-Commerciale.docx","t":"Offre commerciale","u":"Présenter l’offre complète : méthode, planning, prix, conditions","s":"DGS + Client"},{"c":"DGS-CLI-010","p":"02_CLIENTS/Devis_Offres/DGS-CLI-010-Bordereau-Prix.docx","f":"DGS-CLI-010-Bordereau-Prix.docx","t":"Bordereau des prix","u":"Lister les prix unitaires applicables aux prestations","s":"DGS (+ Client)"},{"c":"DGS-CLI-011","p":"02_CLIENTS/Devis_Offres/DGS-CLI-011-Conditions-Paiement.docx","f":"DGS-CLI-011-Conditions-Paiement.docx","t":"Conditions de paiement","u":"Définir échéancier, acomptes et modalités de règlement","s":"DGS + Client"},{"c":"DGS-CLI-012","p":"02_CLIENTS/Devis_Offres/DGS-CLI-012-Bon-Pour-Accord.docx","f":"DGS-CLI-012-Bon-Pour-Accord.docx","t":"Bon pour accord","u":"Acter l’acceptation du devis ou de l’offre par le client","s":"Client + DGS"},{"c":"DGS-CLI-019","p":"02_CLIENTS/Devis_Offres/DGS-CLI-019-Fiche-Demande-Revision-Client.docx","f":"DGS-CLI-019-Fiche-Demande-Revision-Client.docx","t":"Fiche de demande de révision client","u":"Enregistrer une demande de révision d’un devis, d’un plan ou d’une prestation","s":"Client + DGS"},{"c":"DGS-CLI-020","p":"02_CLIENTS/Devis_Offres/DGS-CLI-020-Lettre-Transmission-Documents.docx","f":"DGS-CLI-020-Lettre-Transmission-Documents.docx","t":"Lettre de transmission de documents","u":"Transmettre des documents au client avec accusé de réception","s":"DGS (+ accusé du Client)"},{"c":"DGS-CLI-025","p":"02_CLIENTS/Devis_Offres/DGS-CLI-025-Lettre-Relance-Devis.docx","f":"DGS-CLI-025-Lettre-Relance-Devis.docx","t":"Lettre de relance de devis","u":"Relancer un client qui n’a pas répondu à un devis ou à une offre","s":"DGS"},{"c":"DGS-CLI-015","p":"02_CLIENTS/Facturation/DGS-CLI-015-Recu-Paiement.docx","f":"DGS-CLI-015-Recu-Paiement.docx","t":"Reçu de paiement","u":"Constater la réception d’un paiement du client","s":"DGS"},{"c":"DGS-CLI-016","p":"02_CLIENTS/Facturation/DGS-CLI-016-Lettre-Rappel-Paiement.docx","f":"DGS-CLI-016-Lettre-Rappel-Paiement.docx","t":"Lettre de rappel de paiement","u":"Rappeler au client une facture échue et impayée","s":"DGS"},{"c":"DGS-CLI-017","p":"02_CLIENTS/Facturation/DGS-CLI-017-Mise-En-Demeure-Payer.docx","f":"DGS-CLI-017-Mise-En-Demeure-Payer.docx","t":"Mise en demeure de payer","u":"Mettre le client en demeure de régler une somme due [À VALIDER JURIDIQUEMENT]","s":"DGS"},{"c":"DGS-CLI-014","p":"02_CLIENTS/Garanties/DGS-CLI-014-Fiche-Suivi-Garantie.docx","f":"DGS-CLI-014-Fiche-Suivi-Garantie.docx","t":"Fiche de suivi garantie","u":"Suivre garanties, échéances et interventions par projet","s":"DGS"},{"c":"DGS-CLI-001","p":"02_CLIENTS/Identification/DGS-CLI-001-Fiche-Identification-Client.docx","f":"DGS-CLI-001-Fiche-Identification-Client.docx","t":"Fiche d’identification client","u":"Identifier le client (personne physique ou morale) et ouvrir son dossier","s":"Client + DGS"},{"c":"DGS-CLI-002","p":"02_CLIENTS/Identification/DGS-CLI-002-Fiche-Demande-Client.docx","f":"DGS-CLI-002-Fiche-Demande-Client.docx","t":"Fiche de demande client","u":"Enregistrer la demande initiale, le besoin exprimé et le budget indicatif","s":"DGS (+ Client)"},{"c":"DGS-CLI-003","p":"02_CLIENTS/Identification/DGS-CLI-003-Fiche-Visite.docx","f":"DGS-CLI-003-Fiche-Visite.docx","t":"Fiche de visite","u":"Consigner les observations techniques de la visite de site","s":"DGS (+ Client)"},{"c":"DGS-CLI-004","p":"02_CLIENTS/Identification/DGS-CLI-004-Fiche-Releve.docx","f":"DGS-CLI-004-Fiche-Releve.docx","t":"Fiche de relevé","u":"Consigner les relevés dimensionnels pièce par pièce","s":"DGS"},{"c":"DGS-CLI-005","p":"02_CLIENTS/Identification/DGS-CLI-005-Cahier-Besoins-Client.docx","f":"DGS-CLI-005-Cahier-Besoins-Client.docx","t":"Cahier des besoins client","u":"Formaliser programme, attentes, contraintes et priorités du client","s":"Client + DGS"},{"c":"DGS-CLI-006","p":"02_CLIENTS/Identification/DGS-CLI-006-Compte-Rendu-Reunion-Client.docx","f":"DGS-CLI-006-Compte-Rendu-Reunion-Client.docx","t":"Compte rendu de réunion client","u":"Tracer les échanges et décisions d’une réunion avec le client","s":"DGS (+ Client)"},{"c":"DGS-PV-001","p":"02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-001-PV-Visite-Initiale.docx","f":"DGS-PV-001-PV-Visite-Initiale.docx","t":"PV de visite initiale","u":"Constater l’état du site et les besoins lors de la première visite","s":"DGS + Client"},{"c":"DGS-PV-002","p":"02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-002-PV-Etat-Lieux.docx","f":"DGS-PV-002-PV-Etat-Lieux.docx","t":"PV d’état des lieux","u":"Constater contradictoirement l’état existant avant travaux","s":"DGS + Client"},{"c":"DGS-PV-003","p":"02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-003-PV-Remise-Site.docx","f":"DGS-PV-003-PV-Remise-Site.docx","t":"PV de remise du site","u":"Acter la mise à disposition du site à DGS","s":"Client + DGS"},{"c":"DGS-PV-004","p":"02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-004-PV-Reunion-Lancement.docx","f":"DGS-PV-004-PV-Reunion-Lancement.docx","t":"PV de réunion de lancement","u":"Formaliser organisation, planning et règles au lancement","s":"DGS + Client (+ intervenants)"},{"c":"DGS-PV-005","p":"02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-005-PV-Demarrage-Travaux.docx","f":"DGS-PV-005-PV-Demarrage-Travaux.docx","t":"PV de démarrage des travaux","u":"Acter la date effective de démarrage des travaux","s":"DGS + Client"},{"c":"DGS-PV-006","p":"02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-006-PV-Validation-Plans.docx","f":"DGS-PV-006-PV-Validation-Plans.docx","t":"PV de validation des plans","u":"Valider les plans d’exécution ou d’aménagement","s":"Client + DGS (+ Architecte)"},{"c":"DGS-PV-007","p":"02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-007-PV-Validation-Materiaux.docx","f":"DGS-PV-007-PV-Validation-Materiaux.docx","t":"PV de validation des matériaux","u":"Valider les matériaux proposés (nature, marque, référence)","s":"Client + DGS"},{"c":"DGS-PV-008","p":"02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-008-PV-Validation-Echantillons.docx","f":"DGS-PV-008-PV-Validation-Echantillons.docx","t":"PV de validation des échantillons","u":"Valider les échantillons présentés","s":"Client + DGS"},{"c":"DGS-PV-009","p":"02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-009-PV-Validation-Choix-Client.docx","f":"DGS-PV-009-PV-Validation-Choix-Client.docx","t":"PV de validation des choix du client","u":"Acter les choix du client (finitions, équipements, teintes)","s":"Client + DGS"},{"c":"DGS-PV-036","p":"02_CLIENTS/PV/01_Lancement_Et_Validation/DGS-PV-036-PV-Choix-Materiaux.docx","f":"DGS-PV-036-PV-Choix-Materiaux.docx","t":"PV de choix des matériaux","u":"Consigner les options comparées et le choix retenu (gamme, marque, prix)","s":"Client + DGS"},{"c":"DGS-PV-010","p":"02_CLIENTS/PV/02_Suivi_Et_Avancement/DGS-PV-010-PV-Reunion-Chantier.docx","f":"DGS-PV-010-PV-Reunion-Chantier.docx","t":"PV de réunion de chantier","u":"Tracer décisions et actions des réunions périodiques de chantier","s":"DGS + Client + intervenants"},{"c":"DGS-PV-011","p":"02_CLIENTS/PV/02_Suivi_Et_Avancement/DGS-PV-011-PV-Avancement-Travaux.docx","f":"DGS-PV-011-PV-Avancement-Travaux.docx","t":"PV d’avancement des travaux","u":"Constater l’avancement par rapport au planning","s":"DGS (+ Client)"},{"c":"DGS-PV-012","p":"02_CLIENTS/PV/02_Suivi_Et_Avancement/DGS-PV-012-PV-Constat-Avancement.docx","f":"DGS-PV-012-PV-Constat-Avancement.docx","t":"PV de constat d’avancement","u":"Constater contradictoirement quantités et état des travaux réalisés","s":"DGS + Client"},{"c":"DGS-PV-013","p":"02_CLIENTS/PV/02_Suivi_Et_Avancement/DGS-PV-013-PV-Reception-Une-Etape.docx","f":"DGS-PV-013-PV-Reception-Une-Etape.docx","t":"PV de réception d’une étape","u":"Réceptionner une étape ou une phase intermédiaire","s":"DGS + Client"},{"c":"DGS-PV-014","p":"02_CLIENTS/PV/03_Modifications_Et_Travaux_Supplementaires/DGS-PV-014-PV-Travaux-Modificatifs.docx","f":"DGS-PV-014-PV-Travaux-Modificatifs.docx","t":"PV de travaux modificatifs","u":"Acter des modifications de travaux et leur incidence","s":"DGS + Client"},{"c":"DGS-PV-015","p":"02_CLIENTS/PV/03_Modifications_Et_Travaux_Supplementaires/DGS-PV-015-PV-Travaux-Supplementaires.docx","f":"DGS-PV-015-PV-Travaux-Supplementaires.docx","t":"PV de travaux supplémentaires","u":"Acter des travaux hors périmètre initial et leur incidence","s":"DGS + Client"},{"c":"DGS-PV-016","p":"02_CLIENTS/PV/03_Modifications_Et_Travaux_Supplementaires/DGS-PV-016-PV-Demande-Modification-Client.docx","f":"DGS-PV-016-PV-Demande-Modification-Client.docx","t":"PV de demande de modification client","u":"Enregistrer une demande de modification formulée par le client","s":"Client + DGS"},{"c":"DGS-PV-017","p":"02_CLIENTS/PV/04_Arrets_Retards_Et_Litiges/DGS-PV-017-PV-Suspension-Travaux.docx","f":"DGS-PV-017-PV-Suspension-Travaux.docx","t":"PV de suspension des travaux","u":"Acter l’arrêt temporaire des travaux et ses causes","s":"DGS + Client"},{"c":"DGS-PV-018","p":"02_CLIENTS/PV/04_Arrets_Retards_Et_Litiges/DGS-PV-018-PV-Reprise-Travaux.docx","f":"DGS-PV-018-PV-Reprise-Travaux.docx","t":"PV de reprise des travaux","u":"Acter la reprise des travaux après suspension","s":"DGS + Client"},{"c":"DGS-PV-019","p":"02_CLIENTS/PV/04_Arrets_Retards_Et_Litiges/DGS-PV-019-PV-Retard.docx","f":"DGS-PV-019-PV-Retard.docx","t":"PV de retard","u":"Constater un retard, ses causes et les mesures correctives","s":"DGS (+ Client)"},{"c":"DGS-PV-021","p":"02_CLIENTS/PV/04_Arrets_Retards_Et_Litiges/DGS-PV-021-PV-Constat-Desaccord.docx","f":"DGS-PV-021-PV-Constat-Desaccord.docx","t":"PV de constat de désaccord","u":"Consigner les positions des parties en cas de désaccord","s":"DGS + Client"},{"c":"DGS-PV-037","p":"02_CLIENTS/PV/04_Arrets_Retards_Et_Litiges/DGS-PV-037-PV-Annulation-Contrat.docx","f":"DGS-PV-037-PV-Annulation-Contrat.docx","t":"PV d’annulation de contrat","u":"Acter l’annulation d’un contrat, d’une commande ou d’une prestation","s":"DGS + Client"},{"c":"DGS-CLI-021","p":"02_CLIENTS/Reception/DGS-CLI-021-Attestation-Fin-Travaux.docx","f":"DGS-CLI-021-Attestation-Fin-Travaux.docx","t":"Attestation de fin de travaux","u":"Attester de l’achèvement et de la réception des travaux","s":"DGS"},{"c":"DGS-PV-022","p":"02_CLIENTS/Reception/DGS-PV-022-PV-Pre-Reception.docx","f":"DGS-PV-022-PV-Pre-Reception.docx","t":"PV de pré-réception","u":"Recenser les points restants avant la réception","s":"DGS + Client"},{"c":"DGS-PV-023","p":"02_CLIENTS/Reception/DGS-PV-023-PV-Reception-Avec-Reserves.docx","f":"DGS-PV-023-PV-Reception-Avec-Reserves.docx","t":"PV de réception avec réserves","u":"Réceptionner les travaux en listant les réserves","s":"DGS + Client"},{"c":"DGS-PV-024","p":"02_CLIENTS/Reception/DGS-PV-024-PV-Reception-Provisoire.docx","f":"DGS-PV-024-PV-Reception-Provisoire.docx","t":"PV de réception provisoire","u":"Acter la réception provisoire des travaux","s":"DGS + Client (+ Architecte / BC)"},{"c":"DGS-PV-025","p":"02_CLIENTS/Reception/DGS-PV-025-PV-Levee-Reserves.docx","f":"DGS-PV-025-PV-Levee-Reserves.docx","t":"PV de levée des réserves","u":"Constater la levée des réserves","s":"DGS + Client"},{"c":"DGS-PV-026","p":"02_CLIENTS/Reception/DGS-PV-026-PV-Reception-Definitive.docx","f":"DGS-PV-026-PV-Reception-Definitive.docx","t":"PV de réception définitive","u":"Acter la réception définitive des travaux","s":"DGS + Client"},{"c":"DGS-PV-027","p":"02_CLIENTS/Reception/DGS-PV-027-PV-Livraison-Travaux.docx","f":"DGS-PV-027-PV-Livraison-Travaux.docx","t":"PV de livraison des travaux","u":"Acter la remise des travaux achevés","s":"DGS + Client"},{"c":"DGS-PV-028","p":"02_CLIENTS/Reception/DGS-PV-028-PV-Remise-Cles.docx","f":"DGS-PV-028-PV-Remise-Cles.docx","t":"PV de remise des clés","u":"Acter la remise des clés et des accès","s":"DGS + Client"},{"c":"DGS-PV-029","p":"02_CLIENTS/Reception/DGS-PV-029-PV-Cloture-Chantier.docx","f":"DGS-PV-029-PV-Cloture-Chantier.docx","t":"PV de clôture du chantier","u":"Clôturer administrativement le chantier","s":"DGS (+ Client)"},{"c":"DGS-PV-030","p":"02_CLIENTS/Reception/DGS-PV-030-PV-Cloture-Projet.docx","f":"DGS-PV-030-PV-Cloture-Projet.docx","t":"PV de clôture du projet","u":"Clôturer le projet (technique, financier, documentaire)","s":"DGS + Client"},{"c":"DGS-CLI-013","p":"02_CLIENTS/SAV/DGS-CLI-013-Fiche-Demande-SAV.docx","f":"DGS-CLI-013-Fiche-Demande-SAV.docx","t":"Fiche demande SAV","u":"Enregistrer une demande d’intervention après réception","s":"Client (+ DGS)"},{"c":"DGS-CLI-018","p":"02_CLIENTS/SAV/DGS-CLI-018-Fiche-Reclamation-Client.docx","f":"DGS-CLI-018-Fiche-Reclamation-Client.docx","t":"Fiche de réclamation client","u":"Enregistrer et traiter une réclamation du client","s":"DGS (+ Client)"},{"c":"DGS-CLI-023","p":"02_CLIENTS/SAV/DGS-CLI-023-Reponse-Une-Reclamation-Client.docx","f":"DGS-CLI-023-Reponse-Une-Reclamation-Client.docx","t":"Réponse à une réclamation client","u":"Répondre par écrit à une réclamation du client","s":"DGS"},{"c":"DGS-CLI-024","p":"02_CLIENTS/SAV/DGS-CLI-024-Enquete-Satisfaction-Client.docx","f":"DGS-CLI-024-Enquete-Satisfaction-Client.docx","t":"Enquête de satisfaction client","u":"Recueillir l’appréciation du client à la fin du projet","s":"Client (facultatif)"},{"c":"DGS-PV-031","p":"02_CLIENTS/SAV/DGS-PV-031-PV-Constat-SAV.docx","f":"DGS-PV-031-PV-Constat-SAV.docx","t":"PV de constat SAV","u":"Constater le désordre signalé par le client","s":"DGS + Client"},{"c":"DGS-PV-032","p":"02_CLIENTS/SAV/DGS-PV-032-PV-Intervention-SAV.docx","f":"DGS-PV-032-PV-Intervention-SAV.docx","t":"PV d’intervention SAV","u":"Tracer l’intervention réalisée","s":"DGS + Client"},{"c":"DGS-PV-033","p":"02_CLIENTS/SAV/DGS-PV-033-PV-Reparation.docx","f":"DGS-PV-033-PV-Reparation.docx","t":"PV de réparation","u":"Tracer une réparation et ses travaux","s":"DGS + Client"},{"c":"DGS-PV-034","p":"02_CLIENTS/SAV/DGS-PV-034-PV-Reception-Apres-Intervention.docx","f":"DGS-PV-034-PV-Reception-Apres-Intervention.docx","t":"PV de réception après intervention","u":"Réceptionner l’intervention réalisée","s":"Client + DGS"},{"c":"DGS-PV-035","p":"02_CLIENTS/SAV/DGS-PV-035-PV-Cloture-SAV.docx","f":"DGS-PV-035-PV-Cloture-SAV.docx","t":"PV de clôture SAV","u":"Clôturer la demande SAV","s":"DGS + Client"},{"c":"DGS-HSE-001","p":"03_CHANTIERS/HSE/DGS-HSE-001-PV-Controle-Securite.docx","f":"DGS-HSE-001-PV-Controle-Securite.docx","t":"PV de contrôle sécurité","u":"Contrôler les mesures de sécurité du chantier","s":"DGS"},{"c":"DGS-HSE-002","p":"03_CHANTIERS/HSE/DGS-HSE-002-PV-Controle-HSE.docx","f":"DGS-HSE-002-PV-Controle-HSE.docx","t":"PV de contrôle HSE","u":"Contrôle global hygiène, sécurité et environnement","s":"DGS"},{"c":"DGS-HSE-003","p":"03_CHANTIERS/HSE/DGS-HSE-003-PV-Incident-Chantier.docx","f":"DGS-HSE-003-PV-Incident-Chantier.docx","t":"PV d’incident chantier","u":"Consigner un incident sans blessure grave et les mesures prises","s":"DGS (+ témoins)"},{"c":"DGS-HSE-004","p":"03_CHANTIERS/HSE/DGS-HSE-004-PV-Accident-Chantier.docx","f":"DGS-HSE-004-PV-Accident-Chantier.docx","t":"PV d’accident chantier","u":"Consigner un accident, les circonstances et les suites","s":"DGS (+ victime / témoins)"},{"c":"DGS-HSE-005","p":"03_CHANTIERS/HSE/DGS-HSE-005-Fiche-Verification-Quotidienne-Securite.docx","f":"DGS-HSE-005-Fiche-Verification-Quotidienne-Securite.docx","t":"Fiche de vérification quotidienne de sécurité","u":"Vérifier chaque jour les conditions de sécurité avant le démarrage du travail","s":"Vérificateur + Responsable chantier"},{"c":"DGS-HSE-006","p":"03_CHANTIERS/HSE/DGS-HSE-006-Fiche-Accueil-Securite.docx","f":"DGS-HSE-006-Fiche-Accueil-Securite.docx","t":"Fiche d’accueil sécurité","u":"Tracer l’accueil sécurité de toute personne qui intervient sur le chantier","s":"Accueillant + Personne accueillie"},{"c":"DGS-CHT-001","p":"03_CHANTIERS/Lancement/DGS-CHT-001-Fiche-Projet.docx","f":"DGS-CHT-001-Fiche-Projet.docx","t":"Fiche projet","u":"Ouvrir et piloter le dossier projet / chantier","s":"DGS"},{"c":"DGS-CHT-002","p":"03_CHANTIERS/Lancement/DGS-CHT-002-PV-Installation-Chantier.docx","f":"DGS-CHT-002-PV-Installation-Chantier.docx","t":"PV d’installation de chantier","u":"Acter installation, base vie, clôtures et accès","s":"DGS (+ Client)"},{"c":"DGS-CHT-003","p":"03_CHANTIERS/Lancement/DGS-CHT-003-PV-Implantation.docx","f":"DGS-CHT-003-PV-Implantation.docx","t":"PV d’implantation","u":"Acter l’implantation et le traçage des ouvrages","s":"DGS (+ BET / Architecte)"},{"c":"DGS-CHT-015","p":"03_CHANTIERS/Materiaux/DGS-CHT-015-Bon-Sortie-Materiaux.docx","f":"DGS-CHT-015-Bon-Sortie-Materiaux.docx","t":"Bon de sortie de matériaux","u":"Tracer la sortie de matériaux du stock vers un chantier","s":"Magasinier + Réceptionnaire"},{"c":"DGS-CHT-016","p":"03_CHANTIERS/Materiaux/DGS-CHT-016-Demande-Approvisionnement.docx","f":"DGS-CHT-016-Demande-Approvisionnement.docx","t":"Demande d’approvisionnement","u":"Formaliser un besoin en matériaux ou fournitures et son approbation","s":"Demandeur + Chef de projet + Gérant"},{"c":"DGS-QLT-001","p":"03_CHANTIERS/Materiaux/DGS-QLT-001-PV-Reception-Materiaux.docx","f":"DGS-QLT-001-PV-Reception-Materiaux.docx","t":"PV de réception des matériaux","u":"Réceptionner les matériaux livrés sur chantier (quantité, état)","s":"DGS (+ Fournisseur)"},{"c":"DGS-QLT-002","p":"03_CHANTIERS/Materiaux/DGS-QLT-002-PV-Controle-Qualite-Materiaux.docx","f":"DGS-QLT-002-PV-Controle-Qualite-Materiaux.docx","t":"PV de contrôle qualité des matériaux","u":"Vérifier la conformité des matériaux aux exigences convenues","s":"DGS (+ Client / BC)"},{"c":"DGS-QLT-004","p":"03_CHANTIERS/Materiaux/DGS-QLT-004-Fiche-Tracabilite-Materiau.docx","f":"DGS-QLT-004-Fiche-Tracabilite-Materiau.docx","t":"Fiche de traçabilité matériau","u":"Suivre origine, lot, livraison et emploi d’un matériau","s":"DGS"},{"c":"DGS-CHT-017","p":"03_CHANTIERS/Non_Conformites/DGS-CHT-017-Registre-Non-Conformites.docx","f":"DGS-CHT-017-Registre-Non-Conformites.docx","t":"Registre des non-conformités","u":"Suivre l’ensemble des non-conformités d’un chantier jusqu’à leur clôture","s":"Responsable chantier + Chef de projet"},{"c":"DGS-PV-020","p":"03_CHANTIERS/Non_Conformites/DGS-PV-020-PV-Non-Conformite.docx","f":"DGS-PV-020-PV-Non-Conformite.docx","t":"PV de non-conformité","u":"Constater une non-conformité et convenir de sa correction","s":"DGS + Client"},{"c":"DGS-QLT-003","p":"03_CHANTIERS/Non_Conformites/DGS-QLT-003-PV-Refus-Materiaux.docx","f":"DGS-QLT-003-PV-Refus-Materiaux.docx","t":"PV de refus des matériaux","u":"Consigner le refus de matériaux non conformes","s":"DGS (+ Fournisseur)"},{"c":"DGS-QLT-005","p":"03_CHANTIERS/Qualite/DGS-QLT-005-PV-Controle-Qualite.docx","f":"DGS-QLT-005-PV-Controle-Qualite.docx","t":"PV de contrôle qualité","u":"Contrôle qualité d’un ouvrage ou d’un lot","s":"DGS (+ Client)"},{"c":"DGS-QLT-006","p":"03_CHANTIERS/Qualite/DGS-QLT-006-PV-Controle-Beton.docx","f":"DGS-QLT-006-PV-Controle-Beton.docx","t":"PV de contrôle béton","u":"Contrôler les opérations et essais de bétonnage","s":"DGS (+ BC)"},{"c":"DGS-CHT-005","p":"03_CHANTIERS/Reception/DGS-CHT-005-PV-Reception-Ferraillage.docx","f":"DGS-CHT-005-PV-Reception-Ferraillage.docx","t":"PV de réception ferraillage","u":"Réceptionner le ferraillage avant coulage","s":"DGS (+ BC / BET)"},{"c":"DGS-CHT-006","p":"03_CHANTIERS/Reception/DGS-CHT-006-PV-Reception-Coffrage.docx","f":"DGS-CHT-006-PV-Reception-Coffrage.docx","t":"PV de réception coffrage","u":"Réceptionner le coffrage avant coulage","s":"DGS (+ BC / BET)"},{"c":"DGS-CHT-007","p":"03_CHANTIERS/Reception/DGS-CHT-007-PV-Reception-Etancheite.docx","f":"DGS-CHT-007-PV-Reception-Etancheite.docx","t":"PV de réception étanchéité","u":"Réceptionner les ouvrages d’étanchéité","s":"DGS (+ BC / Client)"},{"c":"DGS-CHT-008","p":"03_CHANTIERS/Reception/DGS-CHT-008-PV-Reception-Reseaux.docx","f":"DGS-CHT-008-PV-Reception-Reseaux.docx","t":"PV de réception réseaux","u":"Réceptionner les réseaux (eau, assainissement, électricité…)","s":"DGS (+ intervenants)"},{"c":"DGS-CHT-009","p":"03_CHANTIERS/Reception/DGS-CHT-009-PV-Reception-Finition.docx","f":"DGS-CHT-009-PV-Reception-Finition.docx","t":"PV de réception finition","u":"Réceptionner les travaux de finition","s":"DGS + Client"},{"c":"DGS-CHT-004","p":"03_CHANTIERS/Suivi/DGS-CHT-004-PV-Controle-Travaux.docx","f":"DGS-CHT-004-PV-Controle-Travaux.docx","t":"PV de contrôle des travaux","u":"Contrôler l’exécution des travaux","s":"DGS (+ intervenants)"},{"c":"DGS-CHT-010","p":"03_CHANTIERS/Suivi/DGS-CHT-010-PV-Constat-Degradation.docx","f":"DGS-CHT-010-PV-Constat-Degradation.docx","t":"PV de constat de dégradation","u":"Constater une dégradation d’ouvrage ou de bien","s":"DGS (+ Client / tiers)"},{"c":"DGS-CHT-011","p":"03_CHANTIERS/Suivi/DGS-CHT-011-Journal-Chantier.docx","f":"DGS-CHT-011-Journal-Chantier.docx","t":"Journal de chantier","u":"Tenir chaque jour la trace des effectifs, travaux, livraisons et événements du chantier","s":"Responsable chantier"},{"c":"DGS-CHT-012","p":"03_CHANTIERS/Suivi/DGS-CHT-012-Rapport-Hebdomadaire-Avancement.docx","f":"DGS-CHT-012-Rapport-Hebdomadaire-Avancement.docx","t":"Rapport hebdomadaire d’avancement","u":"Rendre compte chaque semaine de l’avancement, des problèmes et des prévisions","s":"Responsable chantier + Chef de projet"},{"c":"DGS-CHT-013","p":"03_CHANTIERS/Suivi/DGS-CHT-013-Rapport-Mensuel-Avancement.docx","f":"DGS-CHT-013-Rapport-Mensuel-Avancement.docx","t":"Rapport mensuel d’avancement","u":"Rendre compte chaque mois de l’avancement physique, financier, qualité et sécurité du projet","s":"Chef de projet + Gérant"},{"c":"DGS-CHT-014","p":"03_CHANTIERS/Suivi/DGS-CHT-014-Fiche-Pointage-Personnel-Chantier.docx","f":"DGS-CHT-014-Fiche-Pointage-Personnel-Chantier.docx","t":"Fiche de pointage du personnel de chantier","u":"Relever les présences et les heures du personnel de chantier","s":"Responsable chantier + Chef de projet"},{"c":"DGS-CHT-018","p":"03_CHANTIERS/Suivi/DGS-CHT-018-Attachement-Travaux.docx","f":"DGS-CHT-018-Attachement-Travaux.docx","t":"Attachement de travaux","u":"Constater contradictoirement les quantités réellement exécutées","s":"DGS + Client (+ Sous-traitant)"},{"c":"DGS-CHT-019","p":"03_CHANTIERS/Suivi/DGS-CHT-019-Ordre-Service.docx","f":"DGS-CHT-019-Ordre-Service.docx","t":"Ordre de service","u":"Donner une instruction écrite à une équipe, à un sous-traitant ou à un intervenant","s":"DGS + Destinataire"},{"c":"DGS-CHT-020","p":"03_CHANTIERS/Suivi/DGS-CHT-020-Planning-Hebdomadaire-Chantier.docx","f":"DGS-CHT-020-Planning-Hebdomadaire-Chantier.docx","t":"Planning hebdomadaire de chantier","u":"Planifier chaque semaine les tâches, équipes et moyens du chantier","s":"Responsable chantier + Chef de projet"},{"c":"DGS-FOU-001","p":"04_FOURNISSEURS/01_Selection_Et_Referencement/DGS-FOU-001-Fiche-Fournisseur.docx","f":"DGS-FOU-001-Fiche-Fournisseur.docx","t":"Fiche fournisseur","u":"Identifier le fournisseur et centraliser ses données","s":"DGS"},{"c":"DGS-FOU-002","p":"04_FOURNISSEURS/01_Selection_Et_Referencement/DGS-FOU-002-Fiche-Referencement-Fournisseur.docx","f":"DGS-FOU-002-Fiche-Referencement-Fournisseur.docx","t":"Fiche référencement fournisseur","u":"Référencer un fournisseur (critères, pièces, conditions)","s":"DGS"},{"c":"DGS-FOU-003","p":"04_FOURNISSEURS/01_Selection_Et_Referencement/DGS-FOU-003-Fiche-Evaluation-Fournisseur.docx","f":"DGS-FOU-003-Fiche-Evaluation-Fournisseur.docx","t":"Fiche évaluation fournisseur","u":"Évaluer périodiquement qualité, délais et prix","s":"DGS"},{"c":"DGS-FOU-004","p":"04_FOURNISSEURS/01_Selection_Et_Referencement/DGS-FOU-004-PV-Selection-Fournisseur.docx","f":"DGS-FOU-004-PV-Selection-Fournisseur.docx","t":"PV sélection fournisseur","u":"Tracer la comparaison des offres et la sélection","s":"DGS"},{"c":"DGS-FOU-005","p":"04_FOURNISSEURS/02_Commandes_Et_Livraisons/DGS-FOU-005-PV-Reception-Commande.docx","f":"DGS-FOU-005-PV-Reception-Commande.docx","t":"PV réception commande","u":"Réceptionner une commande livrée","s":"DGS + Fournisseur"},{"c":"DGS-FOU-006","p":"04_FOURNISSEURS/02_Commandes_Et_Livraisons/DGS-FOU-006-PV-Controle-Livraison.docx","f":"DGS-FOU-006-PV-Controle-Livraison.docx","t":"PV contrôle livraison","u":"Contrôler quantité, état et conformité à la livraison","s":"DGS (+ Fournisseur)"},{"c":"DGS-FOU-007","p":"04_FOURNISSEURS/03_Litiges_Retours_Resiliation/DGS-FOU-007-PV-Non-Conformite-Fournisseur.docx","f":"DGS-FOU-007-PV-Non-Conformite-Fournisseur.docx","t":"PV non-conformité fournisseur","u":"Constater une non-conformité de livraison ou de produit","s":"DGS + Fournisseur"},{"c":"DGS-FOU-008","p":"04_FOURNISSEURS/03_Litiges_Retours_Resiliation/DGS-FOU-008-PV-Retour-Fournisseur.docx","f":"DGS-FOU-008-PV-Retour-Fournisseur.docx","t":"PV retour fournisseur","u":"Acter le retour de marchandises au fournisseur","s":"DGS + Fournisseur"},{"c":"DGS-FOU-009","p":"04_FOURNISSEURS/03_Litiges_Retours_Resiliation/DGS-FOU-009-PV-Resiliation-Fournisseur.docx","f":"DGS-FOU-009-PV-Resiliation-Fournisseur.docx","t":"PV résiliation fournisseur","u":"Acter la fin de la relation avec un fournisseur","s":"DGS + Fournisseur"},{"c":"DGS-ST-001","p":"05_SOUS_TRAITANTS/01_Selection_Et_Contrat/DGS-ST-001-Fiche-Sous-Traitant.docx","f":"DGS-ST-001-Fiche-Sous-Traitant.docx","t":"Fiche sous-traitant","u":"Identifier le sous-traitant et centraliser ses données","s":"DGS"},{"c":"DGS-ST-002","p":"05_SOUS_TRAITANTS/01_Selection_Et_Contrat/DGS-ST-002-Contrat-Sous-Traitance.docx","f":"DGS-ST-002-Contrat-Sous-Traitance.docx","t":"Contrat de sous-traitance","u":"Encadrer les travaux confiés à un sous-traitant","s":"DGS + Sous-traitant"},{"c":"DGS-ST-003","p":"05_SOUS_TRAITANTS/01_Selection_Et_Contrat/DGS-ST-003-PV-Selection-Sous-Traitant.docx","f":"DGS-ST-003-PV-Selection-Sous-Traitant.docx","t":"PV sélection sous-traitant","u":"Tracer la comparaison des offres et la sélection","s":"DGS"},{"c":"DGS-ST-004","p":"05_SOUS_TRAITANTS/02_Execution_Et_Controle/DGS-ST-004-PV-Demarrage-Sous-Traitance.docx","f":"DGS-ST-004-PV-Demarrage-Sous-Traitance.docx","t":"PV démarrage sous-traitance","u":"Acter le démarrage des travaux du sous-traitant","s":"DGS + Sous-traitant"},{"c":"DGS-ST-005","p":"05_SOUS_TRAITANTS/02_Execution_Et_Controle/DGS-ST-005-PV-Reception-Travaux-Sous-Traitant.docx","f":"DGS-ST-005-PV-Reception-Travaux-Sous-Traitant.docx","t":"PV réception travaux sous-traitant","u":"Réceptionner les travaux exécutés par le sous-traitant","s":"DGS + Sous-traitant"},{"c":"DGS-ST-006","p":"05_SOUS_TRAITANTS/02_Execution_Et_Controle/DGS-ST-006-PV-Controle-Sous-Traitant.docx","f":"DGS-ST-006-PV-Controle-Sous-Traitant.docx","t":"PV contrôle sous-traitant","u":"Contrôler l’exécution et le respect des exigences","s":"DGS (+ Sous-traitant)"},{"c":"DGS-ST-007","p":"05_SOUS_TRAITANTS/03_Litiges_Et_Fin_Prestation/DGS-ST-007-PV-Non-Conformite-Sous-Traitant.docx","f":"DGS-ST-007-PV-Non-Conformite-Sous-Traitant.docx","t":"PV non-conformité sous-traitant","u":"Constater une non-conformité et fixer la correction","s":"DGS + Sous-traitant"},{"c":"DGS-ST-008","p":"05_SOUS_TRAITANTS/03_Litiges_Et_Fin_Prestation/DGS-ST-008-PV-Fin-Prestation.docx","f":"DGS-ST-008-PV-Fin-Prestation.docx","t":"PV fin de prestation","u":"Acter la fin des prestations du sous-traitant","s":"DGS + Sous-traitant"},{"c":"DGS-PER-001","p":"06_PERSONNEL/01_Dossier_Salarie/DGS-PER-001-Fiche-Salarie.docx","f":"DGS-PER-001-Fiche-Salarie.docx","t":"Fiche salarié","u":"Centraliser les données administratives d’un salarié","s":"DGS (+ Salarié)"},{"c":"DGS-PER-009","p":"06_PERSONNEL/01_Dossier_Salarie/DGS-PER-009-Contrat-Travail-Duree-Indeterminee.docx","f":"DGS-PER-009-Contrat-Travail-Duree-Indeterminee.docx","t":"Contrat de travail à durée indéterminée","u":"Encadrer l’embauche d’un salarié à durée indéterminée [À VALIDER JURIDIQUEMENT]","s":"DGS + Salarié"},{"c":"DGS-PER-010","p":"06_PERSONNEL/01_Dossier_Salarie/DGS-PER-010-Contrat-Travail-Duree-Determinee.docx","f":"DGS-PER-010-Contrat-Travail-Duree-Determinee.docx","t":"Contrat de travail à durée déterminée","u":"Encadrer l’embauche d’un salarié à durée déterminée [À VALIDER JURIDIQUEMENT]","s":"DGS + Salarié"},{"c":"DGS-PER-013","p":"06_PERSONNEL/01_Dossier_Salarie/DGS-PER-013-Fiche-Poste.docx","f":"DGS-PER-013-Fiche-Poste.docx","t":"Fiche de poste","u":"Définir les missions, responsabilités et compétences d’un poste","s":"DGS + Salarié"},{"c":"DGS-PER-014","p":"06_PERSONNEL/01_Dossier_Salarie/DGS-PER-014-Reglement-Interieur.docx","f":"DGS-PER-014-Reglement-Interieur.docx","t":"Règlement intérieur","u":"Fixer les règles de discipline, d’hygiène et de sécurité applicables au personnel [À VALIDER JURIDIQUEMENT]","s":"DGS (+ accusé de réception du salarié)"},{"c":"DGS-PER-002","p":"06_PERSONNEL/02_Prise_Fonction_Et_Passation/DGS-PER-002-PV-Prise-Fonction.docx","f":"DGS-PER-002-PV-Prise-Fonction.docx","t":"PV prise de fonction","u":"Acter la prise de fonction et le poste occupé","s":"DGS + Salarié"},{"c":"DGS-PER-008","p":"06_PERSONNEL/02_Prise_Fonction_Et_Passation/DGS-PER-008-PV-Passation-Service.docx","f":"DGS-PER-008-PV-Passation-Service.docx","t":"PV passation de service","u":"Formaliser la passation entre deux responsables","s":"DGS + Sortant + Entrant"},{"c":"DGS-PER-003","p":"06_PERSONNEL/03_Remise_Et_Restitution_Materiel/DGS-PER-003-PV-Remise-Materiel.docx","f":"DGS-PER-003-PV-Remise-Materiel.docx","t":"PV remise matériel","u":"Acter la remise de matériel à un salarié","s":"DGS + Salarié"},{"c":"DGS-PER-004","p":"06_PERSONNEL/03_Remise_Et_Restitution_Materiel/DGS-PER-004-PV-Remise-Vehicule.docx","f":"DGS-PER-004-PV-Remise-Vehicule.docx","t":"PV remise véhicule","u":"Acter la remise d’un véhicule à un salarié","s":"DGS + Salarié"},{"c":"DGS-PER-005","p":"06_PERSONNEL/03_Remise_Et_Restitution_Materiel/DGS-PER-005-PV-Restitution-Materiel.docx","f":"DGS-PER-005-PV-Restitution-Materiel.docx","t":"PV restitution matériel","u":"Acter la restitution du matériel par un salarié","s":"DGS + Salarié"},{"c":"DGS-PER-006","p":"06_PERSONNEL/04_Formation_Et_HSE/DGS-PER-006-PV-Formation.docx","f":"DGS-PER-006-PV-Formation.docx","t":"PV formation","u":"Tracer une action de formation et la présence des participants","s":"DGS + Participants"},{"c":"DGS-PER-007","p":"06_PERSONNEL/04_Formation_Et_HSE/DGS-PER-007-PV-Sensibilisation-HSE.docx","f":"DGS-PER-007-PV-Sensibilisation-HSE.docx","t":"PV sensibilisation HSE","u":"Tracer une séance de sensibilisation HSE","s":"DGS + Participants"},{"c":"DGS-PER-011","p":"06_PERSONNEL/05_Absences_Missions_Attestations/DGS-PER-011-Attestation-Travail.docx","f":"DGS-PER-011-Attestation-Travail.docx","t":"Attestation de travail","u":"Certifier l’emploi d’un salarié au sein de DGS","s":"DGS"},{"c":"DGS-PER-012","p":"06_PERSONNEL/05_Absences_Missions_Attestations/DGS-PER-012-Demande-Conge-Ou-Absence.docx","f":"DGS-PER-012-Demande-Conge-Ou-Absence.docx","t":"Demande de congé ou d’absence","u":"Enregistrer et valider une demande de congé ou d’absence","s":"Salarié + Responsable + DGS"},{"c":"DGS-PER-015","p":"06_PERSONNEL/05_Absences_Missions_Attestations/DGS-PER-015-Ordre-Mission.docx","f":"DGS-PER-015-Ordre-Mission.docx","t":"Ordre de mission","u":"Autoriser et cadrer un déplacement professionnel","s":"DGS + Salarié"},{"c":"DGS-PER-016","p":"06_PERSONNEL/06_Depart_Et_Solde/DGS-PER-016-Recu-Pour-Solde-Tout-Compte.docx","f":"DGS-PER-016-Recu-Pour-Solde-Tout-Compte.docx","t":"Reçu pour solde de tout compte","u":"Constater le règlement des sommes dues à un salarié qui quitte l’entreprise [À VALIDER JURIDIQUEMENT]","s":"DGS + Salarié"},{"c":"DGS-MAT-001","p":"07_MATERIEL_VEHICULES/01_Vehicules/DGS-MAT-001-PV-Reception-Vehicule.docx","f":"DGS-MAT-001-PV-Reception-Vehicule.docx","t":"PV réception véhicule","u":"Réceptionner un véhicule (livraison, état, documents)","s":"DGS (+ Vendeur)"},{"c":"DGS-MAT-002","p":"07_MATERIEL_VEHICULES/01_Vehicules/DGS-MAT-002-PV-Affectation-Vehicule.docx","f":"DGS-MAT-002-PV-Affectation-Vehicule.docx","t":"PV affectation véhicule","u":"Affecter un véhicule à un salarié ou à un chantier","s":"DGS + Affectataire"},{"c":"DGS-MAT-003","p":"07_MATERIEL_VEHICULES/01_Vehicules/DGS-MAT-003-PV-Etat-Vehicule.docx","f":"DGS-MAT-003-PV-Etat-Vehicule.docx","t":"PV état du véhicule","u":"Constater l’état du véhicule (remise / restitution)","s":"DGS + Conducteur"},{"c":"DGS-MAT-004","p":"07_MATERIEL_VEHICULES/01_Vehicules/DGS-MAT-004-PV-Accident-Vehicule.docx","f":"DGS-MAT-004-PV-Accident-Vehicule.docx","t":"PV accident véhicule","u":"Consigner un accident de véhicule et les suites","s":"DGS + Conducteur"},{"c":"DGS-MAT-005","p":"07_MATERIEL_VEHICULES/01_Vehicules/DGS-MAT-005-PV-Restitution-Vehicule.docx","f":"DGS-MAT-005-PV-Restitution-Vehicule.docx","t":"PV restitution véhicule","u":"Acter la restitution d’un véhicule","s":"DGS + Conducteur"},{"c":"DGS-MAT-006","p":"07_MATERIEL_VEHICULES/02_Equipements/DGS-MAT-006-PV-Mise-En-Service-Equipement.docx","f":"DGS-MAT-006-PV-Mise-En-Service-Equipement.docx","t":"PV mise en service équipement","u":"Acter la mise en service d’un équipement","s":"DGS (+ Utilisateur)"},{"c":"DGS-MAT-007","p":"07_MATERIEL_VEHICULES/02_Equipements/DGS-MAT-007-PV-Mise-Hors-Service.docx","f":"DGS-MAT-007-PV-Mise-Hors-Service.docx","t":"PV mise hors service","u":"Acter la mise hors service d’un véhicule ou équipement","s":"DGS"},{"c":"DGS-MAT-008","p":"07_MATERIEL_VEHICULES/02_Equipements/DGS-MAT-008-PV-Perte-Ou-Degradation-Materiel.docx","f":"DGS-MAT-008-PV-Perte-Ou-Degradation-Materiel.docx","t":"PV perte ou dégradation matériel","u":"Constater la perte ou la dégradation d’un matériel","s":"DGS + Salarié"},{"c":"DGS-PRO-001","p":"08_PROMOTION_IMMOBILIERE/01_Etudes_Et_Validation/DGS-PRO-001-PV-Validation-Une-Operation-Immobiliere.docx","f":"DGS-PRO-001-PV-Validation-Une-Operation-Immobiliere.docx","t":"PV de validation d’une opération immobilière","u":"Valider la décision de principe de l’opération","s":"DGS (+ Associé unique)"},{"c":"DGS-PRO-002","p":"08_PROMOTION_IMMOBILIERE/01_Etudes_Et_Validation/DGS-PRO-002-PV-Validation-Terrain.docx","f":"DGS-PRO-002-PV-Validation-Terrain.docx","t":"PV de validation du terrain","u":"Valider le terrain support de l’opération","s":"DGS (+ Associé unique)"},{"c":"DGS-PRO-003","p":"08_PROMOTION_IMMOBILIERE/01_Etudes_Et_Validation/DGS-PRO-003-PV-Validation-Programme.docx","f":"DGS-PRO-003-PV-Validation-Programme.docx","t":"PV de validation du programme","u":"Valider le programme (surfaces, typologies, prestations)","s":"DGS (+ Associé unique)"},{"c":"DGS-PRO-004","p":"08_PROMOTION_IMMOBILIERE/01_Etudes_Et_Validation/DGS-PRO-004-PV-Validation-Etude-Faisabilite.docx","f":"DGS-PRO-004-PV-Validation-Etude-Faisabilite.docx","t":"PV de validation de l’étude de faisabilité","u":"Valider l’étude de faisabilité","s":"DGS (+ Associé unique)"},{"c":"DGS-PRO-005","p":"08_PROMOTION_IMMOBILIERE/01_Etudes_Et_Validation/DGS-PRO-005-PV-Validation-Budget.docx","f":"DGS-PRO-005-PV-Validation-Budget.docx","t":"PV de validation du budget","u":"Valider le budget de l’opération","s":"DGS (+ Associé unique)"},{"c":"DGS-PRO-006","p":"08_PROMOTION_IMMOBILIERE/02_Financement_Et_Lancement/DGS-PRO-006-PV-Validation-Financement.docx","f":"DGS-PRO-006-PV-Validation-Financement.docx","t":"PV de validation du financement","u":"Valider le plan de financement","s":"DGS (+ Associé unique)"},{"c":"DGS-PRO-007","p":"08_PROMOTION_IMMOBILIERE/02_Financement_Et_Lancement/DGS-PRO-007-PV-Lancement-Operation.docx","f":"DGS-PRO-007-PV-Lancement-Operation.docx","t":"PV de lancement de l’opération","u":"Acter le lancement de l’opération","s":"DGS (+ intervenants)"},{"c":"DGS-PRO-008","p":"08_PROMOTION_IMMOBILIERE/03_Suivi_Operation/DGS-PRO-008-PV-Suivi-Operation.docx","f":"DGS-PRO-008-PV-Suivi-Operation.docx","t":"PV de suivi de l’opération","u":"Suivre l’avancement technique, financier et commercial","s":"DGS (+ intervenants)"},{"c":"DGS-PRO-009","p":"08_PROMOTION_IMMOBILIERE/04_Livraison_Et_Remise_Cles/DGS-PRO-009-PV-Reception-Promotion.docx","f":"DGS-PRO-009-PV-Reception-Promotion.docx","t":"PV de réception (promotion)","u":"Réceptionner l’opération ou un lot de l’opération","s":"DGS + intervenants"},{"c":"DGS-PRO-010","p":"08_PROMOTION_IMMOBILIERE/04_Livraison_Et_Remise_Cles/DGS-PRO-010-PV-Livraison-Logements.docx","f":"DGS-PRO-010-PV-Livraison-Logements.docx","t":"PV de livraison des logements","u":"Acter la livraison de chaque logement","s":"DGS + Acquéreur"},{"c":"DGS-PRO-011","p":"08_PROMOTION_IMMOBILIERE/04_Livraison_Et_Remise_Cles/DGS-PRO-011-PV-Remise-Cles-Promotion.docx","f":"DGS-PRO-011-PV-Remise-Cles-Promotion.docx","t":"PV de remise des clés (promotion)","u":"Acter la remise des clés de chaque logement","s":"DGS + Acquéreur"},{"c":"DGS-SYS-001","p":"09_MODELES_MASTER/DGS-SYS-001-Master-Document-Template.docx","f":"DGS-SYS-001-Master-Document-Template.docx","t":"DGS Master Document Template","u":"Modèle maître reproduisant le document de référence DGS (en-tête, titres, tableaux, signature)","s":"Aucune (modèle)"},{"c":"DGS-MAR-106","p":"10_MARCHES_PUBLICS/00_Guide/DGS-MAR-106-Guide-Parcours-Appel-Offres.docx","f":"DGS-MAR-106-Guide-Parcours-Appel-Offres.docx","t":"Guide du parcours d’un appel d’offres","u":"Expliquer l’ordre des étapes d’un appel d’offres public et le dossier où se trouve chaque document","s":"Aucune"},{"c":"DGS-MAR-001","p":"10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-001-Fiche-Veille-Et-Decision-Soumission.docx","f":"DGS-MAR-001-Fiche-Veille-Et-Decision-Soumission.docx","t":"Fiche de veille et décision de soumission","u":"Analyser un appel d’offres et décider de soumissionner ou non","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-002","p":"10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-002-Fiche-Retrait-Cahier-Charges-Et-Calendrier.docx","f":"DGS-MAR-002-Fiche-Retrait-Cahier-Charges-Et-Calendrier.docx","t":"Fiche de retrait du cahier des charges et calendrier","u":"Tracer le retrait du cahier des charges et planifier les échéances de l’appel d’offres","s":"DGS"},{"c":"DGS-MAR-006","p":"10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-006-Tableau-Suivi-Soumissions.docx","f":"DGS-MAR-006-Tableau-Suivi-Soumissions.docx","t":"Tableau de suivi des soumissions","u":"Suivre l’ensemble des appels d’offres auxquels DGS soumissionne","s":"DGS"},{"c":"DGS-MAR-008","p":"10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-008-Fiche-Analyse-Cahier-Charges.docx","f":"DGS-MAR-008-Fiche-Analyse-Cahier-Charges.docx","t":"Fiche d’analyse du cahier des charges","u":"Relever les conditions de participation, critères, délais, pénalités et clauses sensibles du cahier des charges","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-009","p":"10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-009-Lettre-Demande-Cahier-Charges.docx","f":"DGS-MAR-009-Lettre-Demande-Cahier-Charges.docx","t":"Lettre de demande du cahier des charges","u":"Demander au service contractant la remise du cahier des charges d’un appel d’offres","s":"DGS"},{"c":"DGS-MAR-084","p":"10_MARCHES_PUBLICS/01_Veille_Et_Decision/DGS-MAR-084-Lettre-Renonciation-Soumissionner.docx","f":"DGS-MAR-084-Lettre-Renonciation-Soumissionner.docx","t":"Lettre de renonciation à soumissionner","u":"Informer le service contractant que DGS ne déposera pas d’offre après avoir retiré le cahier des charges","s":"DGS"},{"c":"DGS-MAR-003","p":"10_MARCHES_PUBLICS/02_Visite_Et_Eclaircissements/DGS-MAR-003-PV-Visite-Site-Appel-Offres.docx","f":"DGS-MAR-003-PV-Visite-Site-Appel-Offres.docx","t":"PV de visite de site (appel d’offres)","u":"Consigner la visite des lieux effectuée avant la remise de l’offre","s":"DGS + Service contractant"},{"c":"DGS-MAR-005","p":"10_MARCHES_PUBLICS/02_Visite_Et_Eclaircissements/DGS-MAR-005-Lettre-Demande-Eclaircissements.docx","f":"DGS-MAR-005-Lettre-Demande-Eclaircissements.docx","t":"Lettre de demande d’éclaircissements","u":"Demander au service contractant des précisions sur le cahier des charges","s":"DGS"},{"c":"DGS-MAR-089","p":"10_MARCHES_PUBLICS/02_Visite_Et_Eclaircissements/DGS-MAR-089-Lettre-Demande-Report-Date-Depot-Offres.docx","f":"DGS-MAR-089-Lettre-Demande-Report-Date-Depot-Offres.docx","t":"Lettre de demande de report de la date de dépôt des offres","u":"Demander au service contractant un report de la date limite de dépôt des offres","s":"DGS"},{"c":"DGS-MAR-105","p":"10_MARCHES_PUBLICS/02_Visite_Et_Eclaircissements/DGS-MAR-105-Attestation-Visite-Lieux.docx","f":"DGS-MAR-105-Attestation-Visite-Lieux.docx","t":"Attestation de visite des lieux","u":"Faire attester par le service contractant la visite des lieux effectuée par DGS avant la remise de l’offre","s":"Service contractant + DGS"},{"c":"DGS-MAR-010","p":"10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-010-Declaration-Candidature.docx","f":"DGS-MAR-010-Declaration-Candidature.docx","t":"Déclaration de candidature","u":"Déclarer la candidature de DGS et les renseignements d’identification exigés","s":"Soumissionnaire"},{"c":"DGS-MAR-011","p":"10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-011-Declaration-Probite.docx","f":"DGS-MAR-011-Declaration-Probite.docx","t":"Déclaration de probité","u":"Engager le soumissionnaire à respecter la probité dans la procédure","s":"Soumissionnaire"},{"c":"DGS-MAR-016","p":"10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-016-Declaration-Sur-Honneur-Fiscale-Parafiscale-Et-Sociale.docx","f":"DGS-MAR-016-Declaration-Sur-Honneur-Fiscale-Parafiscale-Et-Sociale.docx","t":"Déclaration sur l’honneur fiscale, parafiscale et sociale","u":"Déclarer la situation de DGS et lister les attestations à produire en cas d’attribution","s":"Gérant"},{"c":"DGS-MAR-024","p":"10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-024-Declaration-Non-Exclusion-Marches-Publics.docx","f":"DGS-MAR-024-Declaration-Non-Exclusion-Marches-Publics.docx","t":"Déclaration de non-exclusion des marchés publics","u":"Déclarer que DGS n’est exclu ni interdit de participer aux marchés publics","s":"Gérant"},{"c":"DGS-MAR-025","p":"10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-025-Declaration-Absence-Conflit-Interets.docx","f":"DGS-MAR-025-Declaration-Absence-Conflit-Interets.docx","t":"Déclaration d’absence de conflit d’intérêts","u":"Déclarer l’absence de lien d’intérêt entre DGS et les agents du service contractant","s":"Gérant"},{"c":"DGS-MAR-026","p":"10_MARCHES_PUBLICS/03_Candidature_Declarations/DGS-MAR-026-Declaration-Preference-Nationale.docx","f":"DGS-MAR-026-Declaration-Preference-Nationale.docx","t":"Déclaration de préférence nationale","u":"Revendiquer le bénéfice de la marge de préférence accordée aux entreprises et produits d’origine algérienne","s":"Gérant"},{"c":"DGS-MAR-012","p":"10_MARCHES_PUBLICS/04_Candidature_Pouvoirs_Groupement/DGS-MAR-012-Declaration-Sous-Traitant.docx","f":"DGS-MAR-012-Declaration-Sous-Traitant.docx","t":"Déclaration du sous-traitant","u":"Déclarer les prestations sous-traitées et le sous-traitant retenu","s":"Soumissionnaire + Sous-traitant"},{"c":"DGS-MAR-013","p":"10_MARCHES_PUBLICS/04_Candidature_Pouvoirs_Groupement/DGS-MAR-013-Accord-Groupement-Momentane-Entreprises.docx","f":"DGS-MAR-013-Accord-Groupement-Momentane-Entreprises.docx","t":"Accord de groupement momentané d’entreprises","u":"Constituer un groupement d’entreprises pour répondre à un appel d’offres [À VALIDER JURIDIQUEMENT]","s":"Membres du groupement"},{"c":"DGS-MAR-014","p":"10_MARCHES_PUBLICS/04_Candidature_Pouvoirs_Groupement/DGS-MAR-014-Procuration-Pour-Depot-Et-Signature-Offre.docx","f":"DGS-MAR-014-Procuration-Pour-Depot-Et-Signature-Offre.docx","t":"Procuration pour dépôt et signature de l’offre","u":"Habiliter une personne à retirer, signer et déposer l’offre pour DGS","s":"Gérant + Mandataire"},{"c":"DGS-MAR-015","p":"10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-015-Fiche-Renseignements-Soumissionnaire.docx","f":"DGS-MAR-015-Fiche-Renseignements-Soumissionnaire.docx","t":"Fiche de renseignements du soumissionnaire","u":"Présenter l’identité, les moyens et les qualifications de DGS","s":"Gérant"},{"c":"DGS-MAR-017","p":"10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-017-Fiche-References-Professionnelles.docx","f":"DGS-MAR-017-Fiche-References-Professionnelles.docx","t":"Fiche des références professionnelles","u":"Lister les marchés et travaux similaires exécutés par DGS","s":"Gérant"},{"c":"DGS-MAR-018","p":"10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-018-Demande-Attestation-Bonne-Execution.docx","f":"DGS-MAR-018-Demande-Attestation-Bonne-Execution.docx","t":"Demande d’attestation de bonne exécution","u":"Demander à un maître d’ouvrage une attestation de bonne exécution","s":"DGS"},{"c":"DGS-MAR-019","p":"10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-019-Fiche-Moyens-Humains.docx","f":"DGS-MAR-019-Fiche-Moyens-Humains.docx","t":"Fiche des moyens humains","u":"Présenter le personnel d’encadrement et d’exécution proposé pour le marché","s":"Gérant"},{"c":"DGS-MAR-020","p":"10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-020-Curriculum-Vitae-Personnel-Encadrement.docx","f":"DGS-MAR-020-Curriculum-Vitae-Personnel-Encadrement.docx","t":"Curriculum vitae du personnel d’encadrement","u":"Présenter le parcours d’un membre de l’équipe proposée","s":"Intéressé + DGS"},{"c":"DGS-MAR-021","p":"10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-021-Fiche-Moyens-Materiels.docx","f":"DGS-MAR-021-Fiche-Moyens-Materiels.docx","t":"Fiche des moyens matériels","u":"Lister les engins et équipements affectés au marché","s":"Gérant"},{"c":"DGS-MAR-022","p":"10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-022-Fiche-Situation-Financiere.docx","f":"DGS-MAR-022-Fiche-Situation-Financiere.docx","t":"Fiche de situation financière","u":"Présenter le chiffre d’affaires et les bilans des dernières années","s":"Gérant"},{"c":"DGS-MAR-023","p":"10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-023-Plan-Charges-Entreprise.docx","f":"DGS-MAR-023-Plan-Charges-Entreprise.docx","t":"Plan de charges de l’entreprise","u":"Présenter les projets en cours de DGS et sa capacité à en prendre de nouveaux","s":"Gérant"},{"c":"DGS-MAR-027","p":"10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-027-Fiche-Qualification-Classification-Professionnelle.docx","f":"DGS-MAR-027-Fiche-Qualification-Classification-Professionnelle.docx","t":"Fiche de qualification et de classification professionnelle","u":"Présenter le certificat de qualification et de classification professionnelle de DGS et son adéquation avec l’appel d’offres","s":"Gérant"},{"c":"DGS-MAR-028","p":"10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-028-Fiche-Assurances-Entreprise.docx","f":"DGS-MAR-028-Fiche-Assurances-Entreprise.docx","t":"Fiche des assurances de l’entreprise","u":"Lister les polices d’assurance de DGS (responsabilité civile, tous risques chantier, matériel) avec leur validité","s":"Gérant"},{"c":"DGS-MAR-029","p":"10_MARCHES_PUBLICS/05_Candidature_Capacites/DGS-MAR-029-Fiche-Detaillee-Reference-Marche.docx","f":"DGS-MAR-029-Fiche-Detaillee-Reference-Marche.docx","t":"Fiche détaillée de référence (par marché)","u":"Décrire en détail un marché ou un chantier similaire exécuté, à joindre à la liste des références","s":"Gérant"},{"c":"DGS-MAR-085","p":"10_MARCHES_PUBLICS/06_Pieces_Administratives/DGS-MAR-085-Registre-Pieces-Administratives-Validite.docx","f":"DGS-MAR-085-Registre-Pieces-Administratives-Validite.docx","t":"Registre des pièces administratives et de leur validité","u":"Suivre les pièces administratives de DGS et leurs dates d’expiration pour qu’elles soient valides au dépôt","s":"Aucune (registre interne)"},{"c":"DGS-MAR-086","p":"10_MARCHES_PUBLICS/06_Pieces_Administratives/DGS-MAR-086-Lettre-Demande-Attestations-Administratives.docx","f":"DGS-MAR-086-Lettre-Demande-Attestations-Administratives.docx","t":"Lettre de demande d’attestations administratives","u":"Demander à un organisme (impôts, CNAS, CASNOS, CACOBATPH, CNRC) une attestation nécessaire à un dossier d’appel d’offres","s":"DGS"},{"c":"DGS-MAR-087","p":"10_MARCHES_PUBLICS/06_Pieces_Administratives/DGS-MAR-087-Demande-Attestation-Bancaire-Capacite-Financiere.docx","f":"DGS-MAR-087-Demande-Attestation-Bancaire-Capacite-Financiere.docx","t":"Demande d’attestation bancaire de capacité financière","u":"Demander à la banque une attestation de solvabilité ou de capacité financière exigée par un appel d’offres","s":"DGS"},{"c":"DGS-MAR-088","p":"10_MARCHES_PUBLICS/06_Pieces_Administratives/DGS-MAR-088-Sommaire-Dossier-Candidature.docx","f":"DGS-MAR-088-Sommaire-Dossier-Candidature.docx","t":"Sommaire du dossier de candidature","u":"Lister et paginer toutes les pièces de l’enveloppe « dossier de candidature »","s":"Candidat"},{"c":"DGS-MAR-030","p":"10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-030-Declaration-Souscrire.docx","f":"DGS-MAR-030-Declaration-Souscrire.docx","t":"Déclaration à souscrire","u":"Engager le soumissionnaire à respecter le cahier des charges et ses déclarations","s":"Soumissionnaire"},{"c":"DGS-MAR-031","p":"10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-031-Memoire-Technique-Justificatif.docx","f":"DGS-MAR-031-Memoire-Technique-Justificatif.docx","t":"Mémoire technique justificatif","u":"Justifier la compréhension du projet, la méthode, les moyens et le planning proposés","s":"Gérant"},{"c":"DGS-MAR-032","p":"10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-032-Planning-Detaille-Travaux.docx","f":"DGS-MAR-032-Planning-Detaille-Travaux.docx","t":"Planning détaillé des travaux","u":"Présenter le calendrier d’exécution tâche par tâche","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-033","p":"10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-033-Fiche-Installation-Chantier.docx","f":"DGS-MAR-033-Fiche-Installation-Chantier.docx","t":"Fiche d’installation de chantier","u":"Décrire l’organisation et l’installation du chantier proposée","s":"Chef de projet"},{"c":"DGS-MAR-034","p":"10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-034-Liste-Materiaux-Et-Fournitures-Proposes.docx","f":"DGS-MAR-034-Liste-Materiaux-Et-Fournitures-Proposes.docx","t":"Liste des matériaux et fournitures proposés","u":"Présenter les matériaux, marques, origines et normes proposés","s":"Chef de projet"},{"c":"DGS-MAR-035","p":"10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-035-Plan-Qualite-Chantier.docx","f":"DGS-MAR-035-Plan-Qualite-Chantier.docx","t":"Plan qualité du chantier","u":"Décrire l’organisation qualité et les contrôles prévus sur le chantier","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-036","p":"10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-036-Plan-HSE-Chantier.docx","f":"DGS-MAR-036-Plan-HSE-Chantier.docx","t":"Plan HSE du chantier","u":"Décrire l’organisation hygiène, sécurité et environnement du chantier [À VALIDER JURIDIQUEMENT]","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-037","p":"10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-037-Feuille-Acceptation-Cahier-Charges.docx","f":"DGS-MAR-037-Feuille-Acceptation-Cahier-Charges.docx","t":"Feuille d’acceptation du cahier des charges","u":"Attester la lecture et l’acceptation du cahier des charges (mention « lu et accepté »)","s":"Soumissionnaire"},{"c":"DGS-MAR-038","p":"10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-038-Organigramme-Equipe-Chantier.docx","f":"DGS-MAR-038-Organigramme-Equipe-Chantier.docx","t":"Organigramme de l’équipe de chantier","u":"Présenter l’organisation hiérarchique et les fonctions de l’équipe affectée au marché","s":"Gérant"},{"c":"DGS-MAR-039","p":"10_MARCHES_PUBLICS/07_Offre_Technique/DGS-MAR-039-Plan-Gestion-Environnementale-Dechets-Chantier.docx","f":"DGS-MAR-039-Plan-Gestion-Environnementale-Dechets-Chantier.docx","t":"Plan de gestion environnementale et des déchets de chantier","u":"Décrire le tri, le stockage et l’évacuation des déchets et les mesures de protection de l’environnement du chantier","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-040","p":"10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-040-Lettre-Soumission.docx","f":"DGS-MAR-040-Lettre-Soumission.docx","t":"Lettre de soumission","u":"Formuler l’engagement financier de DGS pour l’exécution du marché","s":"Soumissionnaire"},{"c":"DGS-MAR-041","p":"10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-041-Bordereau-Prix-Unitaires.docx","f":"DGS-MAR-041-Bordereau-Prix-Unitaires.docx","t":"Bordereau des prix unitaires","u":"Fixer les prix unitaires en chiffres et en lettres","s":"Soumissionnaire"},{"c":"DGS-MAR-042","p":"10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-042-Detail-Quantitatif-Et-Estimatif.docx","f":"DGS-MAR-042-Detail-Quantitatif-Et-Estimatif.docx","t":"Détail quantitatif et estimatif","u":"Chiffrer les quantités du marché et en calculer le montant total","s":"Soumissionnaire"},{"c":"DGS-MAR-043","p":"10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-043-Sous-Detail-Prix-Unitaires.docx","f":"DGS-MAR-043-Sous-Detail-Prix-Unitaires.docx","t":"Sous-détail des prix unitaires","u":"Justifier un prix unitaire par ses composantes (main-d’œuvre, matériaux, matériel)","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-044","p":"10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-044-Decomposition-Prix-Global-Et-Forfaitaire.docx","f":"DGS-MAR-044-Decomposition-Prix-Global-Et-Forfaitaire.docx","t":"Décomposition du prix global et forfaitaire","u":"Détailler le prix global d’un marché à prix forfaitaire","s":"Soumissionnaire"},{"c":"DGS-MAR-046","p":"10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-046-Recapitulatif-Lots-Montant-Global-Offre.docx","f":"DGS-MAR-046-Recapitulatif-Lots-Montant-Global-Offre.docx","t":"Récapitulatif des lots et du montant global de l’offre","u":"Totaliser les montants par lot pour obtenir le montant global HT, la TVA et le TTC de l’offre","s":"Soumissionnaire"},{"c":"DGS-MAR-047","p":"10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-047-Echeancier-Previsionnel-Facturation.docx","f":"DGS-MAR-047-Echeancier-Previsionnel-Facturation.docx","t":"Échéancier prévisionnel de facturation","u":"Prévoir les situations de travaux, l’avance et la retenue de garantie pour établir le plan de trésorerie du marché","s":"Soumissionnaire"},{"c":"DGS-MAR-048","p":"10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-048-Fiche-Determination-Coefficient-Vente.docx","f":"DGS-MAR-048-Fiche-Determination-Coefficient-Vente.docx","t":"Fiche de détermination du coefficient de vente","u":"Calculer le coefficient K qui transforme le déboursé sec en prix de vente (frais, aléas, bénéfice, taxes)","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-049","p":"10_MARCHES_PUBLICS/08_Offre_Financiere/DGS-MAR-049-Fiche-Verification-Arithmetique-Offre-Financiere.docx","f":"DGS-MAR-049-Fiche-Verification-Arithmetique-Offre-Financiere.docx","t":"Fiche de vérification arithmétique de l’offre financière","u":"Contrôler les calculs et la cohérence de l’offre financière avant la remise du dossier","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-050","p":"10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-050-Demande-Emission-Caution-Bancaire.docx","f":"DGS-MAR-050-Demande-Emission-Caution-Bancaire.docx","t":"Demande d’émission de caution bancaire","u":"Demander à la banque l’émission d’une caution (soumission, bonne exécution, avance)","s":"DGS"},{"c":"DGS-MAR-051","p":"10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-051-Tableau-Suivi-Cautions-Et-Garanties.docx","f":"DGS-MAR-051-Tableau-Suivi-Cautions-Et-Garanties.docx","t":"Tableau de suivi des cautions et garanties","u":"Suivre les cautions émises, leurs échéances et leur mainlevée","s":"DGS"},{"c":"DGS-MAR-052","p":"10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-052-Demande-Mainlevee-Caution.docx","f":"DGS-MAR-052-Demande-Mainlevee-Caution.docx","t":"Demande de mainlevée de caution","u":"Demander la restitution ou la mainlevée d’une caution","s":"DGS"},{"c":"DGS-MAR-053","p":"10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-053-Demande-Prorogation-Caution.docx","f":"DGS-MAR-053-Demande-Prorogation-Caution.docx","t":"Demande de prorogation de caution","u":"Demander à la banque de proroger la validité d’une caution (soumission, bonne exécution) à la demande du service contractant","s":"DGS"},{"c":"DGS-MAR-054","p":"10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-054-Fiche-Determination-Garanties-Marche.docx","f":"DGS-MAR-054-Fiche-Determination-Garanties-Marche.docx","t":"Fiche de détermination des garanties du marché","u":"Calculer les montants, durées et coûts des garanties exigées par un marché (cautions et retenue de garantie)","s":"Gérant"},{"c":"DGS-MAR-055","p":"10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-055-Demande-Substitution-Retenue-Garantie-Caution.docx","f":"DGS-MAR-055-Demande-Substitution-Retenue-Garantie-Caution.docx","t":"Demande de substitution de la retenue de garantie par une caution bancaire","u":"Demander au service contractant de remplacer la retenue de garantie par une caution bancaire","s":"DGS"},{"c":"DGS-MAR-056","p":"10_MARCHES_PUBLICS/09_Garanties_Cautions/DGS-MAR-056-Demande-Restitution-Retenue-Garantie.docx","f":"DGS-MAR-056-Demande-Restitution-Retenue-Garantie.docx","t":"Demande de restitution de la retenue de garantie","u":"Demander le remboursement de la retenue de garantie après la réception définitive du marché","s":"DGS"},{"c":"DGS-MAR-004","p":"10_MARCHES_PUBLICS/10_Depot_Et_Controle/DGS-MAR-004-Liste-Controle-Dossier-Soumission.docx","f":"DGS-MAR-004-Liste-Controle-Dossier-Soumission.docx","t":"Liste de contrôle du dossier de soumission","u":"Vérifier la conformité et la complétude des trois enveloppes avant dépôt","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-070","p":"10_MARCHES_PUBLICS/10_Depot_Et_Controle/DGS-MAR-070-Page-Garde-Dossier-Soumission.docx","f":"DGS-MAR-070-Page-Garde-Dossier-Soumission.docx","t":"Page de garde du dossier de soumission","u":"Identifier chaque enveloppe du dossier de soumission et en présenter le sommaire","s":"Soumissionnaire"},{"c":"DGS-MAR-071","p":"10_MARCHES_PUBLICS/10_Depot_Et_Controle/DGS-MAR-071-Modele-Etiquettes-Enveloppes.docx","f":"DGS-MAR-071-Modele-Etiquettes-Enveloppes.docx","t":"Modèle d’étiquettes pour les enveloppes de l’offre","u":"Préparer les mentions à porter sur l’enveloppe extérieure et sur les trois enveloppes intérieures","s":"Aucune"},{"c":"DGS-MAR-072","p":"10_MARCHES_PUBLICS/10_Depot_Et_Controle/DGS-MAR-072-Bordereau-Depot-Dossier-Soumission.docx","f":"DGS-MAR-072-Bordereau-Depot-Dossier-Soumission.docx","t":"Bordereau de dépôt du dossier de soumission","u":"Faire constater par le service contractant le dépôt des plis (date, heure, nombre d’enveloppes) et conserver une décharge","s":"Soumissionnaire + Service contractant"},{"c":"DGS-MAR-073","p":"10_MARCHES_PUBLICS/10_Depot_Et_Controle/DGS-MAR-073-Lettre-Retrait-Ou-Modification-Offre.docx","f":"DGS-MAR-073-Lettre-Retrait-Ou-Modification-Offre.docx","t":"Lettre de retrait ou de modification de l’offre","u":"Retirer ou modifier une offre déjà déposée, avant la date limite de dépôt","s":"DGS"},{"c":"DGS-MAR-007","p":"10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-007-Lettre-Recours-Contre-Resultat-Appel-Offres.docx","f":"DGS-MAR-007-Lettre-Recours-Contre-Resultat-Appel-Offres.docx","t":"Lettre de recours contre le résultat de l’appel d’offres","u":"Contester le résultat d’une procédure auprès de l’autorité compétente [À VALIDER JURIDIQUEMENT]","s":"DGS"},{"c":"DGS-MAR-074","p":"10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-074-Lettre-Prolongation-Validite-Offre.docx","f":"DGS-MAR-074-Lettre-Prolongation-Validite-Offre.docx","t":"Lettre de prolongation de la validité de l’offre","u":"Répondre à la demande du service contractant de prolonger la durée de validité de l’offre","s":"DGS"},{"c":"DGS-MAR-075","p":"10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-075-Fiche-Suivi-Seance-Ouverture-Plis.docx","f":"DGS-MAR-075-Fiche-Suivi-Seance-Ouverture-Plis.docx","t":"Fiche de suivi de la séance d’ouverture des plis","u":"Consigner ce qui est lu en séance publique d’ouverture des plis : offres, montants, pièces manquantes, réserves","s":"Représentant de DGS"},{"c":"DGS-MAR-076","p":"10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-076-Lettre-Reponse-Demande-Complement-Dossier.docx","f":"DGS-MAR-076-Lettre-Reponse-Demande-Complement-Dossier.docx","t":"Lettre de réponse à une demande de complément de dossier ou de précisions","u":"Répondre dans le délai à la demande du service contractant ou de la commission de compléter une pièce ou de préciser un point","s":"DGS"},{"c":"DGS-MAR-077","p":"10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-077-Lettre-Demande-Communication-Resultats-Evaluation.docx","f":"DGS-MAR-077-Lettre-Demande-Communication-Resultats-Evaluation.docx","t":"Lettre de demande de communication des résultats de l’évaluation","u":"Demander les résultats de l’évaluation des offres et les motifs du classement de DGS","s":"DGS"},{"c":"DGS-MAR-078","p":"10_MARCHES_PUBLICS/11_Resultats_Et_Recours/DGS-MAR-078-Fiche-Analyse-Resultat-Retour-Experience.docx","f":"DGS-MAR-078-Fiche-Analyse-Resultat-Retour-Experience.docx","t":"Fiche d’analyse du résultat et retour d’expérience","u":"Analyser le résultat d’un appel d’offres, comprendre les écarts et en tirer des actions d’amélioration","s":"Gérant"},{"c":"DGS-MAR-090","p":"10_MARCHES_PUBLICS/12_Procedures_Simplifiees/DGS-MAR-090-Lettre-Reponse-Consultation.docx","f":"DGS-MAR-090-Lettre-Reponse-Consultation.docx","t":"Lettre de réponse à une consultation","u":"Remettre une offre de prix en réponse à une consultation ou à une invitation du service contractant","s":"DGS"},{"c":"DGS-MAR-091","p":"10_MARCHES_PUBLICS/12_Procedures_Simplifiees/DGS-MAR-091-Facture-Proforma.docx","f":"DGS-MAR-091-Facture-Proforma.docx","t":"Facture proforma","u":"Établir un document de prix détaillé avant commande ou avant la signature d’un marché de gré à gré","s":"DGS"},{"c":"DGS-MAR-092","p":"10_MARCHES_PUBLICS/12_Procedures_Simplifiees/DGS-MAR-092-Accuse-Reception-Bon-Commande.docx","f":"DGS-MAR-092-Accuse-Reception-Bon-Commande.docx","t":"Accusé de réception de bon de commande","u":"Accuser réception d’une commande publique et confirmer les délais et conditions d’exécution","s":"DGS"},{"c":"DGS-MAR-093","p":"10_MARCHES_PUBLICS/12_Procedures_Simplifiees/DGS-MAR-093-Bon-Livraison-Service-Contractant.docx","f":"DGS-MAR-093-Bon-Livraison-Service-Contractant.docx","t":"Bon de livraison au service contractant","u":"Constater la livraison de fournitures ou matériaux commandés par un service contractant, avec réception signée","s":"DGS + Service contractant"},{"c":"DGS-MAR-060","p":"10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-060-Bordereau-Pieces-Justificatives-Attributaire.docx","f":"DGS-MAR-060-Bordereau-Pieces-Justificatives-Attributaire.docx","t":"Bordereau des pièces justificatives de l’attributaire","u":"Rassembler les pièces à fournir en cas d’attribution du marché","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-061","p":"10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-061-Accuse-Reception-Ordre-Service-Demarrage.docx","f":"DGS-MAR-061-Accuse-Reception-Ordre-Service-Demarrage.docx","t":"Accusé de réception de l’ordre de service de démarrage","u":"Accuser réception de l’ordre de service de commencer les travaux","s":"DGS"},{"c":"DGS-MAR-079","p":"10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-079-Lettre-Acceptation-Attribution-Provisoire.docx","f":"DGS-MAR-079-Lettre-Acceptation-Attribution-Provisoire.docx","t":"Lettre d’acceptation de l’attribution provisoire","u":"Confirmer au service contractant l’acceptation de l’attribution et s’engager à produire les pièces demandées","s":"DGS"},{"c":"DGS-MAR-080","p":"10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-080-Fiche-Lancement-Marche.docx","f":"DGS-MAR-080-Fiche-Lancement-Marche.docx","t":"Fiche de lancement du marché","u":"Préparer l’exécution : équipe, budget cible, obligations clés et documents à produire avant le démarrage","s":"Chef de projet + Gérant"},{"c":"DGS-MAR-081","p":"10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-081-Lettre-Designation-Representant-Entreprise.docx","f":"DGS-MAR-081-Lettre-Designation-Representant-Entreprise.docx","t":"Lettre de désignation du représentant de l’entreprise pour le marché","u":"Désigner auprès du service contractant la personne qui représente DGS pour l’exécution du marché","s":"Gérant"},{"c":"DGS-MAR-082","p":"10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-082-Lettre-Transmission-Attestations-Assurance.docx","f":"DGS-MAR-082-Lettre-Transmission-Attestations-Assurance.docx","t":"Lettre de transmission des attestations d’assurance","u":"Remettre au service contractant les attestations d’assurance exigées avant le démarrage des travaux","s":"DGS"},{"c":"DGS-MAR-083","p":"10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-083-Programme-Execution-Travaux.docx","f":"DGS-MAR-083-Programme-Execution-Travaux.docx","t":"Programme d’exécution des travaux","u":"Présenter au service contractant le calendrier d’exécution mis à jour après l’ordre de service de démarrage","s":"Gérant"},{"c":"DGS-MAR-094","p":"10_MARCHES_PUBLICS/13_Attribution_Et_Demarrage/DGS-MAR-094-Lettre-Rappel-Ordre-Service-Demarrage.docx","f":"DGS-MAR-094-Lettre-Rappel-Ordre-Service-Demarrage.docx","t":"Lettre de rappel pour l’ordre de service de démarrage","u":"Rappeler au service contractant que l’ordre de service n’a pas été notifié et réserver les droits de DGS","s":"DGS"},{"c":"DGS-MAR-062","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-062-Demande-Avance.docx","f":"DGS-MAR-062-Demande-Avance.docx","t":"Demande d’avance","u":"Demander une avance forfaitaire ou sur approvisionnements [À VALIDER JURIDIQUEMENT]","s":"DGS"},{"c":"DGS-MAR-063","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-063-Situation-Travaux-Decompte-Provisoire.docx","f":"DGS-MAR-063-Situation-Travaux-Decompte-Provisoire.docx","t":"Situation de travaux (décompte provisoire)","u":"Présenter les travaux exécutés et le montant dû pour une période","s":"DGS + Service contractant"},{"c":"DGS-MAR-065","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-065-Demande-Prorogation-Delai.docx","f":"DGS-MAR-065-Demande-Prorogation-Delai.docx","t":"Demande de prorogation de délai","u":"Demander une prolongation du délai d’exécution avec justification","s":"DGS"},{"c":"DGS-MAR-066","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-066-Demande-Avenant-Au-Marche.docx","f":"DGS-MAR-066-Demande-Avenant-Au-Marche.docx","t":"Demande d’avenant au marché","u":"Demander la modification du marché (prix, délai, consistance)","s":"DGS"},{"c":"DGS-MAR-068","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-068-Memoire-Reclamation.docx","f":"DGS-MAR-068-Memoire-Reclamation.docx","t":"Mémoire de réclamation","u":"Présenter et chiffrer une réclamation liée à l’exécution du marché","s":"DGS"},{"c":"DGS-MAR-069","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-069-Lettre-Relance-Paiement-Au-Service-Contractant.docx","f":"DGS-MAR-069-Lettre-Relance-Paiement-Au-Service-Contractant.docx","t":"Lettre de relance de paiement au service contractant","u":"Relancer le paiement d’une situation ou d’un décompte impayé","s":"DGS"},{"c":"DGS-MAR-095","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-095-Lettre-Reserves-Entrepreneur.docx","f":"DGS-MAR-095-Lettre-Reserves-Entrepreneur.docx","t":"Lettre de réserves de l’entrepreneur","u":"Formuler par écrit et dans les délais des réserves sur un ordre de service, un constat ou une décision du service contractant","s":"DGS"},{"c":"DGS-MAR-096","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-096-Demande-Revision-Prix.docx","f":"DGS-MAR-096-Demande-Revision-Prix.docx","t":"Demande de révision des prix","u":"Demander la révision du prix du marché lorsque le marché la prévoit, sur la base des indices contractuels","s":"DGS"},{"c":"DGS-MAR-097","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-097-Demande-Interets-Moratoires.docx","f":"DGS-MAR-097-Demande-Interets-Moratoires.docx","t":"Demande d’intérêts moratoires","u":"Réclamer les intérêts dus en cas de retard de paiement d’une situation ou d’un décompte","s":"DGS"},{"c":"DGS-MAR-098","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-098-Demande-Suspension-Travaux.docx","f":"DGS-MAR-098-Demande-Suspension-Travaux.docx","t":"Demande de suspension des travaux","u":"Informer le service contractant de la suspension des travaux pour un motif justifié (non-paiement, force majeure, empêchement)","s":"DGS"},{"c":"DGS-MAR-099","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-099-Tableau-Bord-Suivi-Execution-Marche.docx","f":"DGS-MAR-099-Tableau-Bord-Suivi-Execution-Marche.docx","t":"Tableau de bord de suivi d’exécution du marché","u":"Suivre en un seul document les délais, montants, situations, avenants et garanties d’un marché en cours","s":"Aucune (suivi interne)"},{"c":"DGS-MAR-100","p":"10_MARCHES_PUBLICS/14_Execution_Marche/DGS-MAR-100-Registre-Correspondances-Ordres-Service-Marche.docx","f":"DGS-MAR-100-Registre-Correspondances-Ordres-Service-Marche.docx","t":"Registre des correspondances et ordres de service du marché","u":"Enregistrer chronologiquement les courriers, ordres de service et notifications échangés avec le service contractant","s":"Aucune (registre interne)"},{"c":"DGS-MAR-064","p":"10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-064-Decompte-Definitif.docx","f":"DGS-MAR-064-Decompte-Definitif.docx","t":"Décompte définitif","u":"Arrêter le montant final dû au titre du marché","s":"DGS + Service contractant"},{"c":"DGS-MAR-067","p":"10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-067-Demande-Reception-Provisoire-Travaux.docx","f":"DGS-MAR-067-Demande-Reception-Provisoire-Travaux.docx","t":"Demande de réception provisoire des travaux","u":"Demander la convocation à la réception des travaux","s":"DGS"},{"c":"DGS-MAR-101","p":"10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-101-Demande-Reception-Definitive-Travaux.docx","f":"DGS-MAR-101-Demande-Reception-Definitive-Travaux.docx","t":"Demande de réception définitive des travaux","u":"Demander la convocation à la réception définitive à l’expiration du délai de garantie","s":"DGS"},{"c":"DGS-MAR-102","p":"10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-102-Tableau-Suivi-Reserves-Marche.docx","f":"DGS-MAR-102-Tableau-Suivi-Reserves-Marche.docx","t":"Tableau de suivi des réserves du marché","u":"Suivre chaque réserve émise à la réception, son responsable, son échéance et sa levée","s":"Chef de projet"},{"c":"DGS-MAR-103","p":"10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-103-Demande-Certificat-Bonne-Execution-Marche.docx","f":"DGS-MAR-103-Demande-Certificat-Bonne-Execution-Marche.docx","t":"Demande de certificat de bonne exécution du marché","u":"Demander au maître d’ouvrage une attestation de bonne exécution à la fin du marché, pour constituer une référence","s":"DGS"},{"c":"DGS-MAR-104","p":"10_MARCHES_PUBLICS/15_Reception_Et_Cloture/DGS-MAR-104-Fiche-Cloture-Dossier-Marche.docx","f":"DGS-MAR-104-Fiche-Cloture-Dossier-Marche.docx","t":"Fiche de clôture du dossier de marché","u":"Vérifier que toutes les formalités de fin de marché sont accomplies avant d’archiver le dossier","s":"Chef de projet + Gérant"}];
+const FIELDS={"MARQUE_ET_MODELE":"Marque et modèle","NOM_DU_VENDEUR":"Nom du vendeur","N_D_IMMATRICULATION":"N° d’immatriculation","NOM_ET_FONCTION":"Nom et fonction","DESIGNATION":"Désignation","DESIGNATION_ET_REFERENCE":"Désignation et référence","ADRESSE_DU_CHANTIER":"Adresse du chantier","AUTRE_LOT_OU_POSTE":"Autre lot ou poste","INTITULE_DU_PROJET":"Intitulé du projet","NOM_FONCTION":"Nom / fonction","NOM_CLIENT":"Nom client","N_DEVIS":"N° devis","N_PROJET":"N° projet","DELAI":"Délai","N_OFFRE":"N° offre","PRESTATION_EXCLUE":"Prestation exclue","PRESTATION_INCLUSE":"Prestation incluse","TVA":"Tva","A_COMPLETER_RIB":"À compléter — rib","DATE":"Date","N_BORDEREAU":"N° bordereau","N_CONTRAT_N_DEVIS_N_OFFRE":"N° contrat / n° devis / n° offre","DATE_DE_DEMARRAGE":"Date de démarrage","N_DEVIS_N_OFFRE":"N° devis / n° offre","ADRESSE_CLIENT":"Adresse client","N_CONTRAT_N_FACTURE":"N° contrat / n° facture","DENOMINATION":"Dénomination","MESURE_1_RESPONSABLE_ECHEANCE":"Mesure 1 — responsable — échéance","MESURE_2_RESPONSABLE_ECHEANCE":"Mesure 2 — responsable — échéance","MESURE_3_RESPONSABLE_ECHEANCE":"Mesure 3 — responsable — échéance","N_DOSSIER":"N° dossier","OBJET_DE_LA_REUNION":"Objet de la réunion","NATURE_DES_TRAVAUX":"Nature des travaux","N_CONTRAT":"N° contrat","INTITULE_DU_PROJET_N_PROJET":"Intitulé du projet / n° projet","NOM_FOURNISSEUR":"Nom fournisseur","ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME":"Adresse du terrain ou du programme","INTITULE_DE_L_OPERATION":"Intitulé de l’opération","N_OPERATION":"N° opération","NOM_ET_PRENOM_DE_L_ACQUEREUR":"Nom et prénom de l’acquéreur","N_DE_LOT":"N° de lot","DEUXIEME_ELEMENT":"Deuxième élément","INTITULE_DE_LA_DEUXIEME_RUBRIQUE":"Intitulé de la deuxième rubrique","INTITULE_DE_LA_PREMIERE_RUBRIQUE":"Intitulé de la première rubrique","INTITULE_DE_LA_TROISIEME_RUBRIQUE":"Intitulé de la troisième rubrique","INTRODUCTION_DE_LA_LISTE":"Introduction de la liste :","POSTE_1":"Poste 1","POSTE_2":"Poste 2","POSTE_3":"Poste 3","PREMIER_ELEMENT":"Premier élément","SOUS_TITRE_OU_OBJET_DU_DOCUMENT":"Sous-titre ou objet du document","TITRE_DU_DOCUMENT":"Titre du document","TROISIEME_ELEMENT":"Troisième élément","ELEMENT_OU_DONNEE_PRINCIPALE_VALEUR":"Élément ou donnée principale : valeur","DENOMINATION_DU_SOUS_TRAITANT":"Dénomination du sous-traitant","LOT":"Lot","NOM_SOUS_TRAITANT":"Nom sous-traitant","N_CONTRAT_ST":"N° contrat st","ADRESSE_FOURNISSEUR":"Adresse fournisseur","N_CONTRAT_ACCORD":"N° contrat / accord","NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE":"Nom et prénom de l’associé unique","TEXTE_DE_LA_DECISION_PRECIS_ET_LIMITE_A_UN_SEUL_OBJET":"Texte de la décision, précis et limité à un seul objet.","NOM_ET_PRENOM_DU_GERANT":"Nom et prénom du gérant","DUREE":"Durée","MONTANT":"Montant","PERIODICITE":"Périodicité","TAUX":"Taux","ADRESSE_DU_SITE":"Adresse du site","NOM_DU_SERVICE_CONTRACTANT":"Nom du service contractant","N_AO":"N° ao","N_LOT_SANS_OBJET":"N° lot / sans objet","OBJET_DE_L_APPEL_D_OFFRES":"Objet de l’appel d’offres","ADRESSE_DU_SERVICE_CONTRACTANT":"Adresse du service contractant","DESIGNATION_DU_SITE":"Désignation du site","FONCTION":"Fonction","NOM_ET_PRENOM_DU_MANDATAIRE":"Nom et prénom du mandataire","NOM_DU_GERANT":"Nom du gérant","N_MARCHE":"N° marché","OBJET_DU_MARCHE":"Objet du marché","EMPLACEMENT":"Emplacement","CONDITIONS_DE_PAIEMENT":"Conditions de paiement","N_CONSULTATION_N_BON_DE_COMMANDE":"N° consultation / n° bon de commande","HEURE":"Heure","AGENCE_ET_ADRESSE":"Agence et adresse","BANQUE":"Banque","SERVICE_CONTRACTANT":"Service contractant","ADRESSE":"Adresse","FORME_JURIDIQUE":"Forme juridique","NOM_ET_QUALITE":"Nom et qualité","N_RC":"N° rc","COTRAITANT":"Cotraitant","DENOMINATION_DU_COTRAITANT":"Dénomination du cotraitant","CAUSE_1_DATE_DESCRIPTION_PIECE_JUSTIFICATIVE":"Cause 1 — date, description, pièce justificative","CAUSE_2":"Cause 2","CAUSE_3":"Cause 3","JUSTIFICATION_1_SUJETION_IMPREVUE_MODIFICATION_DE_CONSISTANCE_QUANTITES":"Justification 1 — sujétion imprévue, modification de consistance, quantités","JUSTIFICATION_2":"Justification 2","N_D_ENREGISTREMENT":"N° d’enregistrement","N_MARCHE_N_AO":"N° marché / n° ao","CONTACT":"Contact","NOM_ET_PRENOM":"Nom et prénom","TAUX_OU_MONTANT":"Taux ou montant","N_ET_DESIGNATION_DU_POSTE":"N° et désignation du poste","U":"U","COMPAGNIE":"Compagnie","ORGANISME_EMETTEUR":"Organisme émetteur","ADRESSE_DE_L_ORGANISME":"Adresse de l’organisme","N_D_AFFILIATION":"N° d’affiliation","ORGANISME":"Organisme","NOMBRE":"Nombre","NOM":"Nom","AUTORITE_DESTINATAIRE_DU_RECOURS":"Autorité destinataire du recours","MOTIF_2":"Motif 2","MOTIF_3":"Motif 3","MAITRE_D_OUVRAGE":"Maître d’ouvrage","POSTE":"Poste","N_CERTIFICAT":"N° certificat","NOM_ET_PRENOM_DU_SALARIE":"Nom et prénom du salarié","SERVICE_N_PROJET":"Service / n° projet","INTITULE":"Intitulé","N_PROJET_LIEU":"N° projet / lieu","POSTE_FONCTION":"Poste / fonction","SERVICE":"Service"};
+const DOCFIELDS={"DGS-MAT-001":[["MARQUE_ET_MODELE",1],["NOM_DU_VENDEUR",1],["N_D_IMMATRICULATION",1]],"DGS-MAT-002":[["MARQUE_ET_MODELE",1],["NOM_ET_FONCTION",1],["N_D_IMMATRICULATION",1]],"DGS-MAT-003":[["MARQUE_ET_MODELE",1],["N_D_IMMATRICULATION",1]],"DGS-MAT-004":[["MARQUE_ET_MODELE",1],["N_D_IMMATRICULATION",1]],"DGS-MAT-005":[["MARQUE_ET_MODELE",1],["N_D_IMMATRICULATION",1]],"DGS-MAT-006":[["DESIGNATION",1]],"DGS-MAT-007":[["DESIGNATION",1]],"DGS-MAT-008":[["DESIGNATION_ET_REFERENCE",1],["NOM_ET_FONCTION",1]],"DGS-CLI-007":[["ADRESSE_DU_CHANTIER",1],["AUTRE_LOT_OU_POSTE",1],["INTITULE_DU_PROJET",1],["NOM_FONCTION",1],["NOM_CLIENT",1],["N_DEVIS",1],["N_PROJET",1]],"DGS-CLI-008":[["ADRESSE_DU_CHANTIER",1],["DELAI",1],["INTITULE_DU_PROJET",2],["NOM_FONCTION",1],["NOM_CLIENT",1],["N_DEVIS",1],["N_PROJET",1]],"DGS-CLI-009":[["ADRESSE_DU_CHANTIER",1],["DELAI",3],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_OFFRE",1],["N_PROJET",1],["PRESTATION_EXCLUE",2],["PRESTATION_INCLUSE",2],["TVA",1],["A_COMPLETER_RIB",1]],"DGS-CLI-010":[["ADRESSE_DU_CHANTIER",1],["DATE",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_BORDEREAU",1],["N_PROJET",1]],"DGS-CLI-011":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_CONTRAT_N_DEVIS_N_OFFRE",1],["N_PROJET",1],["A_COMPLETER_RIB",1]],"DGS-CLI-012":[["ADRESSE_DU_CHANTIER",1],["DATE_DE_DEMARRAGE",1],["DATE",2],["DELAI",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_DEVIS_N_OFFRE",1],["N_PROJET",1],["TVA",1]],"DGS-CLI-019":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CLI-020":[["ADRESSE_CLIENT",1],["NOM_CLIENT",1]],"DGS-CLI-025":[["ADRESSE_CLIENT",1],["NOM_CLIENT",1]],"DGS-CLI-015":[["DATE",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_CONTRAT_N_FACTURE",1],["N_PROJET",1]],"DGS-CLI-016":[["ADRESSE_CLIENT",1],["NOM_CLIENT",1]],"DGS-CLI-017":[["ADRESSE_CLIENT",1],["NOM_CLIENT",1]],"DGS-CLI-014":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CON-010":[["DENOMINATION",1],["NOM_CLIENT",1]],"DGS-CLI-013":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CLI-018":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CLI-023":[["ADRESSE_CLIENT",1],["MESURE_1_RESPONSABLE_ECHEANCE",1],["MESURE_2_RESPONSABLE_ECHEANCE",1],["MESURE_3_RESPONSABLE_ECHEANCE",1],["NOM_CLIENT",1]],"DGS-CLI-024":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-031":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-032":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-033":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-034":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-035":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-001":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-002":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-003":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-004":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-005":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-006":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-007":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-008":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-009":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-010":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-011":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-012":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-013":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-014":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-015":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-016":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-017":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-018":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-019":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-021":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-036":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-037":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CLI-001":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_DOSSIER",1],["N_PROJET",1]],"DGS-CLI-002":[["ADRESSE_DU_CHANTIER",1]],"DGS-CLI-003":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CLI-004":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CLI-005":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CLI-006":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1],["OBJET_DE_LA_REUNION",1]],"DGS-CLI-021":[["NATURE_DES_TRAVAUX",1],["NOM_CLIENT",1]],"DGS-PV-022":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-023":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-024":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-025":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-026":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-027":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-028":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-029":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-PV-030":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CLI-022":[["ADRESSE_CLIENT",1],["NOM_CLIENT",1]],"DGS-CON-001":[["DENOMINATION",1],["NOM_CLIENT",1]],"DGS-CON-002":[["DENOMINATION",1],["NOM_CLIENT",1]],"DGS-CON-003":[["DENOMINATION",1],["NOM_CLIENT",1]],"DGS-CON-004":[["DENOMINATION",1],["NOM_CLIENT",1]],"DGS-CON-005":[["DENOMINATION",1],["NOM_CLIENT",1]],"DGS-CON-006":[["DENOMINATION",1],["NOM_CLIENT",1]],"DGS-CON-007":[["DENOMINATION",1],["NOM_CLIENT",1]],"DGS-CON-008":[["DENOMINATION",1],["NOM_CLIENT",1]],"DGS-CON-009":[["DENOMINATION",1],["NOM_CLIENT",1]],"DGS-SYS-004":[],"INDEX-DGS-DOCUMENTS.docx":[],"README-DGS-DOCUMENT-SYSTEM.docx":[],"DGS-CHT-001":[["ADRESSE_DU_CHANTIER",1],["DATE_DE_DEMARRAGE",1],["DATE",3],["DELAI",1],["INTITULE_DU_PROJET",2],["NOM_FONCTION",1],["NOM_CLIENT",2],["N_CONTRAT",1],["N_PROJET",1],["TVA",1]],"DGS-CHT-002":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CHT-003":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CHT-004":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CHT-010":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CHT-011":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-CHT-012":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-CHT-013":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-CHT-014":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-CHT-018":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-CHT-019":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-CHT-020":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-CHT-005":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CHT-006":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CHT-007":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CHT-008":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CHT-009":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CHT-015":[["INTITULE_DU_PROJET_N_PROJET",1]],"DGS-CHT-016":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-QLT-001":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_FOURNISSEUR",1],["N_PROJET",1]],"DGS-QLT-002":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-QLT-004":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-HSE-001":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-HSE-002":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-HSE-003":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-HSE-004":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-HSE-005":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-HSE-006":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-QLT-005":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-QLT-006":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-CHT-017":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-PV-020":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_CLIENT",1],["N_PROJET",1]],"DGS-QLT-003":[["ADRESSE_DU_CHANTIER",1],["INTITULE_DU_PROJET",1],["NOM_FOURNISSEUR",1],["N_PROJET",1]],"DGS-PRO-001":[["ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",1],["INTITULE_DE_L_OPERATION",1],["N_OPERATION",1]],"DGS-PRO-002":[["ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",1],["INTITULE_DE_L_OPERATION",1],["N_OPERATION",1]],"DGS-PRO-003":[["ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",1],["INTITULE_DE_L_OPERATION",1],["N_OPERATION",1]],"DGS-PRO-004":[["ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",1],["INTITULE_DE_L_OPERATION",1],["N_OPERATION",1]],"DGS-PRO-005":[["ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",1],["INTITULE_DE_L_OPERATION",1],["N_OPERATION",1]],"DGS-PRO-006":[["ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",1],["INTITULE_DE_L_OPERATION",1],["N_OPERATION",1]],"DGS-PRO-007":[["ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",1],["INTITULE_DE_L_OPERATION",1],["N_OPERATION",1]],"DGS-PRO-008":[["ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",1],["INTITULE_DE_L_OPERATION",1],["N_OPERATION",1]],"DGS-PRO-009":[["ADRESSE_DU_TERRAIN_OU_DU_PROGRAMME",1],["INTITULE_DE_L_OPERATION",1],["N_OPERATION",1]],"DGS-PRO-010":[["INTITULE_DE_L_OPERATION",1],["NOM_ET_PRENOM_DE_L_ACQUEREUR",1],["N_CONTRAT",1],["N_DE_LOT",1]],"DGS-PRO-011":[["INTITULE_DE_L_OPERATION",1],["NOM_ET_PRENOM_DE_L_ACQUEREUR",1],["N_DE_LOT",1]],"DGS-SYS-001":[["DEUXIEME_ELEMENT",1],["INTITULE_DE_LA_DEUXIEME_RUBRIQUE",1],["INTITULE_DE_LA_PREMIERE_RUBRIQUE",1],["INTITULE_DE_LA_TROISIEME_RUBRIQUE",1],["INTRODUCTION_DE_LA_LISTE",1],["POSTE_1",1],["POSTE_2",1],["POSTE_3",1],["PREMIER_ELEMENT",1],["SOUS_TITRE_OU_OBJET_DU_DOCUMENT",1],["TITRE_DU_DOCUMENT",1],["TROISIEME_ELEMENT",1],["ELEMENT_OU_DONNEE_PRINCIPALE_VALEUR",1]],"DGS-ST-001":[],"DGS-ST-002":[["DENOMINATION_DU_SOUS_TRAITANT",1]],"DGS-ST-003":[["INTITULE_DU_PROJET",1],["LOT",1],["N_PROJET",1]],"DGS-ST-004":[["INTITULE_DU_PROJET",1],["NOM_SOUS_TRAITANT",1],["N_CONTRAT_ST",1],["N_PROJET",1]],"DGS-ST-005":[["INTITULE_DU_PROJET",1],["NOM_SOUS_TRAITANT",1],["N_CONTRAT_ST",1],["N_PROJET",1]],"DGS-ST-006":[["INTITULE_DU_PROJET",1],["NOM_SOUS_TRAITANT",1],["N_CONTRAT_ST",1],["N_PROJET",1]],"DGS-ST-007":[["INTITULE_DU_PROJET",1],["NOM_SOUS_TRAITANT",1],["N_CONTRAT_ST",1],["N_PROJET",1]],"DGS-ST-008":[["INTITULE_DU_PROJET",1],["NOM_SOUS_TRAITANT",1],["N_CONTRAT_ST",1],["N_PROJET",1]],"DGS-FOU-001":[],"DGS-FOU-002":[["ADRESSE_FOURNISSEUR",1],["NOM_FOURNISSEUR",1]],"DGS-FOU-003":[["NOM_FOURNISSEUR",1]],"DGS-FOU-004":[["INTITULE_DU_PROJET",1],["N_PROJET",1]],"DGS-FOU-005":[["ADRESSE_FOURNISSEUR",1],["INTITULE_DU_PROJET_N_PROJET",1],["NOM_FOURNISSEUR",1]],"DGS-FOU-006":[["ADRESSE_FOURNISSEUR",1],["INTITULE_DU_PROJET_N_PROJET",1],["NOM_FOURNISSEUR",1]],"DGS-FOU-007":[["ADRESSE_FOURNISSEUR",1],["INTITULE_DU_PROJET_N_PROJET",1],["NOM_FOURNISSEUR",1]],"DGS-FOU-008":[["ADRESSE_FOURNISSEUR",1],["INTITULE_DU_PROJET_N_PROJET",1],["NOM_FOURNISSEUR",1]],"DGS-FOU-009":[["NOM_FOURNISSEUR",1],["N_CONTRAT_ACCORD",1]],"DGS-ADM-001":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1],["TEXTE_DE_LA_DECISION_PRECIS_ET_LIMITE_A_UN_SEUL_OBJET",1]],"DGS-ADM-002":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1],["NOM_ET_PRENOM_DU_GERANT",1]],"DGS-ADM-003":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1],["NOM_ET_PRENOM_DU_GERANT",2]],"DGS-ADM-004":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1],["NOM_ET_PRENOM_DU_GERANT",1]],"DGS-ADM-005":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1]],"DGS-ADM-006":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1]],"DGS-ADM-007":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1]],"DGS-FIN-001":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1]],"DGS-FIN-002":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1]],"DGS-FIN-003":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1]],"DGS-FIN-004":[["DUREE",1],["MONTANT",1],["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1],["PERIODICITE",1],["TAUX",1]],"DGS-FIN-005":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1]],"DGS-FIN-006":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1]],"DGS-FIN-007":[["NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE",1]],"DGS-MAR-003":[["ADRESSE_DU_SITE",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-005":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-089":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-105":[["ADRESSE_DU_SITE",1],["DESIGNATION_DU_SITE",1],["FONCTION",1],["NOM_DU_SERVICE_CONTRACTANT",1],["NOM_ET_PRENOM_DU_MANDATAIRE",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-010":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-011":[["NOM_DU_GERANT",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-016":[],"DGS-MAR-024":[["NOM_DU_GERANT",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-025":[["NOM_DU_GERANT",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-026":[["NOM_DU_GERANT",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-064":[["DATE",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_MARCHE",1],["OBJET_DU_MARCHE",1]],"DGS-MAR-067":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-101":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-102":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_LOT_SANS_OBJET",1],["N_MARCHE",1],["OBJET_DU_MARCHE",1]],"DGS-MAR-103":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-104":[["DATE",1],["DUREE",1],["EMPLACEMENT",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_LOT_SANS_OBJET",1],["N_MARCHE",1],["OBJET_DU_MARCHE",1]],"DGS-MAR-090":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["CONDITIONS_DE_PAIEMENT",1],["DUREE",1],["DELAI",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-091":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["CONDITIONS_DE_PAIEMENT",1],["DATE",1],["DUREE",1],["DELAI",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_CONSULTATION_N_BON_DE_COMMANDE",1],["N_DEVIS_N_OFFRE",1],["A_COMPLETER_RIB",1]],"DGS-MAR-092":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-093":[["ADRESSE_DU_SITE",1],["DATE",1],["NOM_DU_SERVICE_CONTRACTANT",1],["NOM_ET_FONCTION",1],["N_BORDEREAU",1],["N_MARCHE",1]],"DGS-MAR-001":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-002":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-006":[],"DGS-MAR-008":[["DATE",2],["DUREE",1],["DELAI",1],["HEURE",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-009":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["FONCTION",1],["NOM_DU_SERVICE_CONTRACTANT",1],["NOM_ET_PRENOM_DU_MANDATAIRE",1]],"DGS-MAR-084":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-050":[["AGENCE_ET_ADRESSE",1],["BANQUE",1],["SERVICE_CONTRACTANT",1]],"DGS-MAR-051":[],"DGS-MAR-052":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-053":[["AGENCE_ET_ADRESSE",1],["BANQUE",1]],"DGS-MAR-054":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1],["TAUX",5]],"DGS-MAR-055":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-056":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-106":[],"DGS-MAR-012":[["ADRESSE",1],["DENOMINATION_DU_SOUS_TRAITANT",1],["FORME_JURIDIQUE",1],["NOM_DU_SERVICE_CONTRACTANT",1],["NOM_ET_QUALITE",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["N_RC",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-013":[["COTRAITANT",1],["DENOMINATION_DU_COTRAITANT",1]],"DGS-MAR-014":[["NOM_DU_GERANT",1],["NOM_ET_PRENOM_DU_MANDATAIRE",1]],"DGS-MAR-062":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-063":[["DATE",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_MARCHE",1],["OBJET_DU_MARCHE",1]],"DGS-MAR-065":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["CAUSE_1_DATE_DESCRIPTION_PIECE_JUSTIFICATIVE",1],["CAUSE_2",1],["CAUSE_3",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-066":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["JUSTIFICATION_1_SUJETION_IMPREVUE_MODIFICATION_DE_CONSISTANCE_QUANTITES",1],["JUSTIFICATION_2",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-068":[["DATE",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_MARCHE",1],["OBJET_DU_MARCHE",1]],"DGS-MAR-069":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-095":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-096":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-097":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-098":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-099":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_LOT_SANS_OBJET",1],["N_MARCHE",1],["OBJET_DU_MARCHE",1]],"DGS-MAR-100":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_LOT_SANS_OBJET",1],["N_MARCHE",1],["OBJET_DU_MARCHE",1]],"DGS-MAR-004":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-070":[["DATE",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-071":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-072":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["DATE",1],["HEURE",1],["NOM_DU_SERVICE_CONTRACTANT",1],["NOM_ET_PRENOM_DU_MANDATAIRE",1],["N_AO",1],["N_D_ENREGISTREMENT",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-073":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-060":[["DATE",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_MARCHE_N_AO",1]],"DGS-MAR-061":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-079":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-080":[["DATE",3],["DELAI",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_LOT_SANS_OBJET",1],["N_MARCHE",1],["OBJET_DU_MARCHE",1]],"DGS-MAR-081":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["CONTACT",1],["FONCTION",1],["NOM_DU_SERVICE_CONTRACTANT",1],["NOM_ET_PRENOM",1]],"DGS-MAR-082":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-083":[["DATE",2],["DELAI",1],["NOM_DU_SERVICE_CONTRACTANT",1],["N_LOT_SANS_OBJET",1],["N_MARCHE",1],["OBJET_DU_MARCHE",1]],"DGS-MAR-094":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-040":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1],["TAUX_OU_MONTANT",1]],"DGS-MAR-041":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-042":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-043":[["N_AO",1],["N_ET_DESIGNATION_DU_POSTE",1],["U",1]],"DGS-MAR-044":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-046":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-047":[["DELAI",2],["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-048":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1],["TAUX",6]],"DGS-MAR-049":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-085":[["BANQUE",1],["COMPAGNIE",1],["ORGANISME_EMETTEUR",1]],"DGS-MAR-086":[["ADRESSE_DE_L_ORGANISME",1],["N_D_AFFILIATION",1],["ORGANISME",1]],"DGS-MAR-087":[["AGENCE_ET_ADRESSE",1],["BANQUE",1]],"DGS-MAR-088":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-030":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-031":[["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-032":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-033":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-034":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-035":[["NOM_ET_FONCTION",2]],"DGS-MAR-036":[["NOM_ET_FONCTION",1],["NOMBRE",1],["NOM",1]],"DGS-MAR-037":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-038":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-039":[["NOM_DU_SERVICE_CONTRACTANT",1],["NOM_ET_PRENOM",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1],["PERIODICITE",1]],"DGS-MAR-007":[["ADRESSE",1],["AUTORITE_DESTINATAIRE_DU_RECOURS",1],["MOTIF_2",1],["MOTIF_3",1]],"DGS-MAR-074":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-075":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["DATE",1],["NOM_DU_SERVICE_CONTRACTANT",1],["NOM_ET_FONCTION",1],["NOM_ET_PRENOM_DU_MANDATAIRE",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-076":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-077":[["ADRESSE_DU_SERVICE_CONTRACTANT",1],["NOM_DU_SERVICE_CONTRACTANT",1]],"DGS-MAR-078":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-015":[],"DGS-MAR-017":[],"DGS-MAR-018":[["ADRESSE",1],["MAITRE_D_OUVRAGE",1]],"DGS-MAR-019":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-020":[["NOM_ET_PRENOM",1],["N_AO",1],["POSTE",1]],"DGS-MAR-021":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-022":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-023":[["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1]],"DGS-MAR-027":[["DATE",2],["NOM_DU_SERVICE_CONTRACTANT",1],["N_AO",1],["N_CERTIFICAT",1],["N_LOT_SANS_OBJET",1],["OBJET_DE_L_APPEL_D_OFFRES",1],["ORGANISME_EMETTEUR",1]],"DGS-MAR-028":[],"DGS-MAR-029":[["ADRESSE_DU_SITE",1],["CONTACT",1],["INTITULE_DU_PROJET",1],["MAITRE_D_OUVRAGE",1],["NATURE_DES_TRAVAUX",1],["NOM_ET_FONCTION",1],["N_MARCHE",1]],"DGS-PER-001":[],"DGS-PER-002":[["FONCTION",1],["NOM_ET_PRENOM_DU_SALARIE",1],["SERVICE_N_PROJET",1]],"DGS-PER-003":[["FONCTION",1],["NOM_ET_PRENOM_DU_SALARIE",1],["SERVICE_N_PROJET",1]],"DGS-PER-004":[["MARQUE_ET_MODELE",1],["NOM_ET_PRENOM_DU_SALARIE",1],["N_D_IMMATRICULATION",1]],"DGS-PER-005":[["FONCTION",1],["NOM_ET_PRENOM_DU_SALARIE",1],["SERVICE_N_PROJET",1]],"DGS-PER-006":[["INTITULE",1]],"DGS-PER-007":[["N_PROJET_LIEU",1]],"DGS-PER-008":[["NOM",2],["POSTE_FONCTION",1]],"DGS-PER-009":[["FONCTION",1],["NOM_ET_PRENOM_DU_SALARIE",1]],"DGS-PER-010":[["FONCTION",1],["NOM_ET_PRENOM_DU_SALARIE",1]],"DGS-PER-011":[["FONCTION",1],["NOM_ET_PRENOM_DU_SALARIE",1]],"DGS-PER-012":[["FONCTION",1],["NOM_ET_PRENOM_DU_SALARIE",1],["SERVICE_N_PROJET",1]],"DGS-PER-013":[["INTITULE",1],["NOM_ET_PRENOM",1],["SERVICE",1]],"DGS-PER-014":[],"DGS-PER-015":[["FONCTION",1],["NOM_ET_PRENOM_DU_SALARIE",1],["SERVICE_N_PROJET",1]],"DGS-PER-016":[["NOM_ET_PRENOM_DU_SALARIE",1]]};
+
+/* ============ Utilitaires ============ */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const nextFrame = () => new Promise(r => setTimeout(r, 0));
+
+/* ============ ZIP (lecture / écriture, sans bibliothèque) ============ */
+const CRC_T = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+function crc32(u8) { let c = 0xFFFFFFFF; for (let i = 0; i < u8.length; i++) c = CRC_T[(c ^ u8[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+async function pipeBytes(u8, stream) { const s = new Blob([u8]).stream().pipeThrough(stream); return new Uint8Array(await new Response(s).arrayBuffer()); }
+const inflateRaw = u8 => pipeBytes(u8, new DecompressionStream('deflate-raw'));
+const deflateRaw = u8 => pipeBytes(u8, new CompressionStream('deflate-raw'));
+
+function readZip(u8) {
+  const dv = new DataView(u8.buffer, u8.byteOffset, u8.byteLength);
+  let e = u8.length - 22;
+  while (e >= 0 && dv.getUint32(e, true) !== 0x06054b50) e--;
+  if (e < 0) throw new Error('Fichier ZIP invalide');
+  const n = dv.getUint16(e + 10, true); let p = dv.getUint32(e + 16, true);
+  const td = new TextDecoder(); const out = [];
+  for (let i = 0; i < n; i++) {
+    if (dv.getUint32(p, true) !== 0x02014b50) throw new Error('ZIP corrompu');
+    const method = dv.getUint16(p + 10, true), time = dv.getUint16(p + 12, true), date = dv.getUint16(p + 14, true);
+    const crc = dv.getUint32(p + 16, true), cs = dv.getUint32(p + 20, true), us = dv.getUint32(p + 24, true);
+    const nl = dv.getUint16(p + 28, true), el = dv.getUint16(p + 30, true), cl = dv.getUint16(p + 32, true), lho = dv.getUint32(p + 42, true);
+    const name = td.decode(u8.subarray(p + 46, p + 46 + nl));
+    const ds = lho + 30 + dv.getUint16(lho + 26, true) + dv.getUint16(lho + 28, true);
+    out.push({ name, method, time, date, crc, cs, us, data: u8.subarray(ds, ds + cs) });
+    p += 46 + nl + el + cl;
+  }
+  return out;
+}
+async function entryBytes(en) {
+  if (en.method === 0) return en.data;
+  if (en.method === 8) return inflateRaw(en.data);
+  throw new Error('Compression ZIP non gérée : ' + en.method);
+}
+function writeZip(entries) {
+  const te = new TextEncoder(); const parts = []; const cds = []; let off = 0;
+  for (const en of entries) {
+    const nb = te.encode(en.name);
+    const h = new Uint8Array(30 + nb.length), dv = new DataView(h.buffer);
+    dv.setUint32(0, 0x04034b50, true); dv.setUint16(4, 20, true); dv.setUint16(6, 0x0800, true); dv.setUint16(8, en.method, true);
+    dv.setUint16(10, en.time, true); dv.setUint16(12, en.date, true); dv.setUint32(14, en.crc, true); dv.setUint32(18, en.cs, true);
+    dv.setUint32(22, en.us, true); dv.setUint16(26, nb.length, true); h.set(nb, 30);
+    parts.push(h, en.data);
+    const c = new Uint8Array(46 + nb.length), cv = new DataView(c.buffer);
+    cv.setUint32(0, 0x02014b50, true); cv.setUint16(4, 20, true); cv.setUint16(6, 20, true); cv.setUint16(8, 0x0800, true); cv.setUint16(10, en.method, true);
+    cv.setUint16(12, en.time, true); cv.setUint16(14, en.date, true); cv.setUint32(16, en.crc, true); cv.setUint32(20, en.cs, true);
+    cv.setUint32(24, en.us, true); cv.setUint16(28, nb.length, true); cv.setUint32(42, off, true); c.set(nb, 46);
+    cds.push(c); off += h.length + en.data.length;
+  }
+  let cdsz = 0; cds.forEach(c => cdsz += c.length);
+  const eo = new Uint8Array(22), ev = new DataView(eo.buffer);
+  ev.setUint32(0, 0x06054b50, true); ev.setUint16(8, entries.length, true); ev.setUint16(10, entries.length, true);
+  ev.setUint32(12, cdsz, true); ev.setUint32(16, off, true);
+  return concat([...parts, ...cds, eo]);
+}
+function concat(arrs) {
+  let n = 0; arrs.forEach(a => n += a.length);
+  const o = new Uint8Array(n); let p = 0; arrs.forEach(a => { o.set(a, p); p += a.length; }); return o;
+}
+
+/* ============ IndexedDB ============ */
+const DB = {
+  _db: null,
+  async open() {
+    if (this._db) return this._db;
+    this._db = await new Promise((res, rej) => {
+      const r = indexedDB.open('dgsdocs', 1);
+      r.onupgradeneeded = () => { const d = r.result; ['kv', 'templates', 'entities', 'docs'].forEach(s => d.createObjectStore(s)); };
+      r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+    });
+    return this._db;
+  },
+  async tx(store, mode, fn) {
+    const d = await this.open();
+    return new Promise((res, rej) => {
+      const t = d.transaction(store, mode); const s = t.objectStore(store);
+      let out; Promise.resolve(fn(s)).then(v => out = v);
+      t.oncomplete = () => res(out); t.onerror = () => rej(t.error); t.onabort = () => rej(t.error);
+    });
+  },
+  req(r) { return new Promise((res, rej) => { r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); }); },
+  get(store, k) { return this.tx(store, 'readonly', s => this.req(s.get(k))); },
+  put(store, k, v) { return this.tx(store, 'readwrite', s => { s.put(v, k); }); },
+  del(store, k) { return this.tx(store, 'readwrite', s => { s.delete(k); }); },
+  keys(store) { return this.tx(store, 'readonly', s => this.req(s.getAllKeys())); },
+  all(store) { return this.tx(store, 'readonly', s => this.req(s.getAll())); },
+  clear(store) { return this.tx(store, 'readwrite', s => { s.clear(); }); }
+};
+
+/* ============ Clés de champs (même algorithme que dgs_fill.py) ============ */
+function normKey(token) {
+  let s = token.slice(1, -1).normalize('NFD').replace(/\p{Mn}/gu, '');
+  s = s.replace(/°/g, '').replace(/’/g, ' ').replace(/'/g, ' ');  // même convention que le catalogue (extract_fields.py)
+  s = s.replace(/[^A-Za-z0-9]+/g, '_').replace(/^_+|_+$/g, '').toUpperCase().replace(/_+/g, '_');
+  if (!s) return null;
+  if (/^\d/.test(s)) s = 'F_' + s;
+  return s;
+}
+
+/* ============ Remplissage du .docx (moteur dynamique) ============ */
+const WNS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+const kids = (el, n) => el ? [...el.children].filter(c => c.localName === n) : [];
+const kid = (el, n) => el ? ([...el.children].find(c => c.localName === n) || null) : null;
+const wa = (el, a) => el ? (el.getAttributeNS(WNS, a) ?? el.getAttribute('w:' + a)) : null;
+
+function runText(r) {
+  let t = '';
+  for (const c of r.children) {
+    if (c.localName === 't') t += c.textContent;
+    else if (c.localName === 'tab') t += '\t';
+    else if (c.localName === 'br') t += '\n';
+  }
+  return t;
+}
+function setRunText(doc, r, text) {
+  for (const c of [...r.children]) if (c.localName !== 'rPr') r.removeChild(c);
+  const lines = String(text).split(/\r?\n/);
+  lines.forEach((ln, i) => {
+    if (i > 0) r.appendChild(doc.createElementNS(WNS, 'w:br'));
+    const t = doc.createElementNS(WNS, 'w:t');
+    t.setAttributeNS('http://www.w3.org/XML/1998/namespace', 'xml:space', 'preserve');
+    t.textContent = ln; r.appendChild(t);
+  });
+}
+function clearShading(r) {
+  const rPr = kid(r, 'rPr'); if (!rPr) return;
+  for (const n of ['shd', 'color', 'b']) { const e = kid(rPr, n); if (e) rPr.removeChild(e); }
+}
+
+/* Champs génériques : un même mot (DATE, MONTANT…) a un sens différent à chaque endroit
+   -> un champ distinct par occurrence (avec son contexte). Les autres champs sont partagés. */
+const GENERIC = new Set(['DATE', 'MONTANT', 'DELAI', 'BLANK', 'A_COMPLETER', 'DUREE', 'TAUX', 'NOM_ET_FONCTION', 'INTITULE_DU_LOT', 'ADRESSE', 'NOMBRE', 'NOM', 'N', 'HEURE', 'LIEU', 'BANQUE', 'FONCTION', 'MODALITES', 'NOM_ET_PRENOM', 'N_CAUTION', 'A_COMPLETER_RIB', 'OBJET', 'ZONE', 'CONDITIONS', 'MOTIF', 'AUTRE_ANNEXE', 'N_CONSULTATION', 'NOM_TELEPHONE', 'NOM_DE_L_ANNEXE', 'EMAIL', 'TELEPHONE', 'DESIGNATION', 'DENOMINATION', 'FORME_JURIDIQUE', 'N_RC', 'NIF', 'NIS', 'QUALITE', 'AGENCE_ET_ADRESSE', 'CONTACT', 'NATIONALITE', 'N_PIECE_D_IDENTITE', 'AUTRE_PIECE_JOINTE', 'ETAPE', 'MODE', 'NOMS']);
+const TOKRE = /\[[^\[\]]{1,120}\]/g;
+const slug = s => s.normalize('NFD').replace(/\p{Mn}/gu, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().slice(-22).trim();
+const capFirst = s => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+const paraT = p => [...p.getElementsByTagNameNS(WNS, 't')];
+
+/** Parcourt un document XML. mode 'scan' : collecte ; mode 'fill' : remplace. */
+function walkXml(doc, part, mode, values, acc) {
+  const isMain = part === 'word/document.xml';
+  const have = id => { const v = values[id]; return v != null && String(v).trim() !== ''; };
+  const toRemove = [];
+  let boxN = acc.boxN || 0;
+  for (const p of [...doc.getElementsByTagNameNS(WNS, 'p')]) {
+    const ts = paraT(p); if (!ts.length) continue;
+    let full = ts.map(t => t.textContent).join('');
+    if (!full.includes('[') && !full.includes('☐')) continue;
+    // --- Choix personne physique / morale
+    const sm = /\[SI PERSONNE (PHYSIQUE|MORALE)\]\s*/.exec(full);
+    if (sm && isMain) {
+      if (mode === 'scan') { acc.party = true; for (const t of ts) t.textContent = t.textContent.replace(/\[SI PERSONNE (PHYSIQUE|MORALE)\]\s*/g, ''); full = ts.map(t => t.textContent).join(''); }
+      else if (have('PARTY')) {
+        if (values.PARTY !== sm[1]) { toRemove.push(p); continue; }
+        for (const t of ts) t.textContent = t.textContent.replace(/\[SI PERSONNE (PHYSIQUE|MORALE)\]\s*/g, '');
+      }
+    }
+    if (mode === 'fill' && have('PARTY') && /Supprimer la mention qui ne convient pas\.?\s*/.test(full))
+      for (const t of ts) t.textContent = t.textContent.replace(/Supprimer la mention qui ne convient pas\.?\s*/, '');
+    if (mode === 'fill') full = ts.map(t => t.textContent).join('');
+    // positions des cases dans le paragraphe
+    let off = 0;
+    for (const t of ts) {
+      const orig = t.textContent; const base = off; off += orig.length;
+      if (!orig.includes('[') && !orig.includes('☐')) continue;
+      const run = t.parentNode; const single = kids(run, 't').length === 1;
+      const trimmed = orig.trim();
+      let whole = null;
+      let out = orig.replace(/☐|\[[^\[\]]{1,120}\]/g, (tok, idx) => {
+        const pos = base + idx;
+        if (tok === '☐') {
+          if (!isMain) return tok;
+          const id = 'B' + (boxN++);
+          if (mode === 'scan') { const nx = full.indexOf('☐', pos + 1); acc.boxes.push({ id, label: full.slice(pos + 1, nx < 0 ? undefined : nx).replace(/\s+/g, ' ').trim().slice(0, 70) || 'Case' }); return tok; }
+          if (values[id] === true) { acc.used.add(id); return '☒'; } return tok;
+        }
+        if (/^\[SI PERSONNE/.test(tok) || tok.startsWith('[À VALIDER')) return tok;
+        let key = null;
+        const inner = tok.slice(1, -1);
+        if (inner.trim() === '') key = 'BLANK'; else key = normKey(tok);
+        if (!key) return tok;
+        const before = full.slice(Math.max(0, pos - 70), pos);
+        const id = GENERIC.has(key) ? key + '@' + (slug(before) || 'x') : key;
+        if (mode === 'scan') {
+          if (!acc.map.has(id)) {
+            const after = full.slice(pos + tok.length, pos + tok.length + 22);
+            const lab = inner.trim() ? capFirst(inner.trim()) : 'Valeur';
+            acc.map.set(id, { id, key, label: lab, generic: GENERIC.has(key), n: 1, before: before.slice(-48), after, tok });
+            acc.list.push(acc.map.get(id));
+          } else acc.map.get(id).n++;
+          return tok;
+        }
+        if (have(id)) {
+          acc.used.add(id);
+          const val = String(values[id]).trim();
+          if (single && trimmed === tok) whole = val;
+          return val.replace(/\s*\r?\n\s*/g, ' ');
+        }
+        return tok;
+      });
+      if (mode === 'fill' && out !== orig) {
+        if (whole !== null && /\n/.test(whole)) { setRunText(doc, run, whole); clearShading(run); }
+        else { t.textContent = out; t.setAttributeNS('http://www.w3.org/XML/1998/namespace', 'xml:space', 'preserve'); if (whole !== null) clearShading(run); }
+      }
+    }
+  }
+  acc.boxN = boxN;
+  for (const p of toRemove) {
+    const par = p.parentNode;
+    if (kids(par, 'p').length > 1) par.removeChild(p); else paraT(p).forEach(t => t.textContent = '');
+  }
+}
+const _analysis = {};
+async function analyzeDocx(code, bytes) {
+  if (_analysis[code]) return _analysis[code];
+  const entries = readZip(bytes); const td = new TextDecoder();
+  const acc = { list: [], map: new Map(), boxes: [], party: false, boxN: 0, used: new Set() };
+  const order = n => n === 'word/document.xml' ? 0 : 1;
+  for (const en of entries.filter(e => /^word\/(document|header\d*|footer\d*)\.xml$/.test(e.name)).sort((a, b) => order(a.name) - order(b.name))) {
+    const xml = td.decode(await entryBytes(en));
+    if (!xml.includes('[') && !xml.includes('☐')) continue;
+    walkXml(xmlDoc(xml), en.name, 'scan', {}, acc);
+  }
+  return _analysis[code] = { fields: acc.list, boxes: acc.boxes, party: acc.party };
+}
+/** Remplit un modèle .docx (Uint8Array). values : { id: texte, Bn: true, PARTY: 'PHYSIQUE'|'MORALE' } */
+async function fillDocx(bytes, values) {
+  const entries = readZip(bytes); const used = new Set(); const td = new TextDecoder(); const te = new TextEncoder();
+  const acc = { used, boxN: 0 };
+  const order = n => n === 'word/document.xml' ? 0 : 1;
+  for (const en of entries.filter(e => /^word\/(document|header\d*|footer\d*)\.xml$/.test(e.name)).sort((a, b) => order(a.name) - order(b.name))) {
+    const xml = td.decode(await entryBytes(en));
+    if (!xml.includes('[') && !xml.includes('☐')) continue;
+    const doc = xmlDoc(xml);
+    if (doc.getElementsByTagName('parsererror').length) throw new Error('XML invalide dans le modèle');
+    walkXml(doc, en.name, 'fill', values, acc);
+    const out = te.encode('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' + new XMLSerializer().serializeToString(doc).replace(/^<\?xml[^>]*\?>\s*/, ''));
+    const comp = await deflateRaw(out);
+    Object.assign(en, { method: 8, crc: crc32(out), cs: comp.length, us: out.length, data: comp });
+  }
+  return { bytes: writeZip(entries), used };
+}
+
+/* ============ Rendu .docx -> HTML (modèles DGS) ============ */
+const tw2px = v => (parseFloat(v) || 0) / 15;
+const FONT_STACKS = {
+  'Cambria': "Cambria,Caladea,'Noto Serif','DejaVu Serif',serif",
+  'Segoe UI Symbol': "'Segoe UI Symbol','Noto Sans Symbols','Noto Sans Symbols 2','DejaVu Sans',sans-serif"
+};
+const xmlDoc = t => new DOMParser().parseFromString(t, 'application/xml');
+function bool(el) { if (!el) return undefined; const v = wa(el, 'val'); return !(v === '0' || v === 'false' || v === 'off' || v === 'none'); }
+function parseRPr(rPr) {
+  const o = {}; if (!rPr) return o;
+  const set = (k, v) => { if (v !== undefined && v !== null) o[k] = v; };
+  set('b', bool(kid(rPr, 'b'))); set('i', bool(kid(rPr, 'i')));
+  const u = kid(rPr, 'u'); if (u) set('u', wa(u, 'val') !== 'none');
+  const st = kid(rPr, 'strike'); if (st) set('strike', bool(st));
+  const c = kid(rPr, 'color'); if (c) { const v = wa(c, 'val'); set('color', v === 'auto' ? '000000' : v); }
+  const sz = kid(rPr, 'sz'); if (sz) set('sz', parseFloat(wa(sz, 'val')));
+  const f = kid(rPr, 'rFonts'); if (f) set('font', wa(f, 'ascii') || wa(f, 'hAnsi'));
+  const sh = kid(rPr, 'shd'); if (sh && wa(sh, 'fill') && wa(sh, 'fill') !== 'auto') set('shd', wa(sh, 'fill'));
+  const caps = kid(rPr, 'caps'); if (caps) set('caps', bool(caps));
+  const va = kid(rPr, 'vertAlign'); if (va) set('vert', wa(va, 'val'));
+  const rs = kid(rPr, 'rStyle'); if (rs) set('rStyle', wa(rs, 'val'));
+  return o;
+}
+function parsePPr(pPr) {
+  const o = {}; if (!pPr) return o;
+  const jc = kid(pPr, 'jc'); if (jc) o.jc = wa(jc, 'val');
+  const sp = kid(pPr, 'spacing');
+  if (sp) { for (const [k, a] of [['before', 'before'], ['after', 'after'], ['line', 'line']]) { const v = wa(sp, a); if (v != null) o[k] = parseFloat(v); } const lr = wa(sp, 'lineRule'); if (lr) o.lineRule = lr; }
+  const ind = kid(pPr, 'ind');
+  if (ind) for (const [k, a] of [['left', 'left'], ['left', 'start'], ['right', 'right'], ['right', 'end'], ['firstLine', 'firstLine'], ['hanging', 'hanging']]) { const v = wa(ind, a); if (v != null) o[k] = parseFloat(v); }
+  const kn = kid(pPr, 'keepNext'); if (kn) o.keepNext = bool(kn);
+  const pb = kid(pPr, 'pageBreakBefore'); if (pb) o.pageBreakBefore = bool(pb);
+  const ps = kid(pPr, 'pStyle'); if (ps) o.pStyle = wa(ps, 'val');
+  const np = kid(pPr, 'numPr'); if (np) { o.numId = wa(kid(np, 'numId'), 'val'); o.ilvl = parseInt(wa(kid(np, 'ilvl'), 'val') || '0', 10); }
+  const tabs = kid(pPr, 'tabs'); if (tabs) o.tabs = kids(tabs, 'tab').map(t => ({ val: wa(t, 'val'), pos: parseFloat(wa(t, 'pos')), leader: wa(t, 'leader') })).filter(t => t.val !== 'clear');
+  const rp = kid(pPr, 'rPr'); if (rp) o.markRPr = parseRPr(rp);
+  return o;
+}
+const mergeObj = (...os) => { const o = {}; for (const x of os) if (x) for (const k in x) if (x[k] !== undefined) o[k] = x[k]; return o; };
+
+class DocxModel {
+  constructor(files) {
+    this.styles = {}; this.def = { rPr: {}, pPr: {} }; this.num = {}; this.footer = null; this.body = null; this.sect = {};
+    const td = new TextDecoder();
+    const st = files['word/styles.xml'];
+    if (st) {
+      const d = xmlDoc(td.decode(st)); const dd = kid(d.documentElement, 'docDefaults');
+      if (dd) { this.def.rPr = parseRPr(kid(kid(dd, 'rPrDefault'), 'rPr')); this.def.pPr = parsePPr(kid(kid(dd, 'pPrDefault'), 'pPr')); }
+      for (const s of kids(d.documentElement, 'style')) this.styles[wa(s, 'styleId')] = { based: wa(kid(s, 'basedOn'), 'val'), rPr: parseRPr(kid(s, 'rPr')), pPr: parsePPr(kid(s, 'pPr')) };
+    }
+    const nm = files['word/numbering.xml'];
+    if (nm) {
+      const d = xmlDoc(td.decode(nm)); const abs = {};
+      for (const a of kids(d.documentElement, 'abstractNum')) {
+        const lv = {};
+        for (const l of kids(a, 'lvl')) lv[wa(l, 'ilvl')] = { fmt: wa(kid(l, 'numFmt'), 'val'), text: wa(kid(l, 'lvlText'), 'val'), start: parseInt(wa(kid(l, 'start'), 'val') || '1', 10), pPr: parsePPr(kid(l, 'pPr')), rPr: parseRPr(kid(l, 'rPr')) };
+        abs[wa(a, 'abstractNumId')] = lv;
+      }
+      for (const n of kids(d.documentElement, 'num')) this.num[wa(n, 'numId')] = abs[wa(kid(n, 'abstractNumId'), 'val')] || {};
+    }
+    this.counters = {};
+    const dm = xmlDoc(td.decode(files['word/document.xml'])); this.body = kid(dm.documentElement, 'body');
+    const sp = kid(this.body, 'sectPr');
+    const ps = kid(sp, 'pgSz'), pm = kid(sp, 'pgMar');
+    this.sect = {
+      w: tw2px(wa(ps, 'w') || 11906), h: tw2px(wa(ps, 'h') || 16838),
+      top: tw2px(wa(pm, 'top') || 1440), bottom: tw2px(wa(pm, 'bottom') || 1440), left: tw2px(wa(pm, 'left') || 1440), right: tw2px(wa(pm, 'right') || 1440),
+      footer: tw2px(wa(pm, 'footer') || 708)
+    };
+    const fk = Object.keys(files).filter(k => /^word\/footer\d*\.xml$/.test(k)).sort()[0];
+    if (fk) this.footer = xmlDoc(td.decode(files[fk])).documentElement;
+  }
+  styleChain(id, pick) {
+    const chain = []; let cur = id, n = 0;
+    while (cur && this.styles[cur] && n++ < 12) { chain.unshift(this.styles[cur]); cur = this.styles[cur].based; }
+    return mergeObj(...chain.map(s => s[pick]));
+  }
+  paraProps(p) {
+    const direct = parsePPr(kid(p, 'pPr'));
+    const sty = direct.pStyle ? this.styleChain(direct.pStyle, 'pPr') : {};
+    let numP = {}, numR = {}, lvl = null;
+    const numId = direct.numId ?? sty.numId, ilvl = direct.ilvl ?? sty.ilvl ?? 0;
+    if (numId && numId !== '0' && this.num[numId] && this.num[numId][ilvl]) { lvl = this.num[numId][ilvl]; numP = lvl.pPr; numR = lvl.rPr; }
+    return { pp: mergeObj(this.def.pPr, sty, numP, direct), sty, lvl, numId, ilvl, numR };
+  }
+  baseRPr(pp, sty) { return mergeObj(this.def.rPr, pp.pStyle ? this.styleChain(pp.pStyle, 'rPr') : {}); }
+  numLabel(numId, ilvl, lvl) {
+    const c = this.counters[numId] || (this.counters[numId] = {});
+    c[ilvl] = (c[ilvl] ?? (lvl.start - 1)) + 1;
+    for (const k of Object.keys(c)) if (+k > ilvl) delete c[k];
+    if (lvl.fmt === 'bullet') return lvl.text || '•';
+    const fmt = (n, f) => f === 'lowerLetter' ? String.fromCharCode(96 + ((n - 1) % 26) + 1) : f === 'upperLetter' ? String.fromCharCode(64 + ((n - 1) % 26) + 1) : f === 'lowerRoman' || f === 'upperRoman' ? roman(n, f === 'lowerRoman') : String(n);
+    return (lvl.text || '%1.').replace(/%(\d)/g, (_, d) => { const L = +d - 1; const lv = this.num[numId][L]; return fmt(c[L] ?? lv?.start ?? 1, lv?.fmt); });
+  }
+  runCss(rp) {
+    const css = [];
+    const fam = rp.font ? (FONT_STACKS[rp.font] || `'${rp.font}',${FONT_STACKS.Cambria}`) : FONT_STACKS.Cambria;
+    css.push('font-family:' + fam);
+    if (rp.sz) css.push(`font-size:${(rp.sz * 2 / 3).toFixed(2)}px`);
+    if (rp.b) css.push('font-weight:bold'); if (rp.i) css.push('font-style:italic');
+    const deco = []; if (rp.u) deco.push('underline'); if (rp.strike) deco.push('line-through'); if (deco.length) css.push('text-decoration:' + deco.join(' '));
+    if (rp.color) css.push('color:#' + rp.color);
+    if (rp.shd) css.push('background:#' + rp.shd);
+    if (rp.caps) css.push('text-transform:uppercase');
+    if (rp.vert === 'superscript') css.push('vertical-align:super;font-size:0.7em'); if (rp.vert === 'subscript') css.push('vertical-align:sub;font-size:0.7em');
+    return css.join(';');
+  }
+  runsHtml(container, baseRPr, out) {
+    for (const r of container.children) {
+      if (r.localName === 'hyperlink') { this.runsHtml(r, baseRPr, out); continue; }
+      if (r.localName !== 'r') continue;
+      const own = parseRPr(kid(r, 'rPr'));
+      const rp = mergeObj(baseRPr, own.rStyle ? this.styleChain(own.rStyle, 'rPr') : {}, own);
+      let inner = '';
+      for (const c of r.children) {
+        if (c.localName === 't') inner += esc(c.textContent);
+        else if (c.localName === 'tab') inner += '<span class="tab">​</span>';
+        else if (c.localName === 'br') inner += wa(c, 'type') === 'page' ? '<span class="pgbr"></span>' : '<br/>';
+        else if (c.localName === 'instrText') { const t = c.textContent.trim().toUpperCase(); inner += t.startsWith('NUMPAGES') ? '\u0001NUMPAGES\u0001' : t.startsWith('PAGE') ? '\u0001PAGE\u0001' : ''; }
+        else if (c.localName === 'noBreakHyphen') inner += '‑';
+      }
+      if (inner) out.push(`<span style="${this.runCss(rp)}">${inner}</span>`);
+    }
+  }
+  paraHtml(p, inCell) {
+    const { pp, sty, lvl, numId, ilvl, numR } = this.paraProps(p);
+    const base = this.baseRPr(pp, sty);
+    const css = []; const pad = [];
+    css.push(`padding-top:${tw2px(pp.before ?? 0).toFixed(2)}px`); css.push(`padding-bottom:${tw2px(pp.after ?? 0).toFixed(2)}px`);
+    const jc = { both: 'justify', center: 'center', right: 'right', end: 'right', left: 'left', start: 'left' }[pp.jc] || 'left'; css.push('text-align:' + jc);
+    let left = tw2px(pp.left ?? 0), hang = tw2px(pp.hanging ?? 0), first = tw2px(pp.firstLine ?? 0);
+    css.push(`margin-left:${left}px`); if (pp.right) css.push(`margin-right:${tw2px(pp.right)}px`);
+    if (hang) css.push(`text-indent:${-hang}px`); else if (first) css.push(`text-indent:${first}px`);
+    const line = pp.line ?? 240;
+    if (pp.lineRule === 'exact' || pp.lineRule === 'atLeast') css.push(`line-height:${tw2px(line).toFixed(2)}px`); else css.push(`line-height:${(line / 240 * 1.17).toFixed(3)}`);
+    const parts = [];
+    if (lvl) {
+      const lab = this.numLabel(numId, ilvl, lvl);
+      const lrp = mergeObj(base, lvl.fmt === 'bullet' ? {} : {}, numR);
+      parts.push(`<span style="display:inline-block;min-width:${hang || 18}px;padding-right:4px;white-space:nowrap;text-indent:0;${this.runCss(lrp)}">${esc(lab)}</span>`);
+    }
+    this.runsHtml(p, base, parts);
+    if (!parts.length || (parts.length === 1 && lvl)) parts.push(`<span style="${this.runCss(mergeObj(base, pp.markRPr))}">​</span>`);
+    const tabs = pp.tabs ? ` data-tabs="${esc(JSON.stringify(pp.tabs.map(t => ({ v: t.val, p: tw2px(t.pos), l: t.leader || '' }))))}"` : '';
+    return `<div class="p"${pp.keepNext ? ' data-kn="1"' : ''}${pp.pageBreakBefore ? ' data-pbb="1"' : ''}${tabs} style="${css.join(';')}">${parts.join('')}</div>`;
+  }
+  borderCss(el, side) {
+    const b = kid(el, side); if (!b) return null;
+    const v = wa(b, 'val'); if (!v || v === 'none' || v === 'nil') return 'none';
+    const sz = parseFloat(wa(b, 'sz') || '4'); let col = wa(b, 'color') || '000000'; if (col === 'auto') col = '000000';
+    return `${Math.max(1, Math.round(sz / 6 * 10) / 10)}px ${v === 'dotted' ? 'dotted' : v === 'dashed' ? 'dashed' : v === 'double' ? 'double' : 'solid'} #${col}`;
+  }
+  tableHtml(t) {
+    const pr = kid(t, 'tblPr'); const tb = kid(pr, 'tblBorders');
+    const grid = kids(kid(t, 'tblGrid'), 'gridCol').map(g => tw2px(wa(g, 'w')));
+    const tblW = kid(pr, 'tblW'); let total = grid.reduce((a, b) => a + b, 0);
+    if (tblW && wa(tblW, 'type') === 'dxa') total = tw2px(wa(tblW, 'w')) || total;
+    const ind = kid(pr, 'tblInd'); const ml = ind ? tw2px(wa(ind, 'w')) : 0;
+    const rows = kids(t, 'tr'); let h = `<table style="border-collapse:collapse;table-layout:fixed;width:${total}px;margin-left:${ml}px"><colgroup>${grid.map(g => `<col style="width:${g}px"/>`).join('')}</colgroup>`;
+    rows.forEach((tr, ri) => {
+      const trp = kid(tr, 'trPr'); const th = kid(trp, 'trHeight'); const hdr = kid(trp, 'tblHeader');
+      h += `<tr${hdr ? ' data-th="1"' : ''}${th ? ` style="height:${tw2px(wa(th, 'val'))}px"` : ''}>`;
+      let ci = 0; const cells = kids(tr, 'tc');
+      for (const tc of cells) {
+        const tp = kid(tc, 'tcPr'); const span = parseInt(wa(kid(tp, 'gridSpan'), 'val') || '1', 10);
+        const first = ci === 0, last = ci + span >= grid.length, firstRow = ri === 0, lastRow = ri === rows.length - 1;
+        const tcb = kid(tp, 'tcBorders'); const css = [];
+        const sides = { top: ['top', firstRow ? 'top' : 'insideH'], bottom: ['bottom', lastRow ? 'bottom' : 'insideH'], left: ['left', first ? 'left' : 'insideV'], right: ['right', last ? 'right' : 'insideV'] };
+        for (const s in sides) { const v = this.borderCss(tcb, sides[s][0]) ?? this.borderCss(tb, sides[s][1]); if (v) css.push(`border-${s}:${v}`); }
+        const mar = kid(tp, 'tcMar'); const m = s => { const e = kid(mar, s); return e ? tw2px(wa(e, 'w')) : (s === 'left' || s === 'right' ? 7.2 : 0); };
+        css.push(`padding:${m('top')}px ${m('right')}px ${m('bottom')}px ${m('left')}px`);
+        const va = wa(kid(tp, 'vAlign'), 'val'); css.push('vertical-align:' + (va === 'center' ? 'middle' : va === 'bottom' ? 'bottom' : 'top'));
+        const sh = kid(tp, 'shd'); if (sh && wa(sh, 'fill') && wa(sh, 'fill') !== 'auto') css.push('background:#' + wa(sh, 'fill'));
+        h += `<td${span > 1 ? ` colspan="${span}"` : ''} style="${css.join(';')}">${this.blocksHtml(tc, true)}</td>`;
+        ci += span;
+      }
+      h += '</tr>';
+    });
+    return h + '</table>';
+  }
+  blocksHtml(container, inCell) {
+    let h = '';
+    for (const c of container.children) {
+      if (c.localName === 'p') h += this.paraHtml(c, inCell);
+      else if (c.localName === 'tbl') h += this.tableHtml(c);
+    }
+    return h;
+  }
+  bodyHtml() { this.counters = {}; return this.blocksHtml(this.body, false); }
+  footerHtml() { return this.footer ? this.blocksHtml(this.footer, false) : ''; }
+}
+
+const PAGE_CSS = `.dgs *{box-sizing:border-box}.dgs{font-family:Cambria,Caladea,'Noto Serif',serif;color:#000;white-space:pre-wrap;word-wrap:break-word}
+.dgs .p{display:block;min-height:0}.dgs table{border-spacing:0}.dgs td{overflow:visible;word-wrap:break-word}.dgs .tab{display:inline-block;white-space:pre}.dgs .pgbr{display:inline-block;width:0;height:0}`;
+
+/** Met en page le .docx : renvoie { pages:[Uint8Array jpeg], w, h } */
+async function renderDocxToJpegs(docxBytes, opts = {}) {
+  const scale = opts.scale || 2, quality = opts.quality || 0.9;
+  const entries = readZip(docxBytes); const files = {};
+  for (const en of entries) if (/^word\/[^/]+\.xml$/.test(en.name)) files[en.name] = await entryBytes(en);
+  const model = new DocxModel(files); const S = model.sect;
+  const CW = S.w - S.left - S.right, CH = S.h - S.top - S.bottom;
+  const bodyHtml = model.bodyHtml(), footHtml = model.footerHtml();
+  const host = document.createElement('div');
+  host.style.cssText = `position:absolute;left:-20000px;top:0;width:${CW}px;visibility:hidden`;
+  host.innerHTML = `<style>${PAGE_CSS}</style><div class="dgs" id="dgsroot" style="position:relative;width:${CW}px">${bodyHtml}</div>`;
+  document.body.appendChild(host);
+  try {
+    const root = host.querySelector('#dgsroot'); const rr = () => root.getBoundingClientRect();
+    // tabulations
+    for (const par of root.querySelectorAll('.p')) {
+      const spans = [...par.querySelectorAll('.tab')]; if (!spans.length) continue;
+      const tabs = par.dataset.tabs ? JSON.parse(par.dataset.tabs) : [];
+      const cell = par.closest('td');
+      for (let i = 0; i < spans.length; i++) {
+        const sp = spans[i]; sp.style.width = '0px'; sp.style.borderBottom = '0';
+        const base = (cell ? cell.getBoundingClientRect().left + parseFloat(getComputedStyle(cell).paddingLeft) : rr().left);
+        const x0 = sp.getBoundingClientRect().left - base;
+        const stop = tabs.find(t => t.p > x0 + 1) || null;
+        let target, kind = 'left', leader = '';
+        if (stop) { target = stop.p; kind = stop.v; leader = stop.l; } else { target = (Math.floor(x0 / 48) + 1) * 48; }
+        let w = target - x0;
+        if (kind === 'right' || kind === 'center' || kind === 'end') {
+          const rng = document.createRange(); rng.setStartAfter(sp);
+          if (spans[i + 1]) rng.setEndBefore(spans[i + 1]); else rng.setEnd(par, par.childNodes.length);
+          const aw = rng.getBoundingClientRect().width; w -= (kind === 'center' ? aw / 2 : aw);
+        }
+        sp.style.width = Math.max(4, w) + 'px';
+        if (leader === 'dot') sp.style.borderBottom = '1px dotted #000'; else if (leader === 'underscore') sp.style.borderBottom = '1px solid #000'; else if (leader === 'hyphen') sp.style.borderBottom = '1px dashed #000';
+        if (leader) sp.style.height = '1em';
+      }
+    }
+    await nextFrame();
+    // points de coupure
+    const base0 = rr().top; const units = [];
+    for (const el of root.children) {
+      const r = el.getBoundingClientRect();
+      if (el.tagName === 'TABLE') {
+        const trs = [...el.querySelectorAll(':scope > tbody > tr, :scope > tr')];
+        trs.forEach((tr, i) => { const q = tr.getBoundingClientRect(); units.push({ top: q.top - base0, bottom: q.bottom - base0, kn: false, force: false, th: tr.dataset.th === '1', tbl: el, ti: i }); });
+        if (units.length) units[units.length - 1].bottom = Math.max(units[units.length - 1].bottom, r.bottom - base0);
+      } else {
+        units.push({ top: r.top - base0, bottom: r.bottom - base0, kn: el.dataset.kn === '1', force: el.dataset.pbb === '1' || !!el.querySelector('.pgbr'), th: false, pbAfter: !!el.querySelector('.pgbr') });
+      }
+    }
+    const total = units.length ? units[units.length - 1].bottom : 0;
+    const cuts = []; let start = 0, i = 0;
+    while (i < units.length) {
+      const limit = start + CH; let last = i - 1;
+      for (let k = i; k < units.length; k++) {
+        if (k > i && units[k].force && !units[k - 1].pbAfter) break;
+        if (units[k].bottom <= limit + 0.5) { last = k; if (units[k].pbAfter) break; } else break;
+      }
+      if (last < i) { cuts.push({ start, end: limit }); start = limit; if (start >= units[i].bottom - 0.5) { start = units[i].bottom; i++; } continue; }
+      if (last < units.length - 1 && !units[last].pbAfter && !units[last + 1].force) { let j = last, c = 0; while (j > i && units[j].kn && c++ < 2) j--; last = j; }
+      cuts.push({ start, end: Math.min(units[last].bottom, limit) });
+      start = last + 1 < units.length ? units[last + 1].top : total; i = last + 1;
+    }
+    if (!cuts.length) cuts.push({ start: 0, end: 0 });
+    const N = cuts.length;
+    // sérialisation XHTML du contenu (une fois)
+    const bodyX = new XMLSerializer().serializeToString(root);
+    const pages = [];
+    for (let i = 0; i < N; i++) {
+      const c = cuts[i]; const hgt = Math.max(1, Math.min(CH, c.end - c.start) + 0.5);
+      const foot = footHtml.replace(/\u0001PAGE\u0001/g, String(i + 1)).replace(/\u0001NUMPAGES\u0001/g, String(N));
+      const footDoc = new DOMParser().parseFromString(`<div xmlns="http://www.w3.org/1999/xhtml" class="dgs">${foot.replace(/<br>/g, '<br/>')}</div>`, 'application/xhtml+xml');
+      const footX = footDoc.getElementsByTagName('parsererror').length ? '' : new XMLSerializer().serializeToString(footDoc.documentElement);
+      const html = `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${S.w}px;height:${S.h}px;position:relative;background:#fff;overflow:hidden"><style>${PAGE_CSS}</style>` +
+        `<div style="position:absolute;left:${S.left}px;top:${S.top}px;width:${CW}px;height:${hgt}px;overflow:hidden"><div style="position:absolute;left:0;top:${-c.start}px;width:${CW}px">${bodyX}</div></div>` +
+        `<div style="position:absolute;left:${S.left}px;bottom:${S.footer}px;width:${CW}px">${footX}</div></div>`;
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${S.w}" height="${S.h}"><foreignObject x="0" y="0" width="${S.w}" height="${S.h}">${html}</foreignObject></svg>`;
+      const img = await svgToImg(svg);
+      const cv = document.createElement('canvas'); cv.width = Math.round(S.w * scale); cv.height = Math.round(S.h * scale);
+      const g = cv.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, cv.width, cv.height); g.scale(scale, scale); g.drawImage(img, 0, 0);
+      const blob = await new Promise(r => cv.toBlob(r, 'image/jpeg', quality));
+      pages.push({ jpeg: new Uint8Array(await blob.arrayBuffer()), w: cv.width, h: cv.height });
+      if (opts.onPage) opts.onPage(i + 1, N);
+      await nextFrame();
+    }
+    return { pages, pw: S.w, ph: S.h };
+  } finally { host.remove(); }
+}
+function svgToImg(svg) {
+  return new Promise((res, rej) => {
+    const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error('Rendu de la page impossible'));
+    i.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  });
+}
+function roman(n, lower) { const m = [[1000, 'M'], [900, 'CM'], [500, 'D'], [400, 'CD'], [100, 'C'], [90, 'XC'], [50, 'L'], [40, 'XL'], [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']]; let s = ''; for (const [v, r] of m) while (n >= v) { s += r; n -= v; } return lower ? s.toLowerCase() : s; }
+
+/* ============ PDF (pages image JPEG, A4) ============ */
+function jpegSize(u) { let i = 2; while (i < u.length) { if (u[i] !== 0xFF) { i++; continue; } const m = u[i + 1]; if (m >= 0xC0 && m <= 0xC3) return { h: (u[i + 5] << 8) | u[i + 6], w: (u[i + 7] << 8) | u[i + 8] }; i += 2 + ((u[i + 2] << 8) | u[i + 3]); } return { w: 1, h: 1 }; }
+function makePdf(pages, pw, ph) {
+  pages = pages.map(p => p.jpeg ? p : { jpeg: p, ...jpegSize(p) });
+  const te = new TextEncoder(); const chunks = []; const offs = []; let pos = 0;
+  const push = u => { chunks.push(u); pos += u.length; };
+  const str = s => push(te.encode(s));
+  const obj = (n, fn) => { offs[n] = pos; str(`${n} 0 obj\n`); fn(); str('\nendobj\n'); };
+  const W = pw * 0.75, H = ph * 0.75; // px (96 dpi) -> pt
+  str('%PDF-1.4\n%\xE2\xE3\xCF\xD3\n');
+  const n = pages.length; const pageObj = i => 3 + i * 3, imgObj = i => 4 + i * 3, conObj = i => 5 + i * 3;
+  obj(1, () => str('<< /Type /Catalog /Pages 2 0 R >>'));
+  obj(2, () => str(`<< /Type /Pages /Count ${n} /Kids [${pages.map((_, i) => pageObj(i) + ' 0 R').join(' ')}] >>`));
+  pages.forEach((p, i) => {
+    obj(pageObj(i), () => str(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${W.toFixed(2)} ${H.toFixed(2)}] /Resources << /XObject << /Im0 ${imgObj(i)} 0 R >> >> /Contents ${conObj(i)} 0 R >>`));
+    obj(imgObj(i), () => { str(`<< /Type /XObject /Subtype /Image /Width ${p.w} /Height ${p.h} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${p.jpeg.length} >>\nstream\n`); push(p.jpeg); str('\nendstream'); });
+    const c = `q ${W.toFixed(2)} 0 0 ${H.toFixed(2)} 0 0 cm /Im0 Do Q`;
+    obj(conObj(i), () => str(`<< /Length ${c.length} >>\nstream\n${c}\nendstream`));
+  });
+  const xref = pos; const total = 3 + n * 3;
+  str(`xref\n0 ${total}\n0000000000 65535 f \n`);
+  for (let k = 1; k < total; k++) str(String(offs[k]).padStart(10, '0') + ' 00000 n \n');
+  str(`trailer\n<< /Size ${total} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`);
+  return concat(chunks);
+}
+
+/* ============ Enregistrer / partager (Android natif ou navigateur) ============ */
+const isNative = () => !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+function toBase64(u8) { let s = ''; const CH = 0x8000; for (let i = 0; i < u8.length; i += CH) s += String.fromCharCode.apply(null, u8.subarray(i, i + CH)); return btoa(s); }
+async function saveFile(u8, name, mime, share) {
+  if (isNative()) {
+    const P = window.Capacitor.Plugins; const FS = P.Filesystem;
+    const r = await FS.writeFile({ path: 'DGS/' + name, data: toBase64(u8), directory: 'DOCUMENTS', recursive: true });
+    if (share && P.Share) { try { await P.Share.share({ title: name, url: r.uri, dialogTitle: 'Partager' }); } catch (e) { } }
+    return 'Documents/DGS/' + name;
+  }
+  const url = URL.createObjectURL(new Blob([u8], { type: mime }));
+  if (share && navigator.canShare) {
+    try { const f = new File([u8], name, { type: mime }); if (navigator.canShare({ files: [f] })) { await navigator.share({ files: [f], title: name }); URL.revokeObjectURL(url); return 'partagé'; } } catch (e) { if (e.name === 'AbortError') return 'annulé'; }
+  }
+  const a = document.createElement('a'); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 30000); return 'Téléchargements/' + name;
+}
+
+/* ============ Configuration métier ============ */
+const FIELD_LABELS = { ADRESSE_COMPLETE_DE_DGS: 'Adresse du siège (n°, rue, cité)', NOM_FONCTION: 'Rédacteur par défaut (nom / fonction)', CAPITAL_SOCIAL: 'Capital social (DA)', VILLE_SIEGE: 'Ville (pour « Fait à »)', NOM_DU_GERANT: 'Nom du gérant', DENOMINATION: 'Dénomination', N_LOT_SANS_OBJET: 'N° lot', A_COMPLETER_RIB: 'RIB', N_RC: 'N° RC', N_AO: "N° appel d'offres", OBJET_DE_L_APPEL_D_OFFRES: "Objet de l'appel d'offres", NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE: "Nom et prénom de l'associé unique" };
+const ET = {
+  societe: {
+    label: 'Société', plural: 'Sociétés', icon: '🏢', folders: ['01_ENTREPRISE', '04_FOURNISSEURS', '05_SOUS_TRAITANTS', '06_PERSONNEL', '07_MATERIEL_VEHICULES', '09_MODELES_MASTER'],
+    fields: ['DENOMINATION', 'NOM_DU_GERANT', 'NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE', 'NOM_FONCTION', 'ADRESSE_COMPLETE_DE_DGS', 'VILLE_SIEGE', 'CAPITAL_SOCIAL', 'A_COMPLETER_RIB'], req: 'DENOMINATION'
+  },
+  client: { label: 'Client', plural: 'Clients', icon: '👤', folders: ['02_CLIENTS'], fields: ['NOM_CLIENT', 'ADRESSE_CLIENT'], req: 'NOM_CLIENT' },
+  projet: {
+    label: 'Projet', plural: 'Projets', icon: '🏗️', folders: ['03_CHANTIERS', '02_CLIENTS', '08_PROMOTION_IMMOBILIERE'],
+    fields: ['INTITULE_DU_PROJET', 'N_PROJET', 'ADRESSE_DU_CHANTIER', 'N_DEVIS', 'N_DOSSIER', 'NATURE_DES_TRAVAUX', 'DELAI', 'DATE_DE_DEMARRAGE', 'MAITRE_D_OUVRAGE', 'CONDITIONS_DE_PAIEMENT'], req: 'INTITULE_DU_PROJET'
+  },
+  marche: {
+    label: 'Marché public', plural: 'Marchés', icon: '📑', folders: ['10_MARCHES_PUBLICS'],
+    fields: ['N_AO', 'OBJET_DE_L_APPEL_D_OFFRES', 'NOM_DU_SERVICE_CONTRACTANT', 'ADRESSE_DU_SERVICE_CONTRACTANT', 'N_MARCHE', 'N_LOT_SANS_OBJET', 'OBJET_DU_MARCHE'], req: 'N_AO'
+  }
+};
+const ENT_OWNER = {}; for (const t of ['societe', 'client', 'projet', 'marche']) for (const k of ET[t].fields) if (!ENT_OWNER[k]) ENT_OWNER[k] = t;
+
+function fieldLabel(k) { return FIELD_LABELS[k] || FIELDS[k] || k; }
+function fieldType(k) {
+  k = String(k).split('@')[0];
+  if (k === 'DATE' || /^DATE_|_DATE$/.test(k)) return 'date';
+  if (/^HEURE/.test(k)) return 'time';
+  if (/MONTANT|^TVA$|^TAUX|PRIX/.test(k)) return 'decimal';
+  if (/^(ADRESSE|OBJET|TEXTE|MOTIF|CAUSE|JUSTIFICATION|INTRODUCTION|PRESTATION|DESIGNATION|MESURE|CONDITIONS|NATURE|INTITULE_DE_L_OPERATION|POSTE|DEUXIEME|PREMIER|TROISIEME|ELEMENT|INTITULE_DE_LA)/.test(k)) return 'textarea';
+  return 'text';
+}
+/* Enchaînement conseillé des documents (modifiable) */
+const WORKFLOW = (() => {
+  const w = {}; const ch = (...c) => { for (let i = 0; i < c.length - 1; i++) { (w['DGS-' + c[i]] = w['DGS-' + c[i]] || []); const n = 'DGS-' + c[i + 1]; if (!w['DGS-' + c[i]].includes(n)) w['DGS-' + c[i]].push(n); } };
+  ch('CLI-001', 'CLI-002', 'CLI-003', 'CLI-004', 'CLI-005', 'CLI-006', 'CLI-007', 'CLI-008', 'CLI-009', 'CLI-011', 'CLI-012');
+  ch('CLI-008', 'CLI-010', 'CLI-011'); ch('CLI-007', 'CLI-008');
+  for (const c of ['CON-001', 'CON-002', 'CON-003', 'CON-004', 'CON-005']) { ch('CLI-012', c); ch(c, 'PV-001'); ch(c, 'PV-003'); }
+  ch('PV-001', 'PV-002', 'PV-003', 'PV-004', 'PV-005', 'CHT-001', 'CHT-002', 'CHT-003', 'CHT-011', 'CHT-012', 'CHT-013', 'PV-011', 'PV-022');
+  ch('CHT-003', 'PV-010'); ch('PV-010', 'PV-011'); ch('PV-011', 'PV-013'); ch('PV-013', 'PV-022');
+  ch('PV-022', 'PV-024', 'PV-026'); ch('PV-022', 'PV-023', 'PV-025', 'PV-026');
+  ch('PV-026', 'PV-027', 'PV-028', 'PV-029', 'PV-030', 'CLI-014', 'CLI-024');
+  ch('PV-005', 'PV-014'); ch('PV-005', 'PV-015'); ch('PV-005', 'PV-017', 'PV-018'); ch('PV-005', 'PV-019');
+  ch('CLI-015', 'CLI-016', 'CLI-017'); ch('CLI-013', 'PV-031', 'PV-032', 'PV-033', 'PV-034', 'PV-035');
+  ch('MAR-001', 'MAR-002', 'MAR-008', 'MAR-003', 'MAR-105', 'MAR-010', 'MAR-011', 'MAR-024', 'MAR-015', 'MAR-017', 'MAR-040', 'MAR-041', 'MAR-042', 'MAR-043', 'MAR-044', 'MAR-046', 'MAR-070', 'MAR-072', 'MAR-080', 'MAR-079', 'MAR-061', 'MAR-083', 'MAR-063');
+  return w;
+})();
+const DOC_BY_CODE = {}; DOCS.forEach(d => DOC_BY_CODE[d.c] = d);
+
+/* ============ État & utilitaires UI ============ */
+const A = { templates: 0, entities: [], docs: [], log: [] };
+const today = () => new Date().toISOString().slice(0, 10);
+const frDate = iso => /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('/') : iso;
+const fmtVal = (k, v) => {
+  v = String(v ?? '').trim(); const b = String(k).split('@')[0];
+  if (fieldType(k) === 'date') return frDate(v);
+  if (/^MONTANT(_HT|_TTC|_TVA)?$/.test(b)) { const n = parseNum(v); if (n != null && /^[\d\s.,]+$/.test(v)) return n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).replace(/[\u202f\u00a0]/g, '\u00a0'); }
+  return v;
+};
+const parseNum = v => { const x = String(v ?? '').replace(/[\s\u00a0\u202f]/g, '').replace(',', '.'); return x !== '' && /^-?\d+(\.\d+)?$/.test(x) ? parseFloat(x) : null; };
+function deriveAmounts(v) {
+  const ht = parseNum(v.MONTANT_HT), tva = parseNum(v.TVA);
+  const f = n => String(Math.round(n * 100) / 100);
+  if (ht != null && tva != null) {
+    if (!String(v.MONTANT_TVA || '').trim()) v.MONTANT_TVA = f(ht * tva / 100);
+    if (!String(v.MONTANT_TTC || '').trim()) v.MONTANT_TTC = f(ht + ht * tva / 100);
+  }
+  return v;
+}
+const COMPANY_DEFAULTS = { DENOMINATION: 'EURL DYNAMIC GROUP SOLUTION', A_COMPLETER_RIB: '001.00811 03300.0002.220/76', VILLE_SIEGE: 'Annaba' };
+function autoValue(f, inh) {
+  const k = f.key, b = f.before || '';
+  if (!f.generic) { const x = inh[k]; return x != null && x !== '' ? x : ''; }
+  if (k === 'DATE' && (/(modification|cr[ée]ation|[ée]mission|[ée]dition|[ée]tabli|date)\s*[:·]?\s*$/i.test(b) || /fait [àa][^\[]*\ble\s*$/i.test(b) || /,\s*le\s*$/i.test(b))) return today();
+  if (k === 'A_COMPLETER_RIB' && !/sous-traitant|client|fournisseur|cotraitant/i.test(b)) return inh.A_COMPLETER_RIB || '';
+  if (k === 'LIEU' && /fait [àa]\s*$/i.test(b)) return inh.VILLE_SIEGE || '';
+  return '';
+}
+const ent = id => A.entities.find(e => e.id === id);
+const entName = e => !e ? '' : e.type === 'societe' ? (e.data.DENOMINATION || 'Société') : e.type === 'client' ? (e.data.NOM_CLIENT || 'Client') : e.type === 'projet' ? ((e.data.N_PROJET ? e.data.N_PROJET + ' · ' : '') + (e.data.INTITULE_DU_PROJET || 'Projet')) : (e.data.N_AO ? 'AO ' + e.data.N_AO : 'Marché') + (e.data.NOM_DU_SERVICE_CONTRACTANT ? ' · ' + e.data.NOM_DU_SERVICE_CONTRACTANT : '');
+const entSub = e => e.type === 'client' ? (ent(e.societeId) ? entName(ent(e.societeId)) : '') : e.type === 'projet' ? (ent(e.clientId) ? entName(ent(e.clientId)) : '') : e.type === 'marche' ? (e.data.OBJET_DE_L_APPEL_D_OFFRES || '') : (e.data.NOM_DU_GERANT ? 'Gérant : ' + e.data.NOM_DU_GERANT : '');
+function toast(m) { const t = document.createElement('div'); t.className = 'toast'; t.textContent = m; document.body.appendChild(t); setTimeout(() => t.classList.add('show'), 10); setTimeout(() => { t.classList.remove('show'); setTimeout(() => t.remove(), 300); }, 3200); }
+let busyEl = null;
+function busy(msg) { if (!busyEl) { busyEl = document.createElement('div'); busyEl.className = 'busy'; document.body.appendChild(busyEl); } busyEl.innerHTML = `<div class="busybox"><div class="spin"></div><div id="busymsg">${esc(msg)}</div><div class="bar"><i id="busybar"></i></div></div>`; }
+function busyMsg(msg, pct) { const m = $('#busymsg'); if (m) m.textContent = msg; const b = $('#busybar'); if (b && pct != null) b.style.width = pct + '%'; }
+function busyDone() { if (busyEl) { busyEl.remove(); busyEl = null; } }
+function logLine(m) { A.log.unshift(new Date().toLocaleString('fr-FR') + ' — ' + m); A.log.length = Math.min(A.log.length, 60); DB.put('kv', 'log', A.log).catch(() => { }); }
+const confirmBox = msg => Promise.resolve(window.confirm(msg));
+
+async function loadAll() {
+  A.entities = await DB.all('entities'); A.docs = await DB.all('docs');
+  A.templates = (await DB.keys('templates')).length; A.log = (await DB.get('kv', 'log')) || [];
+}
+const saveEnt = async e => { e.updatedAt = Date.now(); await DB.put('entities', e.id, e); const i = A.entities.findIndex(x => x.id === e.id); if (i >= 0) A.entities[i] = e; else A.entities.push(e); };
+const saveDoc = async d => { await DB.put('docs', d.id, d); const i = A.docs.findIndex(x => x.id === d.id); if (i >= 0) A.docs[i] = d; else A.docs.push(d); };
+
+/* ============ Import des modèles ============ */
+async function importTemplates(u8, onProg) {
+  const entries = readZip(u8).filter(e => /\.docx$/i.test(e.name) && !/\/~\$/.test(e.name) && !/^__MACOSX/.test(e.name));
+  let n = 0, i = 0;
+  for (const en of entries) {
+    const m = /(DGS-[A-Z]+-\d+)/.exec(en.name.split('/').pop());
+    i++;
+    if (!m || !DOC_BY_CODE[m[1]]) continue;
+    await DB.put('templates', m[1], await entryBytes(en)); n++;
+    if (i % 5 === 0) { onProg && onProg(i, entries.length); await nextFrame(); }
+  }
+  A.templates = (await DB.keys('templates')).length; return n;
+}
+async function autoImport() {
+  if (A.templates > 0) return;
+  try {
+    const r = await fetch('templates.zip'); if (!r.ok) return;
+    busy('Installation des modèles de documents…');
+    const buf = new Uint8Array(await r.arrayBuffer());
+    const n = await importTemplates(buf, (i, t) => busyMsg(`Modèles ${i}/${t}`, i / t * 100));
+    logLine(`${n} modèles installés automatiquement`);
+  } catch (e) { logLine('Import auto impossible : ' + e.message); } finally { busyDone(); }
+}
+
+/* ============ Valeurs héritées ============ */
+function ctxFromEntity(e, projetId) {
+  const c = { societeId: null, clientId: null, projetId: null, marcheId: null };
+  if (e.type === 'societe') c.societeId = e.id;
+  else if (e.type === 'client') { c.clientId = e.id; c.societeId = e.societeId; c.projetId = projetId || null; }
+  else if (e.type === 'projet') { c.projetId = e.id; c.clientId = e.clientId; c.marcheId = e.marcheId || null; c.societeId = ent(e.clientId)?.societeId || e.societeId || null; }
+  else if (e.type === 'marche') { c.marcheId = e.id; c.societeId = e.societeId; }
+  if (c.projetId && e.type === 'client') { const p = ent(c.projetId); if (p) c.marcheId = p.marcheId || null; }
+  return c;
+}
+function ctxValues(ctx) {
+  const v = {};
+  const soc0 = A.entities.find(x => x.type === 'societe');
+  for (const id of [ctx.societeId || (soc0 && soc0.id), ctx.marcheId, ctx.clientId, ctx.projetId]) { const e = ent(id); if (e) Object.assign(v, e.memo || {}, e.data || {}); }
+  const set = (k, x) => { if ((v[k] == null || v[k] === '') && x) v[k] = x; };
+  set('NOM_ET_PRENOM_DU_GERANT', v.NOM_DU_GERANT); set('NOM_ET_PRENOM_DE_L_ASSOCIE_UNIQUE', v.NOM_DU_GERANT); set('NOM_FONCTION', v.NOM_DU_GERANT ? v.NOM_DU_GERANT + ' / Gérant' : ''); set('SERVICE_CONTRACTANT', v.NOM_DU_SERVICE_CONTRACTANT);
+  if (v.INTITULE_DU_PROJET && v.N_PROJET) set('INTITULE_DU_PROJET_N_PROJET', `${v.INTITULE_DU_PROJET} / ${v.N_PROJET}`);
+  if (v.NOM_DU_SERVICE_CONTRACTANT && v.N_PROJET) set('SERVICE_N_PROJET', `${v.NOM_DU_SERVICE_CONTRACTANT} / ${v.N_PROJET}`);
+  return v;
+}
+
+/* ============ Génération d'un document ============ */
+async function generate(code, values, onStatus) {
+  const tpl = await DB.get('templates', code);
+  if (!tpl) throw new Error("Modèle introuvable : importez d'abord les modèles (Réglages).");
+  const an = await analyzeDocx(code, tpl);
+  const raw = deriveAmounts({ ...values });
+  const map = {}; for (const k in raw) map[k] = (k === 'PARTY' || /^B\d+$/.test(k)) ? raw[k] : fmtVal(k, raw[k]);
+  onStatus && onStatus('Remplissage du document Word…', 20);
+  const { bytes, used } = await fillDocx(tpl, map);
+  onStatus && onStatus('Mise en page et création du PDF…', 45);
+  const r = await renderDocxToJpegs(bytes, { scale: 2, quality: 0.9, onPage: (i, n) => onStatus && onStatus(`Page ${i}/${n}…`, 45 + 50 * i / n) });
+  const miss = an.fields.filter(f => !used.has(f.id)).map(f => fieldLabelOf(f));
+  return { docx: bytes, pages: r.pages.map(p => p.jpeg), pw: r.pw, ph: r.ph, filled: an.fields.filter(f => used.has(f.id)).map(f => f.id), missing: [...new Set(miss)] };
+}
+const fieldLabelOf = f => FIELD_LABELS[f.key] || FIELDS[f.key] || f.label;
+const fileBase = d => { const e = ent(d.entityId); const tag = (d.values.N_PROJET || d.values.N_AO || d.values.NOM_CLIENT || (e && entName(e)) || '').toString().replace(/[^\w\-]+/g, '_').slice(0, 30); return `${d.code}${tag ? '_' + tag : ''}_${(d.validatedAt ? new Date(d.validatedAt) : new Date()).toISOString().slice(0, 10).replace(/-/g, '')}_v${d.version}`; };
+
+function companyBanner(v) {
+  const soc = A.entities.find(x => x.type === 'societe'); if (!soc) return;
+  const need = ['NOM_DU_GERANT', 'ADRESSE_COMPLETE_DE_DGS'].filter(k => !soc.data[k]);
+  if (need.length) v.insertAdjacentHTML('afterbegin', `<a class="card warn" href="#/edit/${soc.id}" style="display:block;text-decoration:none">⚠ Complétez une seule fois le profil de l’entreprise (${need.map(k => esc(fieldLabel(k))).join(', ')}) : il sera appliqué automatiquement à tous les documents. <b>Ouvrir ›</b></a>`);
+}
+/* ============ Routeur ============ */
+const view = () => $('#view');
+function go(h) { if (location.hash === h) render(); else location.hash = h; }
+function parseHash() { const h = location.hash.replace(/^#/, '') || '/'; const [path, q] = h.split('?'); return { parts: path.split('/').filter(Boolean), q: Object.fromEntries(new URLSearchParams(q || '')) }; }
+let homeTab = localStorage.getItem('homeTab') || 'projet'; let homeQ = '';
+async function render() {
+  const { parts, q } = parseHash(); const v = view(); window.scrollTo(0, 0);
+  try {
+    if (!parts.length) { pageHome(v); companyBanner(v); return; }
+    if (parts[0] === 'e') return pageEntity(v, parts[1], q);
+    if (parts[0] === 'new') return pageEntityForm(v, parts[1], null, q);
+    if (parts[0] === 'edit') return pageEntityForm(v, ent(parts[1])?.type, parts[1], q);
+    if (parts[0] === 'doc') return pageDocForm(v, parts[1], parts[2], q);
+    if (parts[0] === 'gen') return pageResult(v, parts[1]);
+    if (parts[0] === 'settings') return pageSettings(v);
+    pageHome(v);
+  } catch (e) { console.error(e); v.innerHTML = `<div class="card err">Erreur : ${esc(e.message)}</div><a class="btn" href="#/">Accueil</a>`; }
+}
+const topbar = (title, back, right = '') => `<header class="top">${back ? `<a class="back" href="${back}">‹</a>` : '<span class="logo">DGS</span>'}<h1>${esc(title)}</h1>${right}</header>`;
+
+/* ---------- Accueil ---------- */
+function pageHome(v) {
+  const t = ET[homeTab]; const list = A.entities.filter(e => e.type === homeTab && (!homeQ || (entName(e) + ' ' + entSub(e)).toLowerCase().includes(homeQ.toLowerCase()))).sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
+  v.innerHTML = topbar('DGS DOCS', null, '<a class="ico" href="#/settings" title="Réglages">⚙️</a>') +
+    (A.templates === 0 ? `<div class="card warn">Les modèles de documents ne sont pas installés. <a href="#/settings">Les importer</a></div>` : '') +
+    `<nav class="tabs">${Object.keys(ET).map(k => `<button data-tab="${k}" class="${k === homeTab ? 'on' : ''}">${ET[k].icon} ${ET[k].plural}<small>${A.entities.filter(e => e.type === k).length}</small></button>`).join('')}</nav>` +
+    `<div class="searchrow"><input id="homeq" type="search" placeholder="Rechercher…" value="${esc(homeQ)}"></div>` +
+    `<div class="list">${list.map(e => `<a class="item" href="#/e/${e.id}"><span class="av">${ET[e.type].icon}</span><span class="tx"><b>${esc(entName(e))}</b><small>${esc(entSub(e))}</small></span><span class="chev">›</span></a>`).join('') || `<div class="empty">Aucun ${t.label.toLowerCase()}.<br>Touchez ＋ pour en créer un.</div>`}</div>` +
+    `<a class="fab" href="#/new/${homeTab}">＋</a>`;
+  $$('[data-tab]', v).forEach(b => b.onclick = () => { homeTab = b.dataset.tab; localStorage.setItem('homeTab', homeTab); homeQ = ''; pageHome(v); });
+  const q = $('#homeq'); q.oninput = () => { homeQ = q.value; const pos = q.selectionStart; pageHome(v); const n = $('#homeq'); n.focus(); n.setSelectionRange(pos, pos); };
+}
+
+/* ---------- Formulaire d'entité ---------- */
+function entInput(k, val) {
+  const ty = fieldType(k), id = 'f_' + k;
+  const base = `id="${id}" data-k="${k}"`;
+  if (ty === 'textarea') return `<textarea ${base} rows="2">${esc(val)}</textarea>`;
+  if (ty === 'date') return `<input ${base} type="date" value="${esc(val)}">`;
+  if (ty === 'decimal') return `<input ${base} type="text" inputmode="decimal" value="${esc(val)}">`;
+  return `<input ${base} type="text" value="${esc(val)}">`;
+}
+function pageEntityForm(v, type, id, q) {
+  const t = ET[type]; if (!t) return go('#/');
+  const e = id ? ent(id) : { id: uid(), type, data: type === 'societe' && !A.entities.some(x => x.type === 'societe') ? { DENOMINATION: 'EURL DYNAMIC GROUP SOLUTION' } : {}, societeId: null, clientId: q.client || null, marcheId: null, createdAt: Date.now() };
+  const socs = A.entities.filter(x => x.type === 'societe'), clients = A.entities.filter(x => x.type === 'client'), marches = A.entities.filter(x => x.type === 'marche');
+  if (!id) { if (type === 'client' || type === 'marche') e.societeId = q.societe || socs[0]?.id || null; }
+  const sel = (nm, list, cur, lbl, req, optLabel) => `<label class="fld"><span>${lbl}${req ? ' *' : ''}</span><select id="${nm}">${req ? '' : `<option value="">${optLabel || '—'}</option>`}${list.map(x => `<option value="${x.id}" ${x.id === cur ? 'selected' : ''}>${esc(entName(x))}</option>`).join('')}</select></label>`;
+  v.innerHTML = topbar((id ? 'Modifier — ' : 'Nouveau — ') + t.label, id ? '#/e/' + id : '#/') +
+    `<form id="entform" class="form">` +
+    (type === 'client' || type === 'marche' ? sel('p_soc', socs, e.societeId, 'Société', true) : '') +
+    (type === 'projet' ? sel('p_cli', clients, e.clientId, 'Client', true) + sel('p_mar', marches, e.marcheId, 'Marché public lié (facultatif)', false) : '') +
+    t.fields.map(k => `<label class="fld"><span>${esc(fieldLabel(k))}${k === t.req ? ' *' : ''}</span>${entInput(k, e.data[k] ?? '')}</label>`).join('') +
+    `<div class="actions"><button class="btn primary" type="submit">Enregistrer</button></div></form>`;
+  if ((type === 'client' || type === 'marche') && !socs.length) v.insertAdjacentHTML('afterbegin', `<div class="card warn">Créez d'abord une société (onglet Sociétés).</div>`);
+  if (type === 'projet' && !clients.length) v.insertAdjacentHTML('afterbegin', `<div class="card warn">Créez d'abord un client.</div>`);
+  $('#entform').onsubmit = async ev => {
+    ev.preventDefault();
+    const data = {}; $$('[data-k]', v).forEach(i => { const x = i.value.trim(); if (x) data[i.dataset.k] = x; });
+    if (!data[t.req]) return toast(`« ${fieldLabel(t.req)} » est obligatoire`);
+    if (type === 'client' || type === 'marche') { e.societeId = $('#p_soc')?.value || null; if (!e.societeId) return toast('Choisissez une société'); }
+    if (type === 'projet') { e.clientId = $('#p_cli').value; if (!e.clientId) return toast('Choisissez un client'); e.marcheId = $('#p_mar').value || null; e.societeId = ent(e.clientId)?.societeId || null; }
+    e.data = data; await saveEnt(e); toast('Enregistré'); go('#/e/' + e.id);
+  };
+}
+
+/* ---------- Fiche d'entité ---------- */
+function docGroupName(p) { const parts = p.split('/').slice(1, -1).map(s => s.replace(/^\d+_/, '').replace(/_/g, ' ')); return parts.join(' › ') || 'Général'; }
+function entDocs(e) { const f = ET[e.type].folders; return DOCS.filter(d => f.includes(d.p.split('/')[0])); }
+const instOf = (e, code) => A.docs.filter(d => d.entityId === e.id && d.code === code).sort((a, b) => b.version - a.version)[0];
+let docQ = '';
+function pageEntity(v, id, q) {
+  const e = ent(id); if (!e) return go('#/');
+  const t = ET[e.type]; const mine = A.docs.filter(d => d.entityId === e.id);
+  const kids = e.type === 'societe' ? A.entities.filter(x => x.type === 'client' && x.societeId === e.id) : e.type === 'client' ? A.entities.filter(x => x.type === 'projet' && x.clientId === e.id) : e.type === 'marche' ? A.entities.filter(x => x.type === 'projet' && x.marcheId === e.id) : [];
+  const valid = new Set(mine.filter(d => d.status === 'validé').map(d => d.code));
+  const dl = entDocs(e);
+  const groups = {}; dl.forEach(d => (groups[docGroupName(d.p)] = groups[docGroupName(d.p)] || []).push(d));
+  const ql = docQ.toLowerCase();
+  const gh = Object.keys(groups).sort().map(g => {
+    const items = groups[g].filter(d => !ql || (d.c + ' ' + d.t).toLowerCase().includes(ql)); if (!items.length) return '';
+    return `<details class="grp" ${ql ? 'open' : ''}><summary>${esc(g)} <small>${items.filter(d => valid.has(d.c)).length}/${items.length}</small></summary>${items.map(d => {
+      const i = instOf(e, d.c); const st = !i ? '⚪' : i.status === 'validé' ? '🟢' : '🟡';
+      return `<a class="doc" href="#/doc/${e.id}/${d.c}${i && i.status === 'brouillon' ? '?edit=' + i.id : ''}"><span class="st">${st}</span><span class="tx"><b>${esc(d.t)}</b><small>${d.c}</small></span><span class="chev">›</span></a>`;
+    }).join('')}</details>`;
+  }).join('');
+  const info = t.fields.filter(k => e.data[k]).map(k => `<div class="kv"><span>${esc(fieldLabel(k))}</span><b>${esc(fmtVal(k, e.data[k]))}</b></div>`).join('');
+  const parents = [e.societeId, e.clientId, e.marcheId].filter(Boolean).map(ent).filter(Boolean);
+  const gens = mine.filter(d => d.status === 'validé').sort((a, b) => b.validatedAt - a.validatedAt);
+  v.innerHTML = topbar(t.icon + ' ' + t.label, '#/', `<a class="ico" href="#/edit/${e.id}" title="Modifier">✏️</a>`) +
+    `<div class="card"><h2>${esc(entName(e))}</h2>${parents.map(p => `<a class="chip" href="#/e/${p.id}">${ET[p.type].icon} ${esc(entName(p))}</a>`).join('')}<div class="kvs">${info || '<small>Aucune donnée saisie.</small>'}</div></div>` +
+    (e.type !== 'projet' && (kids.length || e.type !== 'marche') ? `<div class="sec"><h3>${e.type === 'societe' ? 'Clients' : e.type === 'client' ? 'Projets' : 'Projets liés'} <a class="mini" href="#/new/${e.type === 'societe' ? 'client?societe=' + e.id : e.type === 'client' ? 'projet?client=' + e.id : 'projet'}">＋ Ajouter</a></h3>${kids.map(k => `<a class="item sm" href="#/e/${k.id}"><span class="av">${ET[k.type].icon}</span><span class="tx"><b>${esc(entName(k))}</b></span><span class="chev">›</span></a>`).join('') || '<small>Aucun.</small>'}</div>` : '') +
+    `<div class="sec"><h3>Documents <small>${valid.size} validé(s)</small></h3><input id="docq" type="search" placeholder="Rechercher un document (code ou nom)…" value="${esc(docQ)}">${gh || '<div class="empty">Aucun document.</div>'}</div>` +
+    (gens.length ? `<div class="sec"><h3>Documents générés</h3>${gens.map(d => `<a class="doc" href="#/gen/${d.id}"><span class="st">🟢</span><span class="tx"><b>${esc(DOC_BY_CODE[d.code]?.t || d.code)}</b><small>${d.code} · v${d.version} · ${new Date(d.validatedAt).toLocaleDateString('fr-FR')}</small></span><span class="chev">›</span></a>`).join('')}</div>` : '') +
+    `<div class="sec"><button class="btn danger" id="delent">Supprimer ${t.label.toLowerCase()}</button></div>`;
+  const dq = $('#docq'); dq.oninput = () => { docQ = dq.value; const p = dq.selectionStart; pageEntity(v, id, q); const n = $('#docq'); n.focus(); n.setSelectionRange(p, p); };
+  $('#delent').onclick = async () => {
+    if (kids.length) return toast('Supprimez d’abord les éléments liés (' + kids.length + ')');
+    if (!await confirmBox(`Supprimer « ${entName(e)} » et ses documents générés ?`)) return;
+    for (const d of mine) { await DB.del('docs', d.id); } A.docs = A.docs.filter(d => d.entityId !== e.id);
+    await DB.del('entities', e.id); A.entities = A.entities.filter(x => x.id !== e.id); go('#/');
+  };
+}
+
+/* ---------- Formulaire d'un document ---------- */
+let F = null; // état du formulaire
+async function pageDocForm(v, entityId, code, q) {
+  const e = ent(entityId), doc = DOC_BY_CODE[code]; if (!e || !doc) return go('#/');
+  const tpl = await DB.get('templates', code);
+  if (!tpl) { v.innerHTML = topbar(doc.t, '#/e/' + entityId) + `<div class="card err">Modèle introuvable. Importez les modèles dans Réglages.</div>`; return; }
+  const an = await analyzeDocx(code, tpl); const fields = an.fields;
+  const prevDoc = q.edit ? A.docs.find(d => d.id === q.edit) : q.prev ? A.docs.find(d => d.id === q.prev) : null;
+  if (!F || F.entityId !== entityId || F.code !== code || F.key !== (q.edit || q.prev || '')) {
+    const ctx = prevDoc && q.edit ? prevDoc.ctx : ctxFromEntity(e, q.proj || (prevDoc ? prevDoc.ctx.projetId : null));
+    F = { entityId, code, key: q.edit || q.prev || '', ctx, typed: prevDoc ? { ...prevDoc.values } : {}, editId: q.edit || null, save: true };
+    if (prevDoc && !q.edit) { // document suivant : reprendre les valeurs partagées (hors fiches, dates, textes longs, cases)
+      F.typed = {}; for (const k in prevDoc.values) if (!k.includes('@') && !/^B\d+$/.test(k) && k !== 'PARTY' && !ENT_OWNER[k] && !['date', 'time', 'textarea'].includes(fieldType(k)) && prevDoc.values[k]) F.typed[k] = prevDoc.values[k];
+    }
+  }
+  if (e.type === 'client' && q.proj !== undefined && F.ctx.projetId !== (q.proj || null)) { F.ctx = ctxFromEntity(e, q.proj || null); }
+  const inh = ctxValues(F.ctx);
+  const valOf = f => (F.typed[f.id] != null && F.typed[f.id] !== '') ? F.typed[f.id] : (f.key === 'DATE' && !f.generic ? today() : autoValue(f, inh));
+  const empties = fields.filter(f => !String(valOf(f)).trim()), filled = fields.filter(f => String(valOf(f)).trim());
+  const hist = {}; A.docs.forEach(d => { for (const k in d.values) { if (d.values[k] && !ENT_OWNER[k] && !k.includes('@') && k !== 'PARTY' && !/^B\d+$/.test(k)) (hist[k] = hist[k] || new Set()).add(d.values[k]); } });
+  const input = f => {
+    const ty = fieldType(f.key), val = valOf(f), typed = F.typed[f.id] != null && F.typed[f.id] !== '';
+    const from = typed ? '' : (String(val).trim() ? (f.generic ? 'auto' : 'hérité') : '');
+    const dl = hist[f.id] && ty === 'text' ? `list="dl_${f.id}"` : ''; const dlh = hist[f.id] && ty === 'text' ? `<datalist id="dl_${f.id}">${[...hist[f.id]].slice(0, 12).map(x => `<option value="${esc(x)}">`).join('')}</datalist>` : '';
+    const el = ty === 'textarea' ? `<textarea data-k="${esc(f.id)}" rows="3">${esc(val)}</textarea>` : `<input data-k="${esc(f.id)}" ${dl} type="${ty === 'date' ? 'date' : ty === 'time' ? 'time' : 'text'}" ${ty === 'decimal' ? 'inputmode="decimal"' : ''} value="${esc(val)}">`;
+    const ctxl = f.generic ? `<small class="ctx">… ${esc(f.before.slice(-40))}<b>▢</b>${esc(f.after)}</small>` : '';
+    return `<label class="fld"><span>${esc(fieldLabelOf(f))}${f.n > 1 ? ` <em>(×${f.n})</em>` : ''}${from ? ` <em class="inh">${from}</em>` : ''}</span>${ctxl}${el}${dlh}</label>`;
+  };
+  const projs = e.type === 'client' ? A.entities.filter(x => x.type === 'projet' && x.clientId === e.id) : [];
+  const ctxNames = [F.ctx.societeId, F.ctx.clientId, F.ctx.projetId, F.ctx.marcheId].map(ent).filter(Boolean);
+  const partySel = an.party ? `<label class="fld"><span>Type de cocontractant</span><select data-k="PARTY"><option value="">— garder les deux mentions —</option><option value="PHYSIQUE" ${F.typed.PARTY === 'PHYSIQUE' ? 'selected' : ''}>Personne physique</option><option value="MORALE" ${F.typed.PARTY === 'MORALE' ? 'selected' : ''}>Personne morale</option></select></label>` : '';
+  const boxes = an.boxes.length ? `<details class="grp"><summary>Cases à cocher <small>${an.boxes.length}</small></summary><div class="inner">${an.boxes.map(b => `<label class="chk"><input type="checkbox" data-b="${b.id}" ${F.typed[b.id] === true ? 'checked' : ''}> ${esc(b.label)}</label>`).join('')}</div></details>` : '';
+  v.innerHTML = topbar(doc.t, '#/e/' + entityId) +
+    `<div class="card slim"><b>${doc.c}</b>${doc.u ? ` — <small>${esc(doc.u)}</small>` : ''}<div>${ctxNames.map(p => `<span class="chip s">${ET[p.type].icon} ${esc(entName(p))}</span>`).join('')}</div></div>` +
+    (projs.length ? `<label class="fld"><span>Projet concerné (facultatif)</span><select id="projsel"><option value="">— aucun —</option>${projs.map(p => `<option value="${p.id}" ${p.id === F.ctx.projetId ? 'selected' : ''}>${esc(entName(p))}</option>`).join('')}</select></label>` : '') +
+    (!fields.length && !an.boxes.length ? `<div class="card warn">Ce document n’a aucun champ variable : il sera généré tel quel.</div>` : '') +
+    `<form id="docform" class="form">` + partySel +
+    (empties.length ? `<h3 class="hh">À remplir <small>${empties.length}</small></h3>${empties.map(input).join('')}` : (fields.length ? `<div class="card ok">Tous les champs sont déjà renseignés ✔</div>` : '')) +
+    (filled.length ? `<details class="grp" ${empties.length ? '' : 'open'}><summary>Données déjà renseignées <small>${filled.length}</small></summary><div class="inner">${filled.map(input).join('')}</div></details>` : '') + boxes +
+    (fields.some(f => ENT_OWNER[f.id]) ? `<label class="chk"><input type="checkbox" id="savent" ${F.save ? 'checked' : ''}> Mettre à jour les fiches (client / projet / société) avec ces valeurs</label>` : '') +
+    `<div class="actions"><button type="button" class="btn" id="draft">Enregistrer le brouillon</button><button type="submit" class="btn primary big">Validé</button></div></form>`;
+  $$('[data-k]', v).forEach(i => { i.oninput = () => { F.typed[i.dataset.k] = i.value; }; });
+  $$('[data-b]', v).forEach(i => { i.onchange = () => { F.typed[i.dataset.b] = i.checked; }; });
+  const ps = $('#projsel'); if (ps) ps.onchange = () => { snapshot(v); go(`#/doc/${entityId}/${code}?${F.key.startsWith('') && q.edit ? 'edit=' + q.edit + '&' : ''}proj=${ps.value}`); };
+  const collect = () => {
+    snapshot(v); const vals = {};
+    for (const f of fields) { const x = valOf(f); if (String(x).trim()) vals[f.id] = x; }
+    for (const b of an.boxes) if (F.typed[b.id] === true) vals[b.id] = true;
+    if (F.typed.PARTY) vals.PARTY = F.typed.PARTY;
+    return vals;
+  };
+  $('#draft').onclick = async () => {
+    const vals = collect(); const d = F.editId ? A.docs.find(x => x.id === F.editId) : null;
+    const rec = d && d.status === 'brouillon' ? d : { id: uid(), code, entityId, entityType: e.type, ctx: F.ctx, status: 'brouillon', version: nextVersion(entityId, code), gid: uid(), createdAt: Date.now() };
+    rec.values = vals; rec.ctx = F.ctx; rec.updatedAt = Date.now(); await saveDoc(rec); F.editId = rec.id; toast('Brouillon enregistré');
+  };
+  $('#docform').onsubmit = async ev => {
+    ev.preventDefault(); const vals = collect(); const miss = fields.filter(f => !String(vals[f.id] ?? '').trim()).length;
+    if (miss && !await confirmBox(`${miss} champ(s) non renseigné(s) resteront entre [crochets] dans le document.\n\nValider quand même ?`)) return;
+    F.save = !$('#savent') || $('#savent').checked;
+    busy('Création du document…');
+    try {
+      const g = await generate(code, vals, (m, p) => busyMsg(m, p));
+      const old = F.editId ? A.docs.find(x => x.id === F.editId) : null;
+      const rec = old && old.status === 'brouillon' ? old : { id: uid(), code, entityId, entityType: e.type, gid: uid(), createdAt: Date.now() };
+      Object.assign(rec, { ctx: F.ctx, values: vals, status: 'validé', version: old && old.status === 'brouillon' ? nextVersion(entityId, code, old.id) : nextVersion(entityId, code), validatedAt: Date.now(), docx: g.docx, pages: g.pages, pw: g.pw, ph: g.ph, missing: g.missing });
+      await saveDoc(rec);
+      await updateEntities(rec, fields.filter(f => !f.generic).map(f => f.id), F.save);
+      if (g.missing.length) logLine(`${code} : champs restés vides → ${g.missing.join(', ')}`);
+      busyDone(); F = null; go('#/gen/' + rec.id);
+    } catch (err) { busyDone(); console.error(err); logLine(`${code} : ERREUR ${err.message}`); toast('Erreur : ' + err.message); }
+  };
+}
+function snapshot(v) { $$('[data-k]', v).forEach(i => { if (F) F.typed[i.dataset.k] = i.value; }); }
+const nextVersion = (entityId, code, skipId) => 1 + Math.max(0, ...A.docs.filter(d => d.entityId === entityId && d.code === code && d.status === 'validé' && d.id !== skipId).map(d => d.version));
+async function updateEntities(rec, keys, save) {
+  const ctx = rec.ctx; const owner = ent(ctx.projetId) || ent(ctx.marcheId) || ent(ctx.clientId) || ent(ctx.societeId);
+  if (owner) {
+    const memo = owner.memo || {};
+    for (const k of keys) { const val = rec.values[k]; const ty = fieldType(k); if (!val || ENT_OWNER[k] || ['date', 'time', 'textarea'].includes(ty)) continue; memo[k] = val; }
+    owner.memo = memo; await saveEnt(owner);
+  }
+  if (!save) return;
+  for (const k of keys) {
+    const t = ENT_OWNER[k]; const val = rec.values[k]; if (!t || !val) continue;
+    const e = ent({ societe: ctx.societeId, client: ctx.clientId, projet: ctx.projetId, marche: ctx.marcheId }[t]); if (!e) continue;
+    if (e.data[k] !== val) { e.data[k] = val; await saveEnt(e); }
+  }
+}
+
+/* ---------- Résultat ---------- */
+const urlCache = {};
+async function ensureFiles(d) {
+  if (d.pages && d.docx) return d;
+  busy('Régénération du document…');
+  try { const g = await generate(d.code, d.values, (m, p) => busyMsg(m, p)); Object.assign(d, { docx: g.docx, pages: g.pages, pw: g.pw, ph: g.ph, missing: g.missing }); await saveDoc(d); } finally { busyDone(); }
+  return d;
+}
+async function pageResult(v, id) {
+  let d = A.docs.find(x => x.id === id); if (!d) return go('#/');
+  if (d.status !== 'validé') return go(`#/doc/${d.entityId}/${d.code}?edit=${d.id}`);
+  v.innerHTML = topbar('…', '#/e/' + d.entityId); d = await ensureFiles(d);
+  const info = DOC_BY_CODE[d.code]; const e = ent(d.entityId);
+  const imgs = d.pages.map((p, i) => { const k = d.id + ':' + i; if (!urlCache[k]) urlCache[k] = URL.createObjectURL(new Blob([p], { type: 'image/jpeg' })); return `<img class="pg" src="${urlCache[k]}" alt="page ${i + 1}">`; }).join('');
+  const nexts = (WORKFLOW[d.code] || []).filter(c => DOC_BY_CODE[c]);
+  v.innerHTML = topbar(info?.t || d.code, '#/e/' + d.entityId) +
+    `<div class="card ok"><b>Document validé ✔</b><br><small>${d.code} · version ${d.version} · ${d.pages.length} page(s)${e ? ' · ' + esc(entName(e)) : ''}</small>${d.missing && d.missing.length ? `<div class="miss">⚠ ${d.missing.length} champ(s) restés entre crochets : ${d.missing.map(k => esc(fieldLabel(k))).join(', ')}</div>` : ''}</div>` +
+    `<div class="actions col"><button class="btn primary big" id="dlpdf">⬇ Télécharger PDF</button><div class="row2"><button class="btn" id="shpdf">Partager le PDF</button><button class="btn" id="dldoc">Fichier Word</button></div></div>` +
+    (nexts.length ? `<div class="sec"><h3>Document suivant suggéré</h3>${nexts.map(c => `<a class="next" href="#/doc/${d.entityId}/${c}?prev=${d.id}"><span>➜</span><span class="tx"><b>${esc(DOC_BY_CODE[c].t)}</b><small>${c}</small></span></a>`).join('')}</div>` : '') +
+    `<div class="actions row2"><a class="btn" href="#/doc/${d.entityId}/${d.code}?edit=${d.id}">Modifier (nouvelle version)</a><button class="btn danger" id="deldoc">Supprimer</button></div>` +
+    `<div class="sec"><h3>Aperçu</h3><div class="pages">${imgs}</div><p class="note">Le PDF est une image fidèle de la mise en page. Le fichier Word reste la version modifiable de référence.</p></div>`;
+  const pdf = () => makePdf(d.pages, d.pw, d.ph);
+  $('#dlpdf').onclick = async () => toast('Enregistré : ' + await saveFile(pdf(), fileBase(d) + '.pdf', 'application/pdf', false));
+  $('#shpdf').onclick = async () => { const r = await saveFile(pdf(), fileBase(d) + '.pdf', 'application/pdf', true); if (r !== 'annulé') toast('PDF : ' + r); };
+  $('#dldoc').onclick = async () => toast('Enregistré : ' + await saveFile(d.docx, fileBase(d) + '.docx', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', false));
+  $('#deldoc').onclick = async () => { if (await confirmBox('Supprimer ce document généré ?')) { await DB.del('docs', d.id); A.docs = A.docs.filter(x => x.id !== d.id); go('#/e/' + d.entityId); } };
+}
+
+/* ---------- Réglages ---------- */
+async function pageSettings(v) {
+  const soc = A.entities.find(x => x.type === 'societe');
+  v.innerHTML = topbar('Réglages', '#/') +
+    (soc ? `<div class="sec"><h3>Profil de l’entreprise</h3><a class="btn primary" href="#/edit/${soc.id}">Modifier gérant, adresse, RIB…</a></div>` : '') +
+    `<div class="sec"><h3>Modèles de documents</h3><div class="card">${A.templates} / ${DOCS.length} modèles installés.<br><small>Importez le fichier ZIP des modèles (DGS_DOCUMENTS…zip) si nécessaire.</small></div><input type="file" id="zipin" accept=".zip,application/zip" hidden><button class="btn" id="zipbtn">Importer les modèles (.zip)</button></div>` +
+    `<div class="sec"><h3>Sauvegarde des données</h3><div class="card"><small>Vos données sont stockées uniquement sur ce téléphone. Faites une sauvegarde régulière.</small></div><div class="row2"><button class="btn" id="exp">Exporter (JSON)</button><button class="btn" id="impbtn">Importer</button></div><input type="file" id="impin" accept=".json,application/json" hidden></div>` +
+    `<div class="sec"><h3>Journal</h3><div class="log">${A.log.map(esc).join('<br>') || '<small>Vide.</small>'}</div></div>` +
+    `<div class="sec"><button class="btn danger" id="reset">Effacer toutes les données</button><p class="note">DGS DOCS v1.1 — fonctionne hors ligne.</p></div>`;
+  $('#zipbtn').onclick = () => $('#zipin').click();
+  $('#zipin').onchange = async ev => {
+    const f = ev.target.files[0]; if (!f) return; busy('Lecture du fichier…');
+    try { const n = await importTemplates(new Uint8Array(await f.arrayBuffer()), (i, t) => busyMsg(`Modèles ${i}/${t}`, i / t * 100)); busyDone(); toast(n + ' modèles importés'); logLine(n + ' modèles importés'); pageSettings(v); } catch (e) { busyDone(); toast('Erreur : ' + e.message); }
+  };
+  $('#exp').onclick = async () => {
+    const data = { app: 'dgsdocs', version: 1, date: new Date().toISOString(), entities: A.entities, docs: A.docs.map(d => { const c = { ...d }; delete c.docx; delete c.pages; return c; }) };
+    toast('Enregistré : ' + await saveFile(new TextEncoder().encode(JSON.stringify(data)), `DGS_DOCS_sauvegarde_${today()}.json`, 'application/json', true));
+  };
+  $('#impbtn').onclick = () => $('#impin').click();
+  $('#impin').onchange = async ev => {
+    const f = ev.target.files[0]; if (!f) return;
+    try {
+      const j = JSON.parse(await f.text()); if (j.app !== 'dgsdocs') throw new Error('Fichier non reconnu');
+      if (!await confirmBox('Remplacer toutes les données actuelles par cette sauvegarde ?')) return;
+      await DB.clear('entities'); await DB.clear('docs');
+      for (const e of j.entities) await DB.put('entities', e.id, e); for (const d of j.docs) await DB.put('docs', d.id, d);
+      await loadAll(); toast('Sauvegarde restaurée'); go('#/');
+    } catch (e) { toast('Erreur : ' + e.message); }
+  };
+  $('#reset').onclick = async () => { if (await confirmBox('Effacer TOUS les clients, projets et documents générés ?')) { await DB.clear('entities'); await DB.clear('docs'); await loadAll(); toast('Données effacées'); go('#/'); } };
+}
+
+/* ============ Démarrage ============ */
+window.addEventListener('hashchange', render);
+(async function main() {
+  try {
+    await DB.open(); await loadAll();
+    if (!A.entities.some(x => x.type === 'societe')) await saveEnt({ id: uid(), type: 'societe', data: { ...COMPANY_DEFAULTS }, societeId: null, clientId: null, marcheId: null, createdAt: Date.now() });
+    if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => { });
+    if (!isNative() && 'serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => { });
+    await autoImport();
+  } catch (e) { view().innerHTML = `<div class="card err">Impossible d’ouvrir le stockage local : ${esc(e.message)}</div>`; return; }
+  render();
+})();
+</script>
+</body>
+</html>
